@@ -6429,7 +6429,7 @@ button.close {
   position: absolute;
   right: 20%;
   bottom: 0px;
-  left: 5%;
+  left: 0%;
   z-index: 10;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -6438,6 +6438,8 @@ button.close {
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
   background-color: #000;
   opacity: 0.8;
+  padding-right: 10px;
+  padding-left: 10px; 
 }
 .carousel-caption .btn {
   text-shadow: none;
