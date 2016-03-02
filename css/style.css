@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 img{
   width: auto;
   align-items: center;
@@ -47,3 +48,64 @@ p{
 .col-xs-6{
   font-size: 12px;
 }
+=======
+/*****************************************************************************
+ * voir truc avec flex ???
+*****************************************************************************/
+
+
+.menu {
+    clear: both;
+}
+
+.menu-item {
+    width: 250px;
+    height: 250px;
+    background: #CECECE;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    overflow: hidden;
+
+}
+
+h2 {
+    padding: 15px;
+}
+
+img{
+    width: 100%;
+}
+
+.menu-img {
+    display: none;
+    padding: 0px;
+}
+
+@media only screen and (min-width: 800px) {
+    .menu-item {
+        width: 275px;
+        height: 275px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+    
+    .menu-img {
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 1601px) {
+    .menu-item {
+        width: 300px;
+        height: 300px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+}
+>>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
