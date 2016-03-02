@@ -1,0 +1,49 @@
+img{
+  width: auto;
+  align-items: center;
+}
+p{
+  padding: 0px 0px !important;
+  margin: 0;
+}
+
+.jumbotron{
+  background-color: #0099cb !important;
+  margin: 0 0 20px 0;
+  padding: 20px 0 !important;
+}
+
+.card{
+  position: relative;
+/*  -webkit-background-size: cover;
+  background-size: cover;*/
+  margin-bottom: 20px;
+  margin-right: 10px;
+/*  background-image: url(img/moustique.jpg);*/
+}
+.card-description{
+  position: absolute;
+	background: black none repeat scroll 0% 0%;
+	padding: 8px 10px;
+  color: #fff;
+  opacity: .9;
+  bottom: 0px;
+  left: 0px;
+}
+.card-description > p >a{
+  color: white;
+}
+.padding {
+  padding: 10px 0;
+}
+.text-muted {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+.text-muted > a {
+  color: gray !important;
+}
+.col-xs-6{
+  font-size: 12px;
+}
