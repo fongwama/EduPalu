@@ -27,7 +27,7 @@ p{
 	background: black none repeat scroll 0% 0%;
 	padding: 8px 10px;
     color: #fff;
-    opacity: .9;
+    opacity: .85;
     bottom: 0px;
     left: 0px;
     min-width: 100%;
@@ -35,6 +35,11 @@ p{
 .card-description > p >a{
   color: white;
 }
+
+.card-description a {
+    text-decoration: none;
+}
+
 .padding {
   padding: 10px 0;
 }
@@ -47,7 +52,7 @@ p{
   color: gray !important;
 }
 .col-xs-6{
-  font-size: 12px;
+  font-size: 14px;
 }
 =======
 /*****************************************************************************
