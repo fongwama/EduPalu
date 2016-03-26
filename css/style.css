@@ -2,7 +2,8 @@ img{
   width: auto;
   align-items: center;
 }
-p{
+
+.card p{
   padding: 0px 0px !important;
   margin: 0;
 }
@@ -49,3 +50,14 @@ p{
   font-size: 14px;
 }
 
+section h1{
+    font-size: 1.5em;
+}
+
+section h2{
+    font-size: 1.3em;
+}
+
+section figcaption {
+    line-height: 1.1;
+}
