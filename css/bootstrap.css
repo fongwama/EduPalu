@@ -1086,11 +1086,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-<<<<<<< HEAD
   background-color: #fff;
-=======
-  background-color: #ecf0f1;
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
 }
 input,
 button,
@@ -1101,20 +1097,12 @@ textarea {
   line-height: inherit;
 }
 a {
-<<<<<<< HEAD
   color: #337ab7;
-=======
-  color: #f0f0f0;
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
   text-decoration: none;
 }
 a:hover,
 a:focus {
-<<<<<<< HEAD
   color: #23527c;
-=======
-  color: #f0f0f0;
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
   text-decoration: underline;
 }
 a:focus {
@@ -1349,12 +1337,6 @@ mark,
 .text-muted {
   color: #777;
 }
-<<<<<<< HEAD
-=======
-.text-muted a:link{
-  color: #777;
-}
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
 .text-primary {
   color: #337ab7;
 }
@@ -1636,10 +1618,6 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-<<<<<<< HEAD
-=======
-  margin-bottom: 15px;
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -1958,11 +1936,6 @@ pre code {
 @media (min-width: 992px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
-<<<<<<< HEAD
-=======
-    margin-bottom: 15px;
-
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
   }
   .col-md-12 {
     width: 100%;
@@ -3144,23 +3117,14 @@ fieldset[disabled] .btn-default.focus {
   background-color: #333;
 }
 .btn-primary {
-<<<<<<< HEAD
   color: #fff;
   background-color: #337ab7;
-=======
-  color: #000;
-  background-color: #0099cb;
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
   border-color: #2e6da4;
 }
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
-<<<<<<< HEAD
   background-color: #286090;
-=======
-  background-color: #0099cb;
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
   border-color: #122b40;
 }
 .btn-primary:hover {
@@ -3185,11 +3149,7 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary.active.focus,
 .open > .dropdown-toggle.btn-primary.focus {
   color: #fff;
-<<<<<<< HEAD
   background-color: #204d74;
-=======
-  background-color: #0099cb;
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
   border-color: #122b40;
 }
 .btn-primary:active,
@@ -4999,19 +4959,11 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-<<<<<<< HEAD
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
   background-color: #eee;
-=======
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-bottom: 0px;
-  color: inherit;
-  background-color: #0099cb;
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -6469,7 +6421,6 @@ button.close {
 }
 .carousel-caption {
   position: absolute;
-<<<<<<< HEAD
   right: 15%;
   bottom: 20px;
   left: 15%;
@@ -6479,21 +6430,6 @@ button.close {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
-=======
-  right: 20%;
-  bottom: 0px;
-  left: 0%;
-  z-index: 10;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: #FFF;
-  text-align: left;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
-  background-color: #000;
-  opacity: 0.8;
-  padding-right: 10px;
-  padding-left: 10px; 
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
 }
 .carousel-caption .btn {
   text-shadow: none;
@@ -6517,16 +6453,9 @@ button.close {
     margin-right: -10px;
   }
   .carousel-caption {
-<<<<<<< HEAD
     right: 20%;
     left: 20%;
     padding-bottom: 30px;
-=======
-    right: 14%;
-    left: 4%;
-    padding-bottom: 10px;
-    padding-left: 10px;
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
   }
   .carousel-indicators {
     bottom: 20px;
@@ -6829,47 +6758,3 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
-<<<<<<< HEAD
-=======
-
-
-/* ^footer²
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-
-  background-color: #f5f5f5;
-}
-
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-body > .container {
-  padding: 30px 15px 0;
-}
-.container .text-muted {
-  margin: 10px 0;
-}
-
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-code {
-  font-size: 80%;
-}
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
