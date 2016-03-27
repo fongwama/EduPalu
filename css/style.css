@@ -67,18 +67,19 @@ section h2{
 
 section figcaption {
     line-height: 1.1;
+    text-align: left;
+    margin-bottom: 10px; 
 }
 .footer-text > a{
   font-size: 14px;
   color: white;
 }
 
-
-p {
-  margin: 0 0 !important;
-}
 .margin-footer{
   margin-bottom: 0 !important;
   margin-top: 20px !important;
 }
 
+footer p {
+    margin: 0px 0px;
+}
