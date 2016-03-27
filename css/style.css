@@ -35,6 +35,7 @@ img{
     bottom: 0px;
     left: 0px;
     min-width: 100%;
+    margin: 0px;
 }
 
 .card-description p{
@@ -70,6 +71,17 @@ section figcaption {
     text-align: left;
     margin-bottom: 10px; 
 }
+
+.question {
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+reponse {
+
+}
+
+
 .footer-text > a{
   font-size: 14px;
   color: white;
