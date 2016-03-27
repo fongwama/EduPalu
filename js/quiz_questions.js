@@ -305,12 +305,12 @@ var questions = [
     "answers": [ 
             {
                 "text" : "Oui",
-                "comment": "Pour le moment, il n’existe que des vaccins qui sont en cours d’étude qu’on appelle des <em>vaccins candidats</em>. Les chercheurs et les médecins travaillent durs pour qu'un vaccin puisse bientôt protéger les populations.",
+                "comment": "Pour le moment, il n’existe que des vaccins qui sont en cours d’étude qu’on appelle des <em>vaccins candidats</em>. Les chercheurs et les médecins travaillent dur pour qu'un vaccin puisse bientôt protéger les populations.",
                 "correct": false,
             },
             {
                 "text" : "Non",
-                "comment": "Pour le moment, il n’existe que des vaccins qui sont en cours d’étude qu’on appelle des <em>vaccins candidats</em>. Les chercheurs et les médecins travaillent durs pour qu'un vaccin puisse bientôt protéger les populations.",
+                "comment": "Pour le moment, il n’existe que des vaccins qui sont en cours d’étude qu’on appelle des <em>vaccins candidats</em>. Les chercheurs et les médecins travaillent dur pour qu'un vaccin puisse bientôt protéger les populations.",
                 "correct": true,
             },
         ]
