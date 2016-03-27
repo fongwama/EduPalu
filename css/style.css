@@ -3,15 +3,17 @@ img{
   align-items: center;
 }
 
-.card p{
-  padding: 0px 0px !important;
-  margin: 0;
-}
 
 .jumbotron{
-  background-color: #0099cb !important;
+  background-color: #0099cb;
   margin: 0 0 20px 0;
-  padding: 20px 0 !important;
+  padding: 10px 0;
+}
+
+.jumbotron p {
+  margin-bottom: 0px;
+  font-size: 14px;
+  color: white
 }
 
 .card{
@@ -19,10 +21,15 @@ img{
   margin-bottom: 20px;
   margin-right: 10px;
 }
+
+.card a{
+    text-decoration: none;
+}
+
 .card-description{
     position: absolute;
 	background: black none repeat scroll 0% 0%;
-	padding: 8px 10px;
+	padding: 2px 5px;
     color: #fff;
     opacity: .85;
     bottom: 0px;
@@ -30,9 +37,9 @@ img{
     min-width: 100%;
 }
 
-
-.card-description a {
-    text-decoration: none;
+.card-description p{
+  padding: 0px 0px !important;
+  margin: 0;
 }
 
 .padding {
@@ -45,9 +52,6 @@ img{
 }
 .text-muted > a {
   color: gray !important;
-}
-.col-xs-6{
-  font-size: 14px;
 }
 
 article {
@@ -69,11 +73,7 @@ section figcaption {
   color: white;
 }
 
-.jumbotron p {
-  margin-bottom: 0px !important;
-  font-size: 14px !important;
-  color: white
-}
+
 p {
   margin: 0 0 !important;
 }
