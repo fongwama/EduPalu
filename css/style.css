@@ -61,3 +61,16 @@ section h2{
 section figcaption {
     line-height: 1.1;
 }
+.footer-text > a{
+  font-size: 14px;
+  color: white;
+}
+
+.jumbotron p {
+  margin-bottom: 0px !important;
+  font-size: 14px !important;
+  color: white
+}
+p {
+  margin: 0 0 !important;
+}
