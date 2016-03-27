@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz ~ FCRM &amp; Fongwama</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/quiz_style.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/quiz_questions.js"></script>
+    <script type="text/javascript" src="js/quiz_engine.js"></script>
+</head>
+<body onload="quiz_play();">
+    <header class="jumbotron">
+		<a href="index.html">
+			<img src="img/logo.png" alt="logo EduPalu" class="center-block" />
+		</a>
+    </header>
+    <section class="container" id="page">
+        <div id="question_header">
+            <div id="question_nb">
+                Question <span id="question_nb_value"></span>
+            </div>
+            <div id="question_timer">
+                Temps restant : <span id="question_timer_value"></span>
+            </div>
+        </div>
+        <div id="question_body">
+            <div id="question_text"></div>
+            <div id="answers"></div>
+        </div>
+        <div id="question_comment">
+            <div id="comment_1"></div>
+            <div id="comment_2"></div>
+        </div>
+        <div id="question_footer"> 
+            <div id="question_score">
+                Score : <span id="question_score_value"></span>
+            </div>
+            <div id="question_next_replay">
+            </div>
+        </div>
+
+    </section>
+	<footer class="jumbotron margin-footer">
+        <p class="footer-text text-center">
+            <a href="http://www.fcrm-congo.com">FCRM</a> &amp; <a href="http://www.fongwama.com">Fongwama</a> - 2016
+        </p>  
+	</footer>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+</body>
+</html>
