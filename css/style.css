@@ -1,3 +1,16 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+}
+
+section {
+    padding-bottom: 50px;
+}
+
 img{
   width: auto;
   align-items: center;
@@ -77,21 +90,27 @@ section figcaption {
     margin-bottom: 0px;
 }
 
-reponse {
+.reponse {
 
 }
 
 
-.footer-text > a{
-  font-size: 14px;
-  color: white;
-}
-
-.margin-footer{
-  margin-bottom: 0 !important;
-  margin-top: 20px !important;
+footer {
+    background-color: #0099cb;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0px;
+    margin-bottom: 0px;
 }
 
 footer p {
     margin: 0px 0px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+footer a:link, a:visited {
+	color: white;
 }
