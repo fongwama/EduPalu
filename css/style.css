@@ -50,6 +50,9 @@ img{
   font-size: 14px;
 }
 
+article {
+    text-align: justify;
+}
 section h1{
     font-size: 1.5em;
 }
