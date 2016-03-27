@@ -6829,19 +6829,12 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
-<<<<<<< HEAD
-=======
-
 
 /* ^footer²
 -------------------------------------------------- */
 html {
   position: relative;
   min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
 }
 .footer {
   position: absolute;
@@ -6872,4 +6865,3 @@ body > .container {
 code {
   font-size: 80%;
 }
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
