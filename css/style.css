@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 img{
   width: auto;
   align-items: center;
@@ -16,11 +15,8 @@ p{
 
 .card{
   position: relative;
-/*  -webkit-background-size: cover;
-  background-size: cover;*/
   margin-bottom: 20px;
   margin-right: 10px;
-/*  background-image: url(img/moustique.jpg);*/
 }
 .card-description{
     position: absolute;
@@ -54,12 +50,6 @@ p{
 .col-xs-6{
   font-size: 14px;
 }
-=======
-/*****************************************************************************
- * voir truc avec flex ???
-*****************************************************************************/
-
-
 .menu {
     clear: both;
 }
@@ -114,4 +104,3 @@ img{
     }
 
 }
->>>>>>> ed68c975d5f33451fcb0aa18831f304d47e7b532
