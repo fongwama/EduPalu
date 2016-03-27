@@ -74,3 +74,8 @@ section figcaption {
 p {
   margin: 0 0 !important;
 }
+.margin-footer{
+  margin-bottom: 0 !important;
+  margin-top: 20px !important;
+}
+
