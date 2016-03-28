@@ -94,6 +94,10 @@ section figcaption {
 
 }
 
+blockquote {
+    text-align: right;
+    font-style: italic;
+}
 
 footer {
     background-color: #0099cb;
