@@ -114,3 +114,16 @@ footer p {
 footer a:link, a:visited {
 	color: white;
 }
+
+@media (min-width: 800px) {
+    html, .container {
+        width: 800px;
+    }
+
+    html {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
