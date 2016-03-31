@@ -1,0 +1,131 @@
+.container{
+  margin: 5px;
+}
+
+section{
+    padding-bottom: 5px;
+}
+#my_canvas_container{
+    position: relative;
+    /*border: 1px solid #fe0ade;*/
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#my_canvas{
+    position: relative;
+}
+#canvas_belt{
+    position: relative;
+    display: inline-block;
+    border: 1px solid grey;
+}
+
+#question{
+    font: bold 12pt arial;
+    color: #6495ED;
+    padding: 3px 0px 3px 0px;
+    text-align: center;
+    width: 100%;
+}
+#extra_infos{
+
+    padding: 2px 0px 2px 0px;
+    float: left;
+    display: inline-block;
+}
+
+#extra_cursor_pos{
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px 0px 2px 0px;
+    display: inline-block;
+    margin-left: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+.ic_image_yes, .ic_image_no, #ic_image_timer{
+    width: 24px;
+    height: 24px;
+    font: bold 12pt arial;
+    color: #6495ED;
+}
+#valPara, #valErreur,#question_timer_value_staked,#question_timer_value,#my_slash{
+    font: bold 12pt arial;
+    color: #6495ED;
+    vertical-align: middle;
+}
+
+.ic_image_no{
+    margin-left: 10px;
+}
+#ic_image_timer{
+    margin-right: 2px;
+}
+
+#question_timer{
+    display: inline-block;
+    font: bold 12pt arial;
+    padding: 3px 0px 3px 0px;
+    margin-right: 20px;
+}
+#question, #question_score, #question_next_replay {
+    display: inline-block;
+    font: bold 12pt arial;
+    color: #6495ED;
+    padding: 3px 0px 3px 0px;
+}
+
+.my_btn_container{
+ /*   margin-bottom: 50px;*/
+}
+.my_btn{
+    display: inline-block;
+    float: left;
+    width: 48%;
+    height: 35px;
+}
+
+.my_btn_right{
+   margin-left: 1.8%;
+   position: relative;
+}
+#question_timer, #question_next_replay {
+    float: right;
+}
+
+#question_text {
+    font-weight: bold;
+}
+
+#question_body {
+    clear: both;
+}
+
+#question_footer {
+    margin-top: 5px;
+}
+
+
+/**/
+.erreurs
+{
+    display  : block;
+    position : absolute;
+    font-weight : bold;
+    color : red;
+    cursor :help;
+
+    z-index: 101;
+}
+
+.valides{
+    display  : block;
+    position : absolute;
+    cursor :help;
+    border: 2px solid green;
+    font-weight: bold;
+    border-radius: 2px;
+    z-index: 102;
+}
