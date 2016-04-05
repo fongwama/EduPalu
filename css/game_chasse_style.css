@@ -1,15 +1,17 @@
 .container{
-  margin: 5px;
+  margin: 2px;
+  overflow: scroll;
 }
 
 section{
-    padding-bottom: 5px;
+    padding-bottom: 0px;
 }
 #my_canvas_container{
     position: relative;
     /*border: 1px solid #fe0ade;*/
     margin-left: auto;
     margin-right: auto;
+    overflow-x: scroll;
 
 }
 #my_canvas{
@@ -18,7 +20,7 @@ section{
 #canvas_belt{
     position: relative;
     display: inline-block;
-    border: 1px solid grey;
+    overflow: scroll;
 }
 
 #question{
@@ -77,8 +79,8 @@ section{
     padding: 3px 0px 3px 0px;
 }
 
-.my_btn_container{
- /*   margin-bottom: 50px;*/
+.buttons_container{
+    margin-bottom: 60px;
 }
 .my_btn{
     display: inline-block;
@@ -107,25 +109,29 @@ section{
     margin-top: 5px;
 }
 
-
-/**/
-.erreurs
-{
-    display  : block;
-    position : absolute;
-    font-weight : bold;
-    color : red;
-    cursor :help;
-
-    z-index: 101;
-}
-
 .valides{
-    display  : block;
+    display  : inline-block;
     position : absolute;
     cursor :help;
     border: 2px solid green;
-    font-weight: bold;
     border-radius: 2px;
     z-index: 102;
+}
+
+@media (max-width: 500px  ) {
+    .valides{
+
+        border: 1px solid green;
+        border-radius: 1px;
+        z-index: 102;
+    }
+
+    .buttons_container{
+        margin-bottom: 0px;
+    }
+
+    #my_canvas{
+        overflow-x: scroll;
+    }
+
 }
