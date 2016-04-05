@@ -80,9 +80,10 @@ section h2{
 }
 
 section figcaption {
-    line-height: 1.1;
+    line-height: 1.2;
     text-align: left;
-    margin-bottom: 10px; 
+    margin-top: 5px; 
+    margin-bottom: 15px; 
 }
 
 .question {
@@ -115,7 +116,7 @@ footer p {
     text-align: center;
 }
 
-footer a:link, a:visited {
+footer a:link, footer a:visited {
 	color: white;
 }
 

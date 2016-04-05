@@ -16,7 +16,7 @@ var questions = [
                 "correct": false,
             },
             {
-                "text" : "Un maladie",
+                "text" : "Une maladie",
                 "comment": "En 2015, le paludisme a été responsable de 438 000 décès.",
                 "correct": true,
             },
@@ -343,7 +343,7 @@ var questions = [
             {
                 "text" : "Non",
                 "comment": "Tu as raison. Seuls un examen de la goutte épaisse ou un test de diagnostic rapide peuvent diagnostiquer le paludisme.",
-                "correct": false,
+                "correct": true,
             },
         ]
     },
