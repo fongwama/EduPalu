@@ -51,14 +51,23 @@ var imgWidth;
 var imgHeight;
 var canvas_belt = $('#canvas_belt');
 var image;
+var image_timer_stoped = new Image();
 var textReussites = $("#valPara"), textErreurs = $("#valErreur");
 var posX = $("#posX"), posY = $("#posY");
+var timer_view = document.getElementById("question_timer_value");
 
+//Chrono
+var min=choixObjet.min, sec=choixObjet.sec, tmp_sec;
+var stop_timer = false;
+var is_game_over = false;
 
 // Methodes
 function chasse_para_play(){
 
 	togleAffichage = false;
+	stop_timer = false;
+    is_game_over = false;
+
 	showHide();
 
 	canvas_quotient= 2;
@@ -68,7 +77,7 @@ function chasse_para_play(){
 
 	canvas.width  = imgWidth;
 	canvas.height = imgHeight;
-	canvas_context = canvas.getContext('2d');
+	canvas_context= canvas.getContext('2d');
 
 	$("#my_canvas_container").css({ "width":imgWidth+10+"px"});
 
@@ -78,8 +87,10 @@ function chasse_para_play(){
 
 	image.onload = function() {
 		canvas_context.drawImage(image, canvas_image.targetleft, canvas_image.targettop ,imgWidth,imgHeight);
-
+		countdown();
+		image_timer_stoped.src = 'img/ic_timer.png';
 	};
+
 	image.src = 'img/'+choixObjet.picture;
 
 
@@ -101,7 +112,8 @@ function ScaleImage(srcwidth, srcheight, targetwidth, targetheight, fLetterBox) 
 	var scaleX2 = (srcwidth * targetheight) / srcheight;
 	var scaleY2 = targetheight;
 
-	// now figure out which one we should use
+	 //en: now figure out which one we should use
+	// fr: Ici on fait notre choix
 	var fScaleOnWidth = (scaleX2 > targetwidth);
 	if (fScaleOnWidth) {
 		fScaleOnWidth = fLetterBox;
@@ -121,16 +133,16 @@ function ScaleImage(srcwidth, srcheight, targetwidth, targetheight, fLetterBox) 
 		result.fScaleToTargetWidth = false;
 	}
 	result.targetleft = Math.floor((targetwidth - result.width) / 2);
-	result.targettop = Math.floor((targetheight - result.height) / 2);
+	result.targettop  = Math.floor((targetheight -result.height)/ 2);
 
 	return result;
 }
 
 function drawError(TabXY){
 
-	var radius = 9/canvas_quotient;
+	var radius = 5/canvas_quotient;
 	canvas_context.beginPath();
-	canvas_context.arc(TabXY[0]/canvas_quotient, (TabXY[1]/canvas_quotient)-1, radius, 0, 2 * Math.PI, false);
+	canvas_context.arc((TabXY[0]+1)/canvas_quotient, ((TabXY[1]+1)/canvas_quotient), radius, 0, 2 * Math.PI, false);
 	canvas_context.fillStyle = 'red';
 	canvas_context.fill();
 	canvas_context.lineWidth = 0;
@@ -138,10 +150,8 @@ function drawError(TabXY){
 	canvas_context.stroke();
 }
 
-
 /*
 function drawSuccess(posX, posY, sizeX, sizeY){
-
 	canvas_context.beginPath();
 	canvas_context.rect(posX, posY,sizeX,sizeY);
 	canvas_context.fillStyle = 'red';
@@ -149,10 +159,8 @@ function drawSuccess(posX, posY, sizeX, sizeY){
 	canvas_context.lineWidth = 0;
 	canvas_context.strokeStyle = 'red';
 	canvas_context.stroke();
-
 }
 */
-
 
 function updateScore(){
 	textReussites.text(reussites_count);
@@ -164,39 +172,43 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
 function renit(){
-
 	//On reinitialise les variables à 0(Zero) ensuite on rafraichi l'affichage
 
 	reussites_count =0;
 	erreurs_count   =0;
 	paraValidees    =[];
 	cordonneesErreurs = [];
+	min = choixObjet.min;
+	sec = choixObjet.sec;
 	togleAffichage = true;
 	$('.valides').remove();
-	//$('.erreurs').remove();
-	//$('.valides').remove();
 
+	stop_timer = true;
 
 	updateScore();
 }
 
 function showHide(isToggle){
+
 		if(togleAffichage){
-			//si c'est true alors on cache tous les //points d'erreurs et reussites
+			 //si c'est true alors on cache tous les points de reussite
+			 $('.valides').hide();
 
-			$('.valides').hide();
-			$("#afficher").text('Afficher');
+			//On change la valeur du text dans le button Afficher/Cacher
+			 $("#afficher").text('Afficher');
 
+			//on redessine l'image de la lame qui est sauvegardée dans la variable "image"
 			if(isToggle){
 				canvas_context.drawImage(image, canvas_image.targetleft, canvas_image.targettop ,imgWidth,imgHeight);
 			}
 
+			//On signale à notre code que l'etat est maintenant "Cacher"
 			togleAffichage = false;
 		}
 		else
 		{
+			// L'oposé de ce qui est la haut
 			$('.valides').show();
 			$("#afficher").text('Cacher');
 
@@ -208,7 +220,6 @@ function showHide(isToggle){
 					}, 300);
 				});
 			}
-
 			togleAffichage = true;
 		}
 }
@@ -218,6 +229,7 @@ function affichePosition(x,y){
 	posY.text(y);
 }
 
+	//Cette fonction sert à dessiner(afficher) le contour sur le parasite
 function validClick(indexPara){
 	       //On incremente le nombre de reussites
 			reussites_count++;
@@ -225,17 +237,22 @@ function validClick(indexPara){
 			//On ajoute l'index actuel dans la liste des parasites déjà trouvées
 			paraValidees.push(indexPara);
 			
-			//on crée un contour
-				  //C'est ici que l'on va creer le point d'Erreur à l'endroit du click
-				  var newSuccess = document.createElement('span');
-				  var newSuccess  = $(newSuccess);
+			//on crée un contour pour la parasite
+				  //C'est ici que l'on va creer le point de reussite à l'endroit du click
+		    var newSuccess = document.createElement('span');
+			    newSuccess = $(newSuccess);
+			    newSuccess.attr( 'class','valides' );
 
-				  			//propriétés de positionnement de l'erreur
-				  newSuccess.attr( 'class','valides' );
-				  newSuccess.css({ 'top':(myTab[indexPara].pos_y/canvas_quotient)+'px', 'left':(myTab[indexPara].pos_x/canvas_quotient)+'px', 'width': myTab[indexPara].size_x/canvas_quotient, 'height':myTab[indexPara].size_y/canvas_quotient});
-				  //newSuccess.css({'width': myTab[indexPara].size_x/canvas_quotient, 'height':myTab[indexPara].size_y/canvas_quotient});
-				  //canvas_context.drawFocusRing(newSuccess,(myTab[indexPara].pos_x/canvas_quotient),(myTab[indexPara].pos_y/canvas_quotient),true)
-				  newSuccess.appendTo(canvas_belt);
+			//propriétés de positionnement du contour
+			newSuccess.css({
+				'top'	:((myTab[indexPara].pos_y+1)/canvas_quotient)+'px',
+				'left'	:((myTab[indexPara].pos_x+1)/canvas_quotient)+'px',
+				'width'	:(myTab[indexPara].size_x+1)/canvas_quotient,
+				'height':(myTab[indexPara].size_y+1)/canvas_quotient
+			});
+
+			//Ajout
+			newSuccess.appendTo(canvas_belt);
 
 			//On actualise le Score (sur l'ecran)
 			updateScore();	
@@ -248,15 +265,16 @@ function verification(valX, valY)
 		valX *=canvas_quotient;
 		valY *=canvas_quotient;
 
-	   //Ce Try/Catch est importante car ça nous permet d'arreter(de sortir de) la boucle ForEach en lançant une Exception
+	  //Ce Try/Catch est tres importante(indispensable) car ça nous permet d'arreter(de sortir de) la
+	 // boucle ForEach en lançant une Exception
 	 try
 	 {
 		//On parcours le tableau des parasites
 	 	myTab.forEach( function(parasite, index, tab)
-	 	{		
-		
-			  //Si le click est valide (on a cliqué sur une parasite)
-			if( (valX >= parasite.pos_x && (valX <= (parasite.pos_x + parasite.size_x))) && (valY >= parasite.pos_y && (valY <= (parasite.pos_y + parasite. size_y))))
+	 	{
+			//Si le click est valide (on a cliqué sur une parasite)
+			if(    (valX >= parasite.pos_x && (valX <= (parasite.pos_x + parasite.size_x)))
+				&& (valY >= parasite.pos_y && (valY <= (parasite.pos_y + parasite.size_y))))
 			{
 				//Si le tableau des parasites trouvés est vide
 				if(paraValidees.length == 0)
@@ -272,25 +290,21 @@ function verification(valX, valY)
 					if(paraValidees.indexOf(index) == -1)
 					{
 					   validClick(index);
-					   
-					   //On sort de la boucle
-					   throw BreakException;
 					}
 					else
 					{
 						// Parasite déja trouvé
-					   //alert("Parasite déja trouvé ! ");   //  +myTab[index].id);
-					   
-					   //On sort de la boucle
-					   throw BreakException;   
+					   alert("Parasite déja trouvé ! ");   //  +myTab[index].id);
+
 					}
-						
+
+					//On sort de la boucle
+					throw BreakException;
 				}
 			}
 			else  //erreur **********************************
 			{
 
-				
 			   // Lorsqu'on fini de parcourrir le tableau des parasites et que les
 			  //  coordonnées du "click" ne correspondent à rien
 			  if((index+1) == tab.length)
@@ -298,44 +312,16 @@ function verification(valX, valY)
 				  //On incremente le nombre d'erreurs
 				  erreurs_count++;
 
-				  /*
-				  //C'est ici que l'on va creer le point d'Erreur à l'endroit du click
-				  var newErrorJS = document.createElement('span');
-				  var newError  = $(newErrorJS);
-
-				  			    //propriétés de positionnement
-				  			   // le -10 (valY -10) depends de la taille verticale du texte(X) qui signale l'erreur
-				  			  //  le -5  (valX -5)  depends de la taille horizontale du texte qui signale l'erreur
-				  			 //en resumé, c'est pour mieux cadrer le point d'erreur (la hauteur du X étant superieur à la largeur)
-				  newError.attr( 'class','erreurs' );
-				  newError.css({ 'top':(valY-(10/canvas_quotient))/canvas_quotient+'px', 'left':(valX-(5/canvas_quotient))/canvas_quotient+'px' });
-
-				  	//Ajout des coordonnées de l'erreur dans la liste d'érreurs
-
-				   var myText = document.createTextNode("X");
-				   var text = $(myText);
-
-
-				   //On insère le texte X dans la balise <span> crée precedement
-				   text.appendTo(newError);
-
-				   //on insère l'element <span> dans le BOX qui contient le canvas (la ceinture du canvas)
-				   newError.appendTo(canvas_belt);
-
-				   */
-
-
-
 				  	var tmpTab = [];
 				    tmpTab.push(valX);  // LEFT
 				  	tmpTab.push(valY);  // TOP
 
 				  	cordonneesErreurs.push(tmpTab);
-				  	drawError(tmpTab);
-				  			
-				  			//
 
-				  //On rafraichi le score(sur l'ecran) pour voir notre point d'erreur
+				  	//on dessine l'erreur sur le canvas
+				  	drawError(tmpTab);
+
+				  //On rafraichi le score(sur l'ecran) pour voir notre nombre d'erreurs
 				  updateScore();
 			  }
 			   
@@ -352,7 +338,69 @@ function verification(valX, valY)
 	 {
 		if (e!==BreakException) throw e;
 	 }
- 	 
+
+	if(reussites_count == choixObjet.entries){
+		stop_timer = true;
+		game_over();
+	}
+
+}
+
+
+function countdown(){
+
+	if(stop_timer){
+		return;
+		//throw BreakException;
+	}
+	sec--;
+	tmp_sec = sec;
+	if(sec<10)
+	{
+		//mettre un zéro avant l'unité
+		if(sec==-1){
+			min--;
+			sec =59;
+			tmp_sec=sec;
+		}
+		else{
+			tmp_sec="0"+sec;
+		}
+	}
+
+	timer_view.innerHTML = (min+":"+tmp_sec);
+
+	if(min>=0 && sec>=0 && !(min==0 && sec==0))
+	{
+		tempo=setTimeout('countdown()',1000);
+	}
+	else
+	{
+		game_over();
+		return;
+		//throw BreakException;
+	}
+}
+
+
+//Game finish
+function game_over(){
+	is_game_over = true;
+	$('#ic_image_timer').attr({'src':"img/ic_timer.png"});
+
+	//$("#comment_1").html("<p>Le jeu est terminé !</p>");
+
+	var score = ""; //perf = score / score_max * 100;
+	if (score>=0 && score<50){
+		msg = "Essayez de rejouer. Vous allez certainement vous améliorez";
+	}
+	else if (score>=50 && score<75){
+		msg = "Vous avez fait un bon score mais vous pouvez sans doute faire mieux. Réessayez !";
+	}
+	else if (score>=75 ){
+		score = "Bravo. Vous avez une bonne connaissance du paludisme.";
+	}
+	//$("#comment_2").html(msg);
 }
 
 
@@ -360,7 +408,7 @@ $('.valides').click(function(e){
 	alert('parasite déjà trouvée !');
 });
 
-//recuperation du positionnement de la souri lors du survol
+	//recuperation du positionnement de la souri lors du survol
 $("#my_canvas").mousemove(function(e){
 	
 	//on recupere l'offset : valeur d'ecartement de l'image
@@ -378,7 +426,7 @@ $("#my_canvas").mousemove(function(e){
 	affichePosition(valX, valY);
 });
 
-  // on renitialise les cordonnées à zéro, x=0, y=0
+	//on renitialise les cordonnées à zéro, x=0, y=0
 $("#my_canvas").mouseout(function(e){
 	
 	//On appelle la fonction d'affichage
@@ -389,29 +437,43 @@ $("#my_canvas").mouseout(function(e){
  
 	//clique sur l'image
 $("#my_canvas").click(function(e){
-	
-	//on recupere l'offset : valeur d'ecartement de l'image
-	var $os = $(this).offset();
-	
-	//on recupere la valeur du scroll de la page
-	var scrollTop  = $(window).scrollTop();
-	var scrollLeft = $(window).scrollLeft();
-	
-	//On recupère avec précision la valeur X et Y du cliqué
-	var valX = parseInt(e.clientX - $os.left + scrollLeft, 10);
-	var valY = parseInt(e.clientY - $os.top  + scrollTop,  10);
-	
-	 //var val = "X:"+parseInt(e.clientX - $os.left + scrollLeft, 10)+"\nY:"+ parseInt(e.clientY - $os.top + scrollTop, 10);
-	//alert(val);
-	
-	//On appelle la fonction de verification
-	verification(valX, valY);
+
+	 //Cette condition nous permet d'afficher les points
+	// au cas l'on clique sur l'image pendant que c'est en moder caché
+	if ( ! togleAffichage)
+	{
+		showHide(true)
+	}
+
+	if(!is_game_over)
+	{
+		//on recupere l'offset : valeur d'ecartement de l'image
+		var $os = $(this).offset();
+
+		//on recupere la valeur du scroll de la page
+		var scrollTop  = $(window).scrollTop();
+		var scrollLeft = $(window).scrollLeft();
+
+		//On recupère avec précision la valeur X et Y du cliqué
+		var valX = parseInt(e.clientX - $os.left + scrollLeft, 10);
+		var valY = parseInt(e.clientY - $os.top  + scrollTop,  10);
+
+		//var val = "X:"+parseInt(e.clientX - $os.left + scrollLeft, 10)+"\nY:"+ parseInt(e.clientY - $os.top + scrollTop, 10);
+		//alert(val);
+
+		//On appelle la fonction de verification
+		verification(valX, valY);
+	}
+
 });
 
 	//Clique sur le button "recommencer"
 $("#recommencer").click(function(e){
 	renit();
-	chasse_para_play();
+
+	setTimeout(function(){
+		chasse_para_play();
+	}, 1000);
 });
 
 	//Clique sur le button "afficher"
