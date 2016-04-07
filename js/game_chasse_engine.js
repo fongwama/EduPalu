@@ -30,13 +30,14 @@ var cordonneesValides = [];
 var butAC = "";
 var togleAffichage = true;
 
-//Choix et chargement de l'image 
-// Le choix entre les trois images que nous possedons (0-2)
+ //Choix et chargement de l'image
+// Le choix entre les differentes images que nous possedons
 var choix = getRandomInt(0,0);
 
 
-	//on recupere l'objet JSON du parasite choisi
+	//on recupere l'objet JSON aléatoirement choisi choisi
 var choixObjet = parasitesTab[choix];    
+document.getElementById("val_total_para").innerHTML= choixObjet.entries;
 
 var myTab   = choixObjet.parasites;  //tableau JSON des positions des parasites
 var myImage = choixObjet.picture;
@@ -53,19 +54,20 @@ var canvas_belt = $('#canvas_belt');
 var image;
 var image_timer_stoped = new Image();
 var textReussites = $("#valPara"), textErreurs = $("#valErreur");
+var text_felicitations = $('#message_fin');
 var posX = $("#posX"), posY = $("#posY");
 var timer_view = document.getElementById("question_timer_value");
 
 //Chrono
-var min=choixObjet.min, sec=choixObjet.sec, tmp_sec;
-var stop_timer = false;
+var sec = choixObjet.time+1; //on recupere le temps de Jeu
+var tempo; // le retardateur
+
 var is_game_over = false;
 
 // Methodes
 function chasse_para_play(){
 
 	togleAffichage = false;
-	stop_timer = false;
     is_game_over = false;
 
 	showHide();
@@ -179,12 +181,9 @@ function renit(){
 	erreurs_count   =0;
 	paraValidees    =[];
 	cordonneesErreurs = [];
-	min = choixObjet.min;
-	sec = choixObjet.sec;
+	sec = choixObjet.time+1;
 	togleAffichage = true;
 	$('.valides').remove();
-
-	stop_timer = true;
 
 	updateScore();
 }
@@ -340,7 +339,7 @@ function verification(valX, valY)
 	 }
 
 	if(reussites_count == choixObjet.entries){
-		stop_timer = true;
+		clearTimeout(tempo);
 		game_over();
 	}
 
@@ -349,36 +348,22 @@ function verification(valX, valY)
 
 function countdown(){
 
-	if(stop_timer){
-		return;
-		//throw BreakException;
-	}
 	sec--;
-	tmp_sec = sec;
-	if(sec<10)
-	{
-		//mettre un zéro avant l'unité
-		if(sec==-1){
-			min--;
-			sec =59;
-			tmp_sec=sec;
-		}
-		else{
-			tmp_sec="0"+sec;
-		}
-	}
 
-	timer_view.innerHTML = (min+":"+tmp_sec);
+	timer_view.innerHTML = (
+			"0"+(parseInt(sec/60))+
+			":"+
+			((sec % 60) <10 ? "0"+(sec%60) :(sec%60))
+	);
 
-	if(min>=0 && sec>=0 && !(min==0 && sec==0))
+	if(sec>0)
 	{
 		tempo=setTimeout('countdown()',1000);
 	}
 	else
 	{
+		clearTimeout(tempo);
 		game_over();
-		return;
-		//throw BreakException;
 	}
 }
 
@@ -390,7 +375,8 @@ function game_over(){
 
 	//$("#comment_1").html("<p>Le jeu est terminé !</p>");
 
-	var score = ""; //perf = score / score_max * 100;
+	//var score = paraValidees.length / choixObjet.entries * 100;
+	/*
 	if (score>=0 && score<50){
 		msg = "Essayez de rejouer. Vous allez certainement vous améliorez";
 	}
@@ -399,8 +385,13 @@ function game_over(){
 	}
 	else if (score>=75 ){
 		score = "Bravo. Vous avez une bonne connaissance du paludisme.";
-	}
-	//$("#comment_2").html(msg);
+	}*/
+	var temp_ecoule = "";
+	if(sec==0)
+		temp_ecoule="Temps écoulé ,";
+
+	text_felicitations.html(temp_ecoule+"Bravo ou Desolé, encore entrain de travailler sur ce message &#x263A");
+	text_felicitations.focus();
 }
 
 
@@ -471,9 +462,10 @@ $("#my_canvas").click(function(e){
 $("#recommencer").click(function(e){
 	renit();
 
+	clearTimeout(tempo)
 	setTimeout(function(){
 		chasse_para_play();
-	}, 1000);
+	}, 500);
 });
 
 	//Clique sur le button "afficher"

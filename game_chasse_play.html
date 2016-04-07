@@ -14,10 +14,11 @@
         <img src="img/logo.png" alt="logo EduPalu" class="center-block" />
     </a>
 </header>
-<section class="container"    >
+<section class="container">
     <div id="question">
         Retrouver les parasites sur cet echantillon de lame <span id="question_nb_value"></span>
     </div>
+    <div id="message_fin"> </div>
     <div id="question_header">
 
 
@@ -26,8 +27,8 @@
     <div id="my_canvas_container" >
 
         <div id="extra_infos" >
-            <img src="img/ic_reussites.png" class="ic_image_yes"/> : <span id="valPara">0</span>
-            <img src="img/ic_echecs.png" class="ic_image_no"/>  : <span id="valErreur">0</span>
+            Parasites trouvés : <span id="valPara">0</span>/<span id="val_total_para">1</span>
+            <span class="erreurs_space">Erreurs</span> : <span id="valErreur">0</span>
 
             <div id="extra_cursor_pos">
                 <span>X:</span> <span id="posX">0</span>px <span id="my_slash">-</span>
@@ -36,7 +37,7 @@
         </div>
         <div id="question_timer">
             <img src="img/ic_timer.gif" id="ic_image_timer"/>
-            <span id="question_timer_value_staked">0</span><span id="question_timer_value">0:00</span>
+            <span id="question_timer_value">0:00</span>
         </div>
 
         <div id="canvas_belt">
