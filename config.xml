@@ -21,7 +21,7 @@
     <platform name="android" />
 
     <!-- icon -->
-    <icon src="icon.png" />
+    <icon src="logo_EduPalu_square.png" />
 
 
     <!-- no permission required -->
