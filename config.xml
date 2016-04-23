@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.princeyoulou.ama"
-        versionCode = "18" 
+        id          = "com.fcrm.edupalu"
+        versionCode = "1" 
         version     = "1.8" >
     <!-- versionCode is optional and Android only. It must be an integer -->
     
 
-    <name>AMA</name>
+    <name>EduPalu</name>
 
     <description>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, impedit.
+        EduPalu est une application d'information et d'éducation sur le paludisme au Congo
     </description>
 
-    <author href="#" email="princeyoulou@princeyoulou.com">
-        Intense Pixel Studio
+    <author href="http://www.fcrm-congo.com" email="info@fcrm-congo.com">
+        FCRM et Fongwama 
     </author>
 
     <!-- build only for android -->
     <platform name="android" />
 
     <!-- icon -->
-    <icon src="icon.png" />
+    <icon src="logo_EduPalu_square.png" />
 
 
     <!-- no permission required -->
@@ -29,20 +29,24 @@
 
     <preference name="fullscreen" value="false" />
 
-    <!-- call plugin -->
-    <plugin spec="https://github.com/Rohfosho/CordovaCallNumberPlugin.git" source="git" />
-    <plugin name="Cordova Call Number Plugin" />
 
-    <!-- launching of external app -->
-    <access origin="tel:*" launch-external="yes" />
-
-    <!-- make phone numbers clickable like text -->
-    <uses-permission android:autoLink="phone" />
-
+    <!-- splash screen -->
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="1500" />
+    <gap:splash platform="android" gap:qualifier="port-ldpi"  src="res/screen/android/screen-ldpi-portrait.png" />
+    <gap:splash platform="android" gap:qualifier="port-mdpi"  src="res/screen/android/screen-mdpi-portrait.png" />
+    <gap:splash platform="android" gap:qualifier="port-hdpi"  src="res/screen/android/screen-hdpi-portrait.png" />
+    <gap:splash platform="android" gap:qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+    <gap:splash platform="android" gap:qualifier="port-xxhdpi" src="res/screen/android/screen-xxhdpi-portrait.png" />
+    <gap:splash platform="android" gap:qualifier="port-xxxhdpi" src="res/screen/android/screen-xxxhdpi-portrait.png" />
+    <gap:splash src="splash.png" />
 
     <!-- access to external links -->
     <preference name="stay-in-webview" value="false"/>
     <access origin="*" browserOnly="true"/>
 
 </widget>
+
+
 
