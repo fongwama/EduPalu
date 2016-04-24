@@ -42,7 +42,7 @@ img{
 .card{
   position: relative;
   margin-bottom: 20px;
-  margin-right: 10px;
+  /*margin-right: 10px;*/
 }
 
 .card a{
