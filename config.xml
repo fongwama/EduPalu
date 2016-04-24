@@ -3,7 +3,8 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.fcrm.edupalu"
         versionCode = "1" 
-        version     = "1.8" >
+        version     = "1.0" >
+        
     <!-- versionCode is optional and Android only. It must be an integer -->
     
 
