@@ -19,6 +19,9 @@ img{
   align-items: center;
 }
 
+.row {
+  padding-right: 15px;
+}
 
 .jumbotron{
   background-color: #0099cb;
