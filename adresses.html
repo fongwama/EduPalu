@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   	<title>Se soigner ~ EduPalu ~ FCRM &amp; Fongwama</title>
+         
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/adresses.css" />
+</head>
+<body>
+    <header class="jumbotron">
+		<a href="index.html">
+			<img src="img/logo.png" alt="logo EduPalu" class="center-block" />
+		</a>
+    </header>
+	<section class="container">
+       
+
+    <div class="col-md-12">
+
+        <div class="row">
+            <div class="col-md-6">
+
+                    <legend><h1><span class="text-primary">Recherche des pharmacies</h1></legend>
+
+                    <!-- Remplacement du champ select par un input-->
+
+                    <div class="form-group">
+                        <label for="lieux">
+                            <span class="text-uppercase">Nom pharmacie</span>
+                        </label>
+                        <input id="input_name" class="form-control" type="text" value="delo"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input_address">
+                             <span class="text-uppercase">Adresse pharmacie</span>
+                        </label>
+                        <input id="input_address" class="form-control search" type="text" value="gau"/>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <button id="btn_search" class="btn-block btn btn-primary">Rechercher</button>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <button id="btn_search_near" class="btn-block btn btn-primary">La plus proche de ma position</button>    
+                        </div>
+
+                    </div>
+            </div>
+        </div>
+
+        <!-- Zone d'affichage du résultat de la recherche-->
+        <div class="row">
+             <div class="col-md-6">
+                 <div class="panel panel-default">
+                        <div class="panel-heading"> 
+                            <span class="text-primary text-uppercase"><b>Résultats de la recherche</b></span>
+                        </div>
+
+                        <div class="panel-body">
+                            <div id="resultat" class="row">
+                            </div>
+                        </div>
+                </div>       
+            </div>
+        </div>
+
+    </div>
+ </section>
+	 
+	<footer>
+        <p>
+            <a href="http://www.fcrm-congo.com">FCRM</a> &amp; <a href="http://www.fongwama.com">Fongwama</a> - 2016
+        </p>  
+	</footer>
+	
+	
+<!-- inclusion  des fichiers javascript -->
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<!-- Bootstrap JavaScript File Include -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/json_query.min.js"></script>
+<script type="text/javascript" src="data/places_db.json"></script>
+<script type="text/javascript" src="js/adresses_search.js"></script>
+
+</body>
+</html>
