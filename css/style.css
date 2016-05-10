@@ -1,10 +1,12 @@
 html {
     height: 100%;
+    font-size: 14px;
 }
 
 body {
     min-height: 100%;
     position: relative;
+    font-size: 1rem;
     -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75) !important;
     -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75) !important;
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75) !important;
@@ -59,6 +61,7 @@ img{
     left: 0px;
     min-width: 100%;
     margin: 0px;
+    font-size: 1.3rem;
 }
 
 .card-description p{
@@ -82,11 +85,11 @@ article {
     text-align: justify;
 }
 section h1{
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 section h2{
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
 section figcaption {
@@ -121,7 +124,7 @@ footer {
 
 footer p {
     margin: 0px 0px;
-    font-size: 14px;
+    font-size: 1rem;
     color: white;
     text-align: center;
 }
@@ -138,7 +141,7 @@ footer a:link, footer a:visited {
     html {
         margin-left: auto;
         margin-right: auto;
+        font-size: 16px;
     }
-    
 }
 
