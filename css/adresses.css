@@ -1,0 +1,71 @@
+ #resultat h1, h2, ul, li{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+}
+
+a { text-decoration: none; }
+a:hover{
+text-decoration : none;
+}
+#resultat { display: block; margin-top: 10px; }
+#resultat ul { }
+#resultat ul a li { 
+  display: block;
+  width: 100%;
+  height: 145px;
+  box-shadow : 1px 0px 1px #CCCCD0;
+  margin-bottom: 5px;
+  background: #ebebeb;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff) to(#ebebeb));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ebebeb);
+  background-image:    -moz-linear-gradient(top, #ffffff, #ebebeb);
+  background-image:      -o-linear-gradient(top, #ffffff, #ebebeb);
+  background-image:         linear-gradient(top, #ffffff, #ebebeb); 
+}
+
+#resultat ul a { display: block; position: relative; width: 100%; }
+#resultat ul li h2 { font-size: 2.1em; line-height: 1.3em; font-weight: normal; letter-spacing: -0.03em; padding-top: 4px; color: #55678d; }
+#resultat ul li p.desc { color: #555; font-family: Arial, sans-serif; font-size: 1.3em; line-height: 1.3em; white-space: nowrap; overflow: hidden; }
+
+#resultat ul li .contact {bottom: 5px; left: 90px; font-size: 1.2em; font-weight: bold; color: #6ea247; }
+
+
+
+#resultat ul a:hover li h2 { color: #7287b1; }
+#resultat ul a:hover li p.desc { color: #757575;}
+
+#resultat ul a:hover li {
+background: #efefef;
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff) to(#efefef));
+background-image: -webkit-linear-gradient(top, #ffffff, #efefef);
+background-image:    -moz-linear-gradient(top, #ffffff, #efefef);
+background-image:      -o-linear-gradient(top, #ffffff, #efefef);
+background-image:         linear-gradient(top, #ffffff, #efefef);
+}
+
+/** basic media queries (support de differents type d'ecrans)**/
+@media only screen and (max-width: 480px) {
+  #resultat ul li h2 { font-size: 1.75em; }
+  
+  #resultat ul li img.thumbnail { margin-top: 2px; }
+}
+
+@media only screen and (max-width: 320px) {
+  #resultat ul li p.desc { display: none; }
+}
+
+
+/** clearfix **/
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; padding-left:5px }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }
+.black{color:#212121;}
+.gray{color:gray;}
+.distance{font-size:18px;}
