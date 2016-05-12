@@ -7,7 +7,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/quiz_style.css" rel="stylesheet" />
-    <script type="text/javascript" src="js/quiz_questions.js"></script>
+    <script type="text/javascript" src="data/quiz_questions.json"></script>
     <script type="text/javascript" src="js/quiz_engine.js"></script>
 </head>
 <body onload="quiz_start();">
@@ -19,13 +19,13 @@
     <section class="container">
         <h1>Quiz</h1>
         <p>
-        Pour chacune des <span id="welcome_questions_nb"></span> questions suivantes, choisit la réponse correcte.
+        Pour chacune des <span id="welcome_questions_nb"></span> questions suivantes, choisissez la réponse correcte.
         </p>
         <p>
-        Plus tu seras rapide, plus tu marqueras de points.
+        Plus vous serez rapide, plus vous marquerez des points !
         </p>
         <form action="quiz_play.html">
-            <button class="btn btn-primary" type="submit">Commencer la partie</button>
+            <button class="btn btn-primary center-block" type="submit">Commencer la partie</button>
         </form>
     </section>
 	<footer>
