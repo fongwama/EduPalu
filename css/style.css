@@ -95,6 +95,7 @@ section h2{
 section figcaption {
     line-height: 1.2;
     text-align: left;
+    font-style: oblique;
     margin-top: 5px; 
     margin-bottom: 15px; 
 }
@@ -115,6 +116,16 @@ blockquote {
 
 .btn {
     font-size: 1rem;
+}
+
+.credit td {
+    vertical-align:top;
+}
+
+.credit img {
+    height: 100px;
+    width:auto;
+    margin-right: 10px;
 }
 
 footer {
