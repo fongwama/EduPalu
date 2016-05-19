@@ -118,6 +118,16 @@ blockquote {
     font-size: 1rem;
 }
 
+.credit td {
+    vertical-align:top;
+}
+
+.credit img {
+    height: 100px;
+    width:auto;
+    margin-right: 10px;
+}
+
 footer {
     background-color: #0099cb;
     position: absolute;
