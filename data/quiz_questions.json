@@ -147,7 +147,7 @@ var questions = [
             },
             {
                 "text" : "Malaria",
-                "comment": "Tu as trouvé. Félicitation !",
+                "comment": "Vous avez trouvé. Félicitation !",
                 "correct": true,
             },
         ]
@@ -184,7 +184,7 @@ var questions = [
             },
             {
                 "text" : "Non",
-                "comment": "Tu as raison. Seuls les anophèles femelles transmettent le paludisme.",
+                "comment": "Vous avez raison. Seuls les anophèles femelles transmettent le paludisme.",
                 "correct": true,
             },
         ]
