@@ -11,7 +11,7 @@ var questions = [
     "time": 15,
     "answers": [ 
             {
-                "text" : "Un medicament",
+                "text" : "Un médicament",
                 "comment": "Le paludisme est une maladie, responsable en 2015 de 438 000 décès.",
                 "correct": false,
             },
@@ -33,17 +33,17 @@ var questions = [
         ]
     },    
     {
-    "text": "Que dois-tu faire quand tu penses avoir le paludisme ?",
+    "text": "Que devez-vous faire quand vous pensez avoir le paludisme ?",
     "time": 15,
     "answers": [ 
             {
-                "text" : "Aller consulter un medecin",
-                "comment": "Tu as raison. Dès que tu penses avoir un palu, va rapidement consulter un médecin.",
+                "text" : "Aller consulter un médecin",
+                "comment": "Vous avez raison. Dès que vous pensez avoir un palu, allez rapidement consulter un médecin.",
                 "correct": true,
             },
             {
                 "text" : "Prendre des médicaments sans consulter un médecin avant",
-                "comment": "Seul un médecin peut diagnostiquer avec certitude le paludisme et te prescrire les bons médicaments à prendre.",
+                "comment": "Seul un médecin peut diagnostiquer avec certitude le paludisme et prescrire les bons médicaments à prendre.",
                 "correct": false,
             },
             {
@@ -68,8 +68,8 @@ var questions = [
                 "correct": false,
             },
             {
-                "text" : "Fièvre, vomissements, fatigue, diarrhée et le mal de tête",
-                "comment": "Vas consulter un médecin dès que tu ressens ces symptômes.",
+                "text" : "Fièvre, vomissements, maux de tête",
+                "comment": "Allez consulter un médecin dès que vous ressentez ces symptômes. D'autres symptômes peuvent être diarrhées, fatigue.",
                 "correct": true,
             },
             {
@@ -101,12 +101,12 @@ var questions = [
         ]
     },
     {
-    "text" : "Comment peux-tu te protéger efficacement du paludisme pendant ton sommeil ?",
+    "text" : "Comment pouvez-vous vous protéger efficacement du paludisme pendant votre sommeil ?",
     "time": 15,
     "answers": [ 
             {
                 "text" : "En dormant sous une moustiquaire imprégnée d’insecticide",
-                "comment": "La moustiquaire imprégnée d’insecticide est la meilleure protection. Fais attention à ce qu'elle soit sans trou et bien fixée autour du matelas.",
+                "comment": "La moustiquaire imprégnée d’insecticide est la meilleure protection. Veillez à ce qu'elle soit sans trou et bien fixée autour du matelas.",
                 "correct": true,
             },
             {
@@ -190,7 +190,7 @@ var questions = [
         ]
     },
     {
-    "text" : "Quel examen permet de déterminer si tu as le paludisme ?",
+    "text" : "Quel examen permet de déterminer si vous avez le paludisme ?",
     "time": 15,
     "answers": [ 
             {
@@ -211,7 +211,7 @@ var questions = [
         ]
     },
     {
-    "text" : "A part la goutte épaisse, quel autre examen permet de déterminer si tu as le paludisme ?",
+    "text" : "A part la goutte épaisse, quel autre examen permet de diagnostiquer le paludisme ?",
     "time": 15,
     "answers": [ 
             {
@@ -262,39 +262,39 @@ var questions = [
                 "correct": false,
             },
             {
-                "text" : "Dans le sang, à l’intérieur des globules blancs",
+                "text" : "Dans les articulations",
                 "comment": "Les parasites du paludisme se cachent et se multiplient dans les cellules du foie.",
                 "correct": false,
             },
             {
-                "text" : "Dans les cellules du foie",
-                "comment": "Après s'être multipliés dans le foie, les parasites vont ensuite dans la circulation sanguine.",
+                "text" : "Dans le  foie",
+                "comment": "Après s'être multipliés dans le foie, les parasites vont ensuite se rendre dans la circulation sanguine.",
                 "correct": true,
             },
         ]
     },
     {
-    "text" : "Dans le corps humains, où se multiplient les parasites responsable du paludisme jusqu’à provoquer les symptômes de la maladie ?",
+    "text" : "Dans le corps humain, où se multiplient les parasites responsables du paludisme jusqu’à provoquer les symptômes de la maladie ?",
     "time": 15,
     "answers": [ 
             {
-                "text" : "Dans les cellules du foie",
-                "comment": "Lorsque tu ressens les symptômes du paludisme, les parasites se trouvent dans le sang, à l’intérieur des globules rouges.",
+                "text" : "Dans le foie",
+                "comment": "Lorsque vous ressentez les symptômes du paludisme, les parasites se trouvent dans le sang, à l’intérieur des globules rouges.",
                 "correct": false,
             },
             {
                 "text" : "Dans l’estomac",
-                "comment": "Lorsque tu ressens les symptômes du paludisme, les parasites se trouvent dans le sang, à l’intérieur des globules rouges.",
+                "comment": "Lorsque vous ressentez les symptômes du paludisme, les parasites se trouvent dans le sang, à l’intérieur des globules rouges.",
                 "correct": false,
             },
             {
-                "text" : "Dans le sang, à l’intérieur des globules rouges",
-                "comment": "Tu peux alors ressentir les symptômes du paludisme : mal de tête, fatigue, vomissement ou diarrhée.",
+                "text" : "Dans les globules rouges du sang",
+                "comment": "Vous pouvez alors ressentir les symptômes du paludisme : mal de tête, fatigue, vomissement ou diarrhée.",
                 "correct": true,
             },
             {
-                "text" : "Dans les os, au niveau des articulations",
-                "comment": "Lorsque tu ressens les symptômes du paludisme, les parasites se trouvent dans le sang, à l’intérieur des globules rouges.",
+                "text" : "Dans les os",
+                "comment": "Lorsque vous ressentez les symptômes du paludisme, les parasites se trouvent dans le sang, à l’intérieur des globules rouges.",
                 "correct": false,
             },
         ]
@@ -332,7 +332,7 @@ var questions = [
         ]
     },
     {
-    "text" : "Est-ce que tu peux savoir si quelqu’un a le paludisme rien qu’en le regardant ?",
+    "text" : "Est-ce qu'on peut savoir si quelqu’un a le paludisme rien qu’en le regardant ?",
     "time": 15,
     "answers": [ 
             {
@@ -342,27 +342,27 @@ var questions = [
             },
             {
                 "text" : "Non",
-                "comment": "Tu as raison. Seuls un examen de la goutte épaisse ou un test de diagnostic rapide peuvent diagnostiquer le paludisme.",
+                "comment": "Vous avez raison. Seuls un examen de la goutte épaisse ou un test de diagnostic rapide peuvent diagnostiquer le paludisme.",
                 "correct": true,
             },
         ]
     },
     {
-    "text" : "Pourquoi n’y-a-t-il du paludisme que dans les pays chauds ?",
+    "text" : "Le paludisme n'est présent que dans les pays chauds à cause :",
     "time": 15,
     "answers": [ 
             {
-                "text" : "À cause de la pauvreté",
+                "text" : "De la pauvreté",
                 "comment": "Le climat chaud et humide est favorable à la fois au développement des moustiques anophèles et à l’évolution des parasites du paludisme dans ces anophèles.",
                 "correct": false,
             },
             {
-                "text" : "À cause du climat",
+                "text" : "Du climat",
                 "comment": "Le climat chaud et humide est favorable à la fois au développement des moustiques anophèles et à l’évolution des parasites du paludisme dans ces anophèles.",
                 "correct": true,
             },
             {
-                "text" : "À cause des grandes étendues de forêts et de savanes",
+                "text" : "Des grandes étendues de savanes",
                 "comment": "Le climat chaud et humide est favorable à la fois au développement des moustiques anophèles et à l’évolution des parasites du paludisme dans ces anophèles.",
                 "correct": false,
             },
@@ -373,18 +373,18 @@ var questions = [
     "time": 15,
     "answers": [ 
             {
-                "text" : "Les adultes",
-                "comment": "Ce sont les enfants de moins de 5 ans et les femmes enceintes qui meurent le plus du paludisme.",
-                "correct": false,
-            },
-            {
                 "text" : "Les personnes âgées",
                 "comment": "Ce sont les enfants de moins de 5 ans et les femmes enceintes qui meurent le plus du paludisme.",
                 "correct": false,
             },
             {
-                "text" : "Les enfants de moins de 5 ans et les femmes enceintes",
-                "comment": "Il est donc important de protéger particulièrement ces populations.",
+                "text" : "Les enfants de moins de 5 ans",
+                "comment": "Les femmes enceintes sont aussi très fragiles. Il est donc important de protéger particulièrement ces deux populations.",
+                "correct": true,
+            },
+            {
+                "text" : "Les femmes enceintes",
+                "comment": "Les enfants de moins de 5 ans sont aussi très fragiles. Il est donc important de protéger particulièrement ces deux populations.",
                 "correct": true,
             },
             {
@@ -395,43 +395,43 @@ var questions = [
         ]
     },
     {
-    "text" : "Pourquoi les enfants de moins de 5 ans et les femmes enceintes sont-ils les personnes qui meurent le plus du paludisme ?",
+    "text" : "Les enfants de moins de 5 ans et les femmes enceintes sont les personnes qui meurent le plus du paludisme à cause :",
     "time": 15,
     "answers": [ 
             {
-                "text" : "À cause de la nourriture qu’ils mangent",
+                "text" : "De la nourriture qu’ils mangent",
                 "comment": "C’est à cause d’un faible système de défense immunitaire. Le système de défense immunitaire des jeunes enfants n'est pas encore construit et celui des femmes enceintes est diminué par la grossesse.",
                 "correct": false,
             },
             {
-                "text" : "À cause d’un faible système de défense immunitaire",
+                "text" : "D’un faible système de défense immunitaire",
                 "comment": "Le système de défense immunitaire des jeunes enfants n'est pas encore construit et celui des femmes enceintes est diminué par la grossesse.",
                 "correct": true,
             },
             {
-                "text" : "À cause de la faiblesse physique",
+                "text" : "De leur faiblesse physique",
                 "comment": "C’est à cause d’un faible système de défense immunitaire. Le système de défense immunitaire des jeunes enfants n'est pas encore construit et celui des femmes enceintes est diminué par la grossesse.",
                 "correct": false,
             },
         ]
     },
     {
-    "text" : "Où dois-tu acheter les médicaments contre le paludisme prescrits par le médecin ?",
+    "text" : "Où faut-il acheter les médicaments contre le paludisme prescrits par le médecin ?",
     "time": 15,
     "answers": [ 
             {
                 "text" : "Chez les vendeurs ambulants",
-                "comment": "Les vendeurs ambulants ne peuvent pas te garantir des médicaments de bonne qualité. Il faut les acheter dans une pharmacie.",
+                "comment": "Les vendeurs ambulants ne peuvent pas garantir des médicaments de bonne qualité. Il faut les acheter dans une pharmacie.",
                 "correct": false,
             },
             {
                 "text" : "À la pharmacie",
-                "comment": "Seules les pharmacies peuvent te garantir des médicaments de bonne qualité.",
+                "comment": "Seules les pharmacies peuvent garantir des médicaments de bonne qualité.",
                 "correct": true,
             },
             {
                 "text" : "Au marché, chez les vendeurs de médicaments",
-                "comment": "Les vendeurs au marché ne peuvent pas te garantir des médicaments de bonne qualité. Il faut les acheter dans une pharmacie.",
+                "comment": "Les vendeurs au marché ne peuvent pas garantir des médicaments de bonne qualité. Il faut les acheter dans une pharmacie.",
                 "correct": false,
             },
         ]
