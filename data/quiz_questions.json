@@ -441,12 +441,12 @@ var questions = [
     "time": 15,
     "answers": [ 
             {
-                "text" : "récente",
+                "text" : "Récente",
                 "comment": "Le maladie est une maladie très ancienne, déjà connue en Egypte au temps des pharaons.",
                 "correct": false,
             },
             {
-                "text" : "très ancienne",
+                "text" : "Très ancienne",
                 "comment": "Elle était déjà connue en Egypte au temps des pharaons.",
                 "correct": true,
             },
@@ -457,17 +457,17 @@ var questions = [
     "time": 15,
     "answers": [ 
             {
-                "text" : "parce qu'ils sont méchants",
+                "text" : "Pour embêter les humains",
                 "comment": "Les moustiques anophèles femelles se nourissent de sang pour nourrir leurs oeufs.",
                 "correct": false,
             },
             {
-                "text" : "pour se protéger",
+                "text" : "Pour se protéger",
                 "comment": "Les moustiques anophèles femelles se nourissent de sang pour nourrir leurs oeufs.",
                 "correct": false,
             },
             {
-                "text" : "pour se nourrir de sang",
+                "text" : "Pour se nourrir de sang",
                 "comment": "Les moustiques anophèles femelles se nourissent de sang pour nourrir leurs oeufs.",
                 "correct": true,
             },
