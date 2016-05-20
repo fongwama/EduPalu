@@ -57,13 +57,13 @@ function quiz_finish(){
     
     perf = score / score_max * 100;
     if (perf>=0 && perf<50){
-        msg = "Essaie de rejouer. Tu vas certainement t'améliorer";
+        msg = "Essayez de rejouer. Vous allez certainement vous améliorer";
     }
     if (perf>=50 && perf<75){
-        msg = "Tu as fait un bon score mais tu peux sans doute faire mieux. Réessaie.";
+        msg = "Vous avez fait un bon score mais vous pouvez sans doute faire mieux. Réessayez.";
     }
     if (perf>=75 ){
-        msg = "Bravo. Tu as une bonne connaissance du paludisme.";
+        msg = "Bravo. Vous avez une bonne connaissance du paludisme.";
     }	
     $("#comment_2").html(msg);
 }

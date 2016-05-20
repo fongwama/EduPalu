@@ -64,7 +64,7 @@ var questions = [
     "answers": [ 
             {
                 "text" : "Chute des cheveux",
-                "comment": "Les symptômes possible du paludisme sont : fièvre, vomissements, fatigue, diarrhée ou mal de tête.",
+                "comment": "Les symptômes possible du paludisme sont : fièvre, vomissements, fatigue, diarrhée ou maux de tête.",
                 "correct": false,
             },
             {
@@ -74,7 +74,7 @@ var questions = [
             },
             {
                 "text" : "Douleur aux orteils",
-                "comment": "Les symptômes possible du paludisme sont : fièvre, vomissements, fatigue, diarrhée ou mal de tête.",
+                "comment": "Les symptômes possible du paludisme sont : fièvre, vomissements, fatigue, diarrhée ou maux de tête.",
                 "correct": false,
             },
         ]
@@ -147,7 +147,7 @@ var questions = [
             },
             {
                 "text" : "Malaria",
-                "comment": "Tu as trouvé. Félicitation !",
+                "comment": "Vous avez trouvé. Félicitation !",
                 "correct": true,
             },
         ]
@@ -184,7 +184,7 @@ var questions = [
             },
             {
                 "text" : "Non",
-                "comment": "Tu as raison. Seuls les anophèles femelles transmettent le paludisme.",
+                "comment": "Vous avez raison. Seuls les anophèles femelles transmettent le paludisme.",
                 "correct": true,
             },
         ]
@@ -289,7 +289,7 @@ var questions = [
             },
             {
                 "text" : "Dans les globules rouges du sang",
-                "comment": "Vous pouvez alors ressentir les symptômes du paludisme : mal de tête, fatigue, vomissement ou diarrhée.",
+                "comment": "Vous pouvez alors ressentir les symptômes du paludisme : maux de tête, fatigue, vomissement ou diarrhée.",
                 "correct": true,
             },
             {
@@ -433,6 +433,112 @@ var questions = [
                 "text" : "Au marché, chez les vendeurs de médicaments",
                 "comment": "Les vendeurs au marché ne peuvent pas garantir des médicaments de bonne qualité. Il faut les acheter dans une pharmacie.",
                 "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "Le paludisme est une maladie :",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "Récente",
+                "comment": "Le maladie est une maladie très ancienne, déjà connue en Egypte au temps des pharaons.",
+                "correct": false,
+            },
+            {
+                "text" : "Très ancienne",
+                "comment": "Elle était déjà connue en Egypte au temps des pharaons.",
+                "correct": true,
+            },
+        ]
+    },    
+    {
+    "text" : "Pourquoi les moustiques piquent ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "Pour embêter les humains",
+                "comment": "Les moustiques anophèles femelles se nourissent de sang pour nourrir leurs oeufs.",
+                "correct": false,
+            },
+            {
+                "text" : "Pour se protéger",
+                "comment": "Les moustiques anophèles femelles se nourissent de sang pour nourrir leurs oeufs.",
+                "correct": false,
+            },
+            {
+                "text" : "Pour se nourrir de sang",
+                "comment": "Les moustiques anophèles femelles se nourissent de sang pour nourrir leurs oeufs.",
+                "correct": true,
+            },
+        ]
+    }, 
+    {
+    "text" : "Le paludisme est-il une maladie contagieuse ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "Oui",
+                "comment": "Le paludisme n'est pas une maladie contagieuse. On ne peut pas attraper cette maladie en étant en contact ou à proximité d'une personne malade.",
+                "correct": false,
+            },
+            {
+                "text" : "Non",
+                "comment": "On ne peut pas attraper le paludisme en étant en contact ou à proximité d'une personne souffrant du paludisme.",
+                "correct": false,
+            },
+        ]
+    }, 
+    {
+    "text" : "Quelle méthode de diagnostic du paludisme est la plus rapide ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "Test de diagnostic rapide (TDR)",
+                "comment": "Le TDR est un test qui prend 15 à 20 minintes.",
+                "correct": true,
+            },
+            {
+                "text" : "Goutte épaisse",
+                "comment": "Le test de diagnostic rapide (TDR) prend 15 à 20 minintes. C'est la méthode la plus rapide.",
+                "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "En 2014, combien de personnes ont été infectées par le paludisme dans le monde ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "Plus de 200 millions",
+                "comment": "Pour être plus exact, l'organisation mondiale de la santé estime que 246 millions de personnes ont été infectées par le paludisme en 2014.",
+                "correct": true,
+            },
+            {
+                "text" : "200 000",
+                "comment": "L'organisation mondiale de la santé estime que 246 millions de personnes ont été infectées par le paludisme en 2014.",
+                "correct": false,
+            },
+            {
+                "text" : "1 million",
+                "comment": "L'organisation mondiale de la santé estime que 246 millions de personnes ont été infectées par le paludisme en 2014.",
+                "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "Le paludisme est-il une maladie sexuellement transmissible ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "Oui",
+                "comment": "Le paludisme a besoin d'un vecteur (le moustique anophèle femelle) pour être transmis. Ce n'est pas une maladie sexuellement transmissible.",
+                "correct": false,
+            },
+            {
+                "text" : "Non",
+                "comment": "Félicitation. Le paludisme n'est pas une maladie sexuellement transmissible.",
+                "correct": true,
             },
         ]
     },
