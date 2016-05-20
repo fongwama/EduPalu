@@ -489,6 +489,59 @@ var questions = [
             },
         ]
     }, 
+    {
+    "text" : "Quelle méthode de diagnostic du paludisme est la plus rapide ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "Test de diagnostic rapide (TDR)",
+                "comment": "Le TDR est un test qui prend 15 à 20 minintes.",
+                "correct": true,
+            },
+            {
+                "text" : "Goutte épaisse",
+                "comment": "Le test de diagnostic rapide (TDR) prend 15 à 20 minintes. C'est la méthode la plus rapide.",
+                "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "En 2014, combien de personnes ont été infectées par le paludisme dans le monde ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "Plus de 200 millions",
+                "comment": "Pour être plus exact, l'organisation mondiale de la santé estime que 246 millions de personnes ont été infectées par le paludisme en 2014.",
+                "correct": true,
+            },
+            {
+                "text" : "200 000",
+                "comment": "L'organisation mondiale de la santé estime que 246 millions de personnes ont été infectées par le paludisme en 2014.",
+                "correct": false,
+            },
+            {
+                "text" : "1 million",
+                "comment": "L'organisation mondiale de la santé estime que 246 millions de personnes ont été infectées par le paludisme en 2014.",
+                "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "Le paludisme est-il une maladie sexuellement transmissible ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "Oui",
+                "comment": "Le paludisme a besoin d'un vecteur (le moustique anophèle femelle) pour être transmis. Ce n'est pas une maladie sexuellement transmissible.",
+                "correct": false,
+            },
+            {
+                "text" : "Non",
+                "comment": "Félicitation. Le paludisme n'est pas une maladie sexuellement transmissible.",
+                "correct": true,
+            },
+        ]
+    },
 ]
 
 
