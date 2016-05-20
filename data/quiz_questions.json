@@ -436,6 +436,172 @@ var questions = [
             },
         ]
     },
+
+
+    {
+    "text" : "Quelle est la methode non approuvée pour traiter le paludisme ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : " rep 1",
+                "comment": "comment 1",
+                "correct": false,
+            },
+            {
+                "text" : " rep 2",
+                "comment": "Comment 2.",
+                "correct": true,
+            },
+            {
+                "text" : "Rep 3",
+                "comment": "Comment 3",
+                "correct": false,
+            }
+        ]
+    },
+    {
+    "text" : "Quelle est la meilleur methode de diagnostique du paludisme ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : " rep 1",
+                "comment": "comment 1",
+                "correct": false,
+            },
+            {
+                "text" : " rep 2",
+                "comment": "Comment 2.",
+                "correct": true,
+            },
+            {
+                "text" : "Rep 3",
+                "comment": "Comment 3",
+                "correct": false,
+            }
+        ]
+    },
+    {
+    "text" : "Quelle methode de diagnostique du palu ne neccessite pas les competences d'un technicien de laboratoire ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "RDT",
+                "comment": "comment 1",
+                "correct": RAS,
+            },
+            {
+                "text" : "IPTp",
+                "comment": "Comment 2.",
+                "correct": RAS,
+            },
+            {
+                "text" : "Microscope",
+                "comment": "Comment 3",
+                "correct": RAS,
+            }
+        ]
+    },
+    {
+    "text" : "A quelle heure est-il plus risqueux d'attraper le paludisme ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "Le Soir",
+                "comment": "comment 1",
+                "correct": false,
+            },
+            {
+                "text" : "Aucune",
+                "comment": "Comment 2.",
+                "correct": true,
+            },
+            {
+                "text" : "Le matin",
+                "comment": "Comment 3",
+                "correct": false,
+            }
+        ]
+    },
+
+    {
+    "text" : "Les parasites dormants representent une vulnerabilité pour ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "Les medecins",
+                "comment": "comment 1",
+                "correct": RAS,
+            },
+            {
+                "text" : "Sero positifs",
+                "comment": "Comment 2.",
+                "correct": RAS,
+            },
+            {
+                "text" : "Les femmes en seinte",
+                "comment": "Comment 3",
+                "correct": RAS,
+            },
+            {
+                "text" : "Les enfants",
+                "comment": "Comment 4",
+                "correct": RAS,
+            }
+        ]
+    },
+    {
+    "text" : "Quelle est le taux de mortalité approximatif du paludisme dans le monde ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "",
+                "comment": "comment 1",
+                "correct": RAS,
+            },
+            {
+                "text" : "",
+                "comment": "Comment 2.",
+                "correct": RAS,
+            },
+            {
+                "text" : "",
+                "comment": "Comment 3",
+                "correct": RAS,
+            },
+            {
+                "text" : "",
+                "comment": "Comment 4",
+                "correct": RAS,
+            }
+        ]
+    },
+
+    {
+    "text" : "Le paludisme peut etre contagieux par ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "La voix sexuelle",
+                "comment": "comment 1",
+                "correct": false,
+            },
+            {
+                "text" : "Transfusion sanguine",
+                "comment": "Comment 2.",
+                "correct": false,
+            },
+            {
+                "text" : "Contact avec les crachats du malade",
+                "comment": "Comment 3",
+                "correct": false,
+            },
+            {
+                "text" : "Aucune de tous",
+                "comment": "Comment 4",
+                "correct": true,
+            }
+        ]
+    },
 ]
 
 
