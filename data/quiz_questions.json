@@ -64,7 +64,7 @@ var questions = [
     "answers": [ 
             {
                 "text" : "Chute des cheveux",
-                "comment": "Les symptômes possible du paludisme sont : fièvre, vomissements, fatigue, diarrhée ou mal de tête.",
+                "comment": "Les symptômes possible du paludisme sont : fièvre, vomissements, fatigue, diarrhée ou maux de tête.",
                 "correct": false,
             },
             {
@@ -74,7 +74,7 @@ var questions = [
             },
             {
                 "text" : "Douleur aux orteils",
-                "comment": "Les symptômes possible du paludisme sont : fièvre, vomissements, fatigue, diarrhée ou mal de tête.",
+                "comment": "Les symptômes possible du paludisme sont : fièvre, vomissements, fatigue, diarrhée ou maux de tête.",
                 "correct": false,
             },
         ]
@@ -289,7 +289,7 @@ var questions = [
             },
             {
                 "text" : "Dans les globules rouges du sang",
-                "comment": "Vous pouvez alors ressentir les symptômes du paludisme : mal de tête, fatigue, vomissement ou diarrhée.",
+                "comment": "Vous pouvez alors ressentir les symptômes du paludisme : maux de tête, fatigue, vomissement ou diarrhée.",
                 "correct": true,
             },
             {
@@ -437,211 +437,58 @@ var questions = [
         ]
     },
     {
-    "text" : "Quand a été découverte la cause du paludisme?",
+    "text" : "Le paludisme est une maladie :",
     "time": 15,
     "answers": [ 
             {
-                "text" : " 6 novembre 1880",
-                "comment": "La cause de la maladie a été découverte le 6 novembre 1880 à l'hôpital militaire de Constantine en Algérie",
+                "text" : "récente",
+                "comment": "Le maladie est une maladie très ancienne, déjà connue en Egypte au temps des pharaons.",
+                "correct": false,
+            },
+            {
+                "text" : "très ancienne",
+                "comment": "Elle était déjà connue en Egypte au temps des pharaons.",
                 "correct": true,
-            },
-            {
-                "text" : " 3 février 1880",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
-            },
-            {
-                "text" : "14 juillet 1800",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
-            },
-            {
-                "text" : "6 novembre 1980",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
             },
         ]
     },    
-    {
-    "text" : "Est-ce les moustiques meurent après avoir piqué ?",
-    "time": 15,
-    "answers": [ 
-            {
-                "text" : "Oui",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
-            },
-            {
-                "text" : "Non",
-                "comment": "Non, les moustiques femelles piquent les vertébrés pour se nourrir et assurer la maturation de leurs oeufs",
-                "correct": true,
-            },
-        ]
-    },
-
     {
     "text" : "Pourquoi les moustiques piquent ?",
     "time": 15,
     "answers": [ 
             {
-                "text" : "Pour nous donner le paludisme",
-                "comment": "Cette réponse n'est pas correcte",
+                "text" : "parce qu'ils sont méchants",
+                "comment": "Les moustiques anophèles femelles se nourissent de sang pour nourrir leurs oeufs.",
                 "correct": false,
             },
             {
-                "text" : "Par simple plaisir",
-                "comment": "Cette réponse n'est pas correcte",
+                "text" : "pour se protéger",
+                "comment": "Les moustiques anophèles femelles se nourissent de sang pour nourrir leurs oeufs.",
                 "correct": false,
             },
             {
-                "text" : "Pourse se protéger",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
-            },
-            {
-                "text" : "Elle cherchent des protéines dans le sang afin de fabriquer leurs oeufs. Les mâles, comme les femelles",
-                "comment": "Réponse correcte",
+                "text" : "pour se nourrir de sang",
+                "comment": "Les moustiques anophèles femelles se nourissent de sang pour nourrir leurs oeufs.",
                 "correct": true,
             },
         ]
     }, 
-
-    {
-    "text" : "Comment attirons-nous les moustiques ? ",
-    "time": 15,
-    "answers": [ 
-            {
-                "text" : "A cause du parfum que l’on porte",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
-            },
-            {
-                "text" : "A cause du sucre de notre sang",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
-            },
-            {
-                "text" : "Les moustiques repèrent la chaleur corporelle",
-                "comment": "les moustiques repèrent la chaleur corporelle et le gaz carbonique que notre peau dégage. Avec leur yeux, ils voient également nos mouvements.",
-                "correct": true,
-            },
-        ]
-    },  
-
-    {
-    "text" : "Comment protéger efficacement mon bébé contre les moustiques ?",
-    "time": 15,
-    "answers": [ 
-            {
-                "text" : "En le parfumant correctement",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
-            },
-            {
-                "text" : "Installer une moustiquaire autour du lit pour la nuit",
-                "comment": "Cette méthode^préventive est très conseillé",
-                "correct": true,
-            },
-            {
-                "text" : "Morceaux d’oignons dans une soucoupe",
-                "comment": "Cette méthode est efficace mais sur une durée donné",
-                "correct": true,
-            },
-            {
-                "text" : "Expliquer à son bébé c'est quoi le moustique",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
-            },
-        ]
-    },  
-
-    {
-    "text" : "Dans quel genre d'endroit vit le moustique ?",
-    "time": 15,
-    "answers": [ 
-            {
-                "text" : "Les moustiques préfèrent les eaux douces et stagnantes",
-                "comment": "Les mare d'eaux, étangs, bras de rivière ou même pot de fleur vide et rempli d’eau dans un jardin !",
-                "correct": true,
-            },
-            {
-                "text" : "dans les rues",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
-            },
-            {
-                "text" : "Près des des autres moustiques",
-                "comment": "Ceci n'est pas un endroit",
-                "correct": false,
-            },
-        ]
-    },  
-
     {
     "text" : "Le paludisme est-il une maladie contagieuse ?",
     "time": 15,
     "answers": [ 
             {
                 "text" : "Oui",
-                "comment": "Cette réponse n'est pas correcte",
+                "comment": "Le paludisme n'est pas une maladie contagieuse. On ne peut pas attraper cette maladie en étant en contact ou à proximité d'une personne malade.",
                 "correct": false,
             },
             {
                 "text" : "Non",
-                "comment": "On n’attrape pas le paludisme en saluant ou en dormant avec une personne ayant le paludisme",
+                "comment": "On ne peut pas attraper le paludisme en étant en contact ou à proximité d'une personne souffrant du paludisme.",
                 "correct": false,
             },
         ]
     }, 
-
-    {
-    "text" : "Quelles sont les conséquences du paludisme sur la grossesse ?",
-    "time": 15,
-    "answers": [ 
-            {
-                "text" : "L'enfant née avec le paludisme",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
-            },
-            {
-                "text" : "La porteuse ne terminera pas sa grossesse",
-                "comment": "e paludisme peut entraîner : anémie, avortement, accouchement prématuré, faible poids de naissance, décès. ",  
-                "correct": true,
-            },
-            {
-                "text" : "La porteuse et le bébé vont mourir",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
-            },
-            {
-                "text" : "L'accouchement peut-être prématuré",
-                "comment": "Le paludisme peut entraîner : anémie, avortement, accouchement prématuré, faible poids de naissance, décès. ",
-                "correct": false,
-            },
-        ]
-    },
-
-    {
-    "text" : "Les injections sont elles plus efficaces que les comprimés pour traiter le paludisme ?",
-    "time": 15,
-    "answers": [ 
-            {
-                "text" : "Les injections sont plus éfficaces",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
-            },
-            {
-                "text" : "Les comprimés sont plus éfficaces",
-                "comment": "Cette réponse n'est pas correcte",
-                "correct": false,
-            },
-            {
-                "text" : "Ils ont la même éfficacité",
-                "comment": "Les comprimés et les injections ont la même efficacité pour traiter le paludisme. Seul l’agent de santé décide du traitement à appliquer. ",  
-                "correct": true,
-            },
-        ]
-    },                        
 ]
 
 
