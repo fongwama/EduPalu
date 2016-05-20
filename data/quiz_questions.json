@@ -64,7 +64,7 @@ var questions = [
     "answers": [ 
             {
                 "text" : "Chute des cheveux",
-                "comment": "Les symptômes possible du paludisme sont : fièvre, vomissements, fatigue, diarrhée ou mal de tête.",
+                "comment": "Les symptômes possible du paludisme sont : fièvre, vomissements, fatigue, diarrhée ou maux de tête.",
                 "correct": false,
             },
             {
@@ -74,7 +74,7 @@ var questions = [
             },
             {
                 "text" : "Douleur aux orteils",
-                "comment": "Les symptômes possible du paludisme sont : fièvre, vomissements, fatigue, diarrhée ou mal de tête.",
+                "comment": "Les symptômes possible du paludisme sont : fièvre, vomissements, fatigue, diarrhée ou maux de tête.",
                 "correct": false,
             },
         ]
@@ -289,7 +289,7 @@ var questions = [
             },
             {
                 "text" : "Dans les globules rouges du sang",
-                "comment": "Vous pouvez alors ressentir les symptômes du paludisme : mal de tête, fatigue, vomissement ou diarrhée.",
+                "comment": "Vous pouvez alors ressentir les symptômes du paludisme : maux de tête, fatigue, vomissement ou diarrhée.",
                 "correct": true,
             },
             {
@@ -436,6 +436,59 @@ var questions = [
             },
         ]
     },
+    {
+    "text" : "Le paludisme est une maladie :",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "récente",
+                "comment": "Le maladie est une maladie très ancienne, déjà connue en Egypte au temps des pharaons.",
+                "correct": false,
+            },
+            {
+                "text" : "très ancienne",
+                "comment": "Elle était déjà connue en Egypte au temps des pharaons.",
+                "correct": true,
+            },
+        ]
+    },    
+    {
+    "text" : "Pourquoi les moustiques piquent ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "parce qu'ils sont méchants",
+                "comment": "Les moustiques anophèles femelles se nourissent de sang pour nourrir leurs oeufs.",
+                "correct": false,
+            },
+            {
+                "text" : "pour se protéger",
+                "comment": "Les moustiques anophèles femelles se nourissent de sang pour nourrir leurs oeufs.",
+                "correct": false,
+            },
+            {
+                "text" : "pour se nourrir de sang",
+                "comment": "Les moustiques anophèles femelles se nourissent de sang pour nourrir leurs oeufs.",
+                "correct": true,
+            },
+        ]
+    }, 
+    {
+    "text" : "Le paludisme est-il une maladie contagieuse ?",
+    "time": 15,
+    "answers": [ 
+            {
+                "text" : "Oui",
+                "comment": "Le paludisme n'est pas une maladie contagieuse. On ne peut pas attraper cette maladie en étant en contact ou à proximité d'une personne malade.",
+                "correct": false,
+            },
+            {
+                "text" : "Non",
+                "comment": "On ne peut pas attraper le paludisme en étant en contact ou à proximité d'une personne souffrant du paludisme.",
+                "correct": false,
+            },
+        ]
+    }, 
 ]
 
 
