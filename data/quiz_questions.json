@@ -542,6 +542,420 @@ var questions = [
             },
         ]
     },
+
+
+
+
+
+
+    {
+    "text" : "C'est l'anophèle (moustique mâle) qui est le vecteur du paludisme ?",
+    "time": 15,
+    "answers": [
+            {
+                "text" : "Vrai",
+                "comment": "  ",
+                "correct": true,
+            },
+            {
+                "text" : "Faux",
+                "comment": "  ",
+                "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "La piqûre du moustique est inodore. ?",
+    "time": 15,
+    "answers": [
+            {
+                "text" : "Vrai",
+                "comment": "  ",
+                "correct": true,
+            },
+            {
+            "text" : "Faux",
+            "comment": "  ",
+            "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "Le paludisme non compliqué est le plus fréquent avec ?",
+    "time": 15,
+    "answers": [
+            {
+            "text" : "Fièvre parfois élevée",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Fièvre parfois élevée",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Céphalée",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Vomissements",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Splénomégalie",
+            "comment": "  ",
+            "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "Il existe deux types de fièvre quarté et tierce ?",
+    "time": 15,
+    "answers": [
+            {
+            "text" : "Vrai",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Faux",
+            "comment": "  ",
+            "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "Le diagnostic se fait par frottis sanguin ?",
+    "time": 15,
+    "answers": [
+            {
+            "text" : "Vrai",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Faux",
+            "comment": "  ",
+            "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "La quinine est un traitement possible contre le paludisme ?",
+    "time": 15,
+    "answers": [
+            {
+            "text" : "Vrai",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Faux",
+            "comment": "  ",
+            "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "Toute fièvre survenant dans les 3 mois après un séjour en zone endémique évoque le diagnostic d'un paludisme ?",
+    "time": 15,
+    "answers": [
+            {
+            "text" : "Vrai",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Faux",
+            "comment": "  ",
+            "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "La prophylaxie contre le paludisme serait : ?",
+    "time": 15,
+    "answers": [
+            {
+            "text" : "De se protèger des piqures de moustique, surtout la journée",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Vêtements longs le soir",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Eviter les extérieurs la nuit",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Utilisation de répulsifs",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Moustiquaire imprégnée d'insecticide",
+            "comment": "  ",
+            "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "Il existe une chimioprophylaxie contre le paludisme ?",
+    "time": 15,
+    "answers": [
+              {
+              "text" : "Vrai",
+              "comment": "  ",
+              "correct": false,
+              },
+              {
+              "text" : "Faux",
+              "comment": "  ",
+              "correct": false,
+              },
+        ]
+    },
+    {
+    "text" : "La population exposée au paludisme représente : ?",
+    "time": 15,
+    "answers": [
+          {
+          "text" : "Toute la population mondiale",
+          "comment": "  ",
+          "correct": false,
+          },
+          {
+          "text" : "les 2/3 de la population mondiale",
+          "comment": "  ",
+          "correct": false,
+          },
+          {
+          "text" : "la moitié de la population modiale",
+          "comment": "  ",
+          "correct": false,
+          },
+          {
+          "text" : "1/10 de la population mondiale",
+          "comment": "  ",
+          "correct": false,
+          },
+        ]
+    },
+    {
+    "text" : "Un enfant meurt du paludisme toutes les :?",
+    "time": 15,
+    "answers": [
+              {
+              "text" : "Heure",
+              "comment": "  ",
+              "correct": false,
+              },
+              {
+              "text" : "10 minutes",
+              "comment": "  ",
+              "correct": false,
+              },
+              {
+              "text" : "3 minutes",
+              "comment": "  ",
+              "correct": false,
+              },
+              {
+              "text" : "30 secondes",
+              "comment": "  ",
+              "correct": false,
+              },
+        ]
+    },
+    {
+    "text" : "Combien de personnes meurent du paludisme chaque année  :?",
+    "time": 15,
+    "answers": [
+          {
+          "text" : "Un peu moins d'un million",
+          "comment": "  ",
+          "correct": false,
+          },
+          {
+          "text" : "50.000",
+          "comment": "  ",
+          "correct": false,
+          },
+          {
+          "text" : "500.00",
+          "comment": "  ",
+          "correct": false,
+          },
+          {
+          "text" : "2 millions",
+          "comment": "  ",
+          "correct": false,
+          },
+        ]
+    },
+    {
+    "text" : "Comment attrape-t-on le paludisme ?",
+    "time": 15,
+    "answers": [
+            {
+            "text" : "Relation sexuelle",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Piqures de moustique",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Air (toux, crachats, etc)",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Transmission méres enfants pendant la grossesse",
+            "comment": "  ",
+            "correct": false,
+            },
+        ]
+    },
+
+    {
+    "text" : "Quelles sont les conséquences possibles de la maladie à plus ou moins long terme ?",
+    "time": 15,
+    "answers": [
+            {
+            "text" : "Accès repetes de fievre",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "La mort",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Séquelle neurologgique",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Des naissances prématurées",
+            "comment": "  ",
+            "correct": false,
+            },
+        ]
+    },
+
+    {
+    "text" : "A votre avis, de qui dépend une lutte efficace contre le paludisme  ?",
+    "time": 15,
+    "answers": [
+              {
+              "text" : "Les ONGs",
+              "comment": "  ",
+              "correct": false,
+              },
+              {
+              "text" : "Les gouvernements",
+              "comment": "  ",
+              "correct": false,
+              },
+              {
+              "text" : "Les entreprises",
+              "comment": "  ",
+              "correct": false,
+              },
+          ]
+    },
+    {
+    "text" : "Pensez-vous que le paludisme soit curable ?",
+    "time": 15,
+    "answers": [
+            {
+            "text" : "Vrai",
+            "comment": "  ",
+            "correct": false,
+            },
+            {
+            "text" : "Faux",
+            "comment": "  ",
+            "correct": false,
+            },
+      ]
+    },
+    {
+    "text" : "Selon vous, il y a plus d'argent dépensé pour les médicaments contre l'alopécie (calvitie) que pour le paludisme ?",
+    "time": 15,
+    "answers": [
+              {
+              "text" : "Vrai",
+              "comment": "  ",
+              "correct": false,
+              },
+              {
+              "text" : "Faux",
+              "comment": "  ",
+              "correct": false,
+              },
+          ]
+    },
+    {
+    "text" : "Quelles sont les conséquences socio-économiques du paludisme sur les populations concernées ?",
+    "time": 15,
+    "answers": [
+              {
+              "text" : "Des arrets de travail répétés",
+              "comment": "  ",
+              "correct": false,
+              },
+              {
+              "text" : "l'absentéïsme scolaire",
+              "comment": "  ",
+              "correct": false,
+              },
+              {
+              "text" : "Aucune conséquence",
+              "comment": "  ",
+              "correct": false,
+              },
+              {
+              "text" : "L'absoption du budget familial par les soins",
+              "comment": "  ",
+              "correct": false,
+              },
+        ]
+    },
+
+    {
+    "text" : "Avez-vous déjà entendu parler de la Journée Mondiale de Lutte Contre le Paludisme ? Si oui, par quels moyens  ?",
+    "time": 15,
+    "answers": [
+              {
+              "text" : "Par les médias",
+              "comment": "  ",
+              "correct": false,
+              },
+              {
+              "text" : "Par les affiches",
+              "comment": "  ",
+              "correct": false,
+              },
+              {
+              "text" : "Par le bouche à oreille",
+              "comment": "  ",
+              "correct": false,
+              },
+          ]
+    },
+
 ]
 
 
