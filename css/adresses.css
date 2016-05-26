@@ -17,7 +17,6 @@ text-decoration : none;
 #resultat ul a li { 
   display: block;
   width: 100%;
-  height: 145px;
   box-shadow : 1px 0px 1px #CCCCD0;
   margin-bottom: 5px;
   background: #ebebeb;
