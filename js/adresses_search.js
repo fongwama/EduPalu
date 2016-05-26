@@ -1,16 +1,22 @@
 $(document).ready(function(){
-     
-	 
 
+    // add field with all addresse data
+    for (var i=0; i < places.length; i++) 
+    {
+        places[i].address_full = places[i].address1 + places[i].address2 + places[i].city;
+    }
+    
+    
     // loading of pharmacy json database
 	var db = JsonQuery(places);
-  var db_geo;
-
+    var db_geo;
+    
     // When search by pharmacy name
     $("#btn_search").click(function() {
 
         // build query, condition, name like (name.$li)
-        var query = "db.where({'name.$li': /" + $("#input_name").val() + "/i}).exec()";
+        re = new RegExp($("#input_name").val(), "i");
+        var query = "db.where({'name.$li': " + re + "}).or({'address_full.$li': " + re + "}).exec()";
 
         // build results content (construction du résultat de la recherche)
         var content = "<ul>";
@@ -20,19 +26,17 @@ $(document).ready(function(){
 
         // Construction des item de la recherche (résultat)
         for (var i=0; i < results.length; i++) {
-
            // row ${i}
            content += "<a href='#' class='feed'><li class='clearfix'>";
            //content +=  "<img src='img/"+results[i].photo +"' alt='thumb' class='thumbnail'>";
            content +=  "<h2>"+results[i].name +"</h2><br/>";
-           content +=  "<span class='desc'>"+ results[i].address + "</span>";
+           content +=  "<span class='desc'>"+ results[i].address1 + "</span><br />";
+           content +=  "<span class='desc'>"+ results[i].address2 + "</span>";
            content +=  "<p class='desc'>"+ results[i].city +"</p>";
            content +=  "<span class='contact'>"+ results[i].tel1 +" | "+results[i].tel2 +"</span>"; 
            content += "</li></a>";
         }
-        
         content += "</ul>";
-       // alert(content);
 
         $("#resultat").html(content);
         //$("#results").html(content);
@@ -70,7 +74,7 @@ $(document).ready(function(){
 
     function getPharmacies(lat1, lon1)
     {
-
+        
          Number.prototype.toRad = function() {
            return this * Math.PI / 180;
           }
@@ -101,7 +105,8 @@ $(document).ready(function(){
                 "distance":d,
                 "id"      :places[i].id,
                 "city"    :places[i].city,
-                "address" :places[i].address,
+                "address1" :places[i].address1,
+                "address2" :places[i].address2,
                 "name"    :places[i].name,
                 "tel1"    :places[i].tel1,
                 "tel2"    :places[i].tel2
@@ -152,7 +157,8 @@ $(document).ready(function(){
            //content +=  "<img src='img/"+results[i].photo +"' alt='thumb' class='thumbnail'>";
            content +=  "<h2>"+results[i].name +"</h2>";           
            content +=  "<span class='contact'>Distance :</span><span class='black distance'> "+ distance +"</span><br/>";
-           content +=  "<span class='desc'>"+ results[i].address + "</span>";
+           content +=  "<span class='desc'>"+ results[i].address1 + "</span>";
+            content +=  "<span class='desc'>"+ results[i].address2 + "</span>";
            content +=  "<p class='desc'>"+ results[i].city +"</p>";
            content +=  "<span class='contact'>"+ results[i].tel1 +" | "+results[i].tel2 +"</span>";
            content += "</li></a>";

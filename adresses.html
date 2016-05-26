@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   	<title>Se soigner ~ EduPalu ~ FCRM &amp; Fongwama</title>
+   	<title>Trouver une pharmacie ~ EduPalu ~ FCRM &amp; Fongwama</title>
          
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -23,35 +23,22 @@
         <div class="row">
             <div class="col-md-6">
 
-                    <legend><h1><span class="text-primary">Recherche des pharmacies</h1></legend>
+                    <legend><h1><span class="text-primary">Trouver une pharmacie</h1></legend>
 
                     <!-- Remplacement du champ select par un input-->
 
                     <div class="form-group">
                         <label for="lieux">
-                            <span class="text-uppercase">Nom pharmacie</span>
+                            <span class="text-uppercase">nom, adresse, ville...</span>
                         </label>
-                        <input id="input_name" class="form-control" type="text" value="delo"/>
+                        <input id="input_name" class="form-control" type="text" value="brazza"/>
                     </div>
 
-                    <div class="form-group">
-                        <label for="input_address">
-                             <span class="text-uppercase">Adresse pharmacie</span>
-                        </label>
-                        <input id="input_address" class="form-control search" type="text" value="gau"/>
 
-                    </div>
+                    <button id="btn_search" class="btn-block btn btn-primary">Rechercher</button>
 
-                    <div class="row">
-                        <div class="col-md-6 form-group">
-                            <button id="btn_search" class="btn-block btn btn-primary">Rechercher</button>
-                        </div>
+                    <button id="btn_search_near" class="btn-block btn btn-primary">La plus proche de ma position</button>    
 
-                        <div class="col-md-6 form-group">
-                            <button id="btn_search_near" class="btn-block btn btn-primary">La plus proche de ma position</button>    
-                        </div>
-
-                    </div>
             </div>
         </div>
 
