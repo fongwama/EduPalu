@@ -547,6 +547,27 @@ var questions = [
             },
         ]
     },
+    {
+    "text" : "Quelle proportion des décès dus au paludisme se trouvent en Afrique subsaharienne ?",
+    "time": 15,
+    "answers": [
+            {
+                "text" : "50 %",
+                "comment": "90 % des décès dus au paludisme se trouvent en Afrique subsaharienne.",
+                "correct": false,
+            },
+            {
+                "text" : "90 %",
+                "comment": "L'Afrique subsaharienne est très impactée par le paludisme.",
+                "correct": true,
+            },
+            {
+                "text" : "10 %",
+                "comment": "90 % des décès dus au paludisme se trouvent en Afrique subsaharienne.",
+                "correct": false,
+            },
+        ]
+    },
 ]
 
 
