@@ -547,6 +547,126 @@ var questions = [
             },
         ]
     },
+
+
+
+
+
+
+    {
+    "text" : "Sous quelle forme le paludisme est-il jugée non compliqué ?",
+    "time": 15,
+    "answers": [
+            {
+            "text" : "Forme légère de paludisme",
+            "comment": " Le paludisme non compliqué est la forme légère de paludisme qui provoque généralement de la fièvre, avec ou sans maux de tête, de la fatigue, des douleurs musculaires, des douleurs abdominales, des nausées et des vomissements.  ",
+            "correct": true,
+            },
+            {
+            "text" : "Forme Severe du paludisme",
+            "comment": "Le paludisme sévère avec une insuffisance rénale, des difficultés respiratoires, des pertes de connaissance et éventuellement des décès. ",
+            "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "Le diagnostic se fait- il par frottis sanguin ?",
+    "time": 15,
+    "answers": [
+            {
+            "text" : "Vrai",
+            "comment": "Le diagnostic est confirmé par la mise en évidence du Plasmodium dans le sang par un examen au microscope par les techniques de frottis sanguin et de goutte épaisse (diagnostic parasitologique).",
+            "correct": true,
+            },
+            {
+            "text" : "Faux",
+            "comment": "La confirmation d'un sujet atteint du paludisme est fait par un examen au microscope ",
+            "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "La quinine est-elle un traitement possible contre le paludisme ?",
+    "time": 15,
+    "answers": [
+            {
+            "text" : "Oui",
+            "comment": "La quinine est la forme générique du médicament Qualaqui marque-nom, un médicament utilisé pour traiter le paludisme simple à P.Falciparum",
+            "correct": true,
+            },
+            {
+            "text" : "Non",
+            "comment": "La quinine a été le premier médicament efficace contre le paludisme",
+            "correct": false,
+            },
+        ]
+    },
+    {
+    "text" : "Que represente la population exposée au paludisme ?",
+    "time": 15,
+    "answers": [
+          {
+          "text" : "Toute la population mondiale",
+          "comment": "Le paludisme touche certaines zones",
+          "correct": false,
+          },
+          {
+          "text" : "Prés de la moitié de la population,
+          "comment": "Environ 3,2 milliards de personnes dans le monde – près de la moitié de la population mondiale – sont exposées au risque de paludisme. ",
+          "correct": true,
+          },
+        ]
+    },
+    {
+    "text" : "En combien de temps un enfant africain meurt du paludisme?",
+    "time": 15,
+    "answers": [
+              {
+              "text" : "30 secondes",
+              "comment": "Faux selon les estimations de OMS ",
+              "correct": false,
+              },
+              {
+              "text" : "Entre 1 min 22 sec et 2 min 22 sec",
+              "comment": "En utilisant le nombre de décès l'OMS a estimé cette durée ",
+              "correct": true,
+              },
+        ]
+    },
+    {
+    "text" : "Combien d'enfants africains meurent du paludisme chaque année ?",
+    "time": 15,
+    "answers": [
+          {
+          "text" : "Un million",
+          "comment": "Les données estimatif, on était données par OMS. ",
+          "correct": false,
+          },
+          {
+          "text" : "Entre 212.000 et 384.000 ",
+          "comment": "En raison de la variation dans les données à travers le continent, l’OMS estime le nombre de décès le plus élevé et celui le faible peuvent être attribués au paludisme",
+          "correct": true,
+          },
+        ]
+    },
+
+
+    {
+    "text" : "Lesquelles devrait lutter efficacement contre le paludisme  ?",
+    "time": 15,
+    "answers": [
+              {
+              "text" : "Les ONGs",
+              "comment": "  ",
+              "correct": false,
+              },
+              {
+              "text" : "Les gouvernements",
+              "comment": "  ",
+              "correct": true,
+              },
+          ]
+    },
 ]
 
 
