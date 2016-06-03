@@ -80,7 +80,7 @@ var questions = [
         ]
     },
     {
-    "text" : "Quel insect transmet le paludisme ?",
+    "text" : "Quel insecte transmet le paludisme ?",
     "time": 15,
     "answers": [ 
             {
@@ -97,6 +97,11 @@ var questions = [
                 "text" : "Le moustique",
                 "comment": "On dit que le moustique est le <em>vecteur</em> du paludisme.",
                 "correct": true,
+            },
+            {
+                "text" : "Le fourou",
+                "comment": "C'est le moustique qui transmet le paludisme.",
+                "correct": false,
             },
         ]
     },
