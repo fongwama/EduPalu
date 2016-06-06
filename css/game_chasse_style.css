@@ -4,17 +4,20 @@
 
 section{
     padding-bottom: 10px;
-    overflow: scroll;
+    /*overflow: scroll;*/
 }
 #my_canvas_container{
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    width: 100%; 
 }
 #my_canvas{
     position: relative;
     overflow: hidden;
+    margin: auto;
 }
+
 #canvas_belt{
     position: relative;
     display: inline-block;
@@ -85,7 +88,7 @@ section{
     display: inline-block;
     font: bold 12pt arial;
     padding: 3px 0px 3px 0px;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 #question, #question_score, #question_next_replay {
     display: inline-block;
@@ -95,17 +98,17 @@ section{
 }
 
 .buttons_container{
-    margin-bottom: 60px;
+    margin-bottom: 60px; 
 }
 .my_btn{
     display: inline-block;
     float: left;
-    width: 48%;
+    width: 49%;
     height: 35px;
 }
 
 .my_btn_right{
-   margin-left: 1.8%;
+   margin-left: 1.5%;
    position: relative;
 }
 #question_timer, #question_next_replay {
@@ -145,9 +148,10 @@ section{
         margin-bottom: 0px;
     }
 
+    /*
     #my_canvas{
         overflow-x: scroll;
-    }
+    }*/
 
 }
 @media (max-height: 660px  ) {

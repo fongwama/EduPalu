@@ -47,14 +47,15 @@ var myHeight= choixObjet.height;
 //creation des references utiles
 var canvas = document.getElementById('my_canvas');
 var canvas_context;
-var canvas_image;
+var canvas_scaled_image_dim;
 var imgWidth;
 var imgHeight;
 var canvas_belt = $('#canvas_belt');
+var canvas_container_width;
 var image;
 var image_timer_stoped = new Image();
 var textReussites = $("#valPara"), textErreurs = $("#valErreur");
-var text_felicitations = $('#message_fin');
+var text_felicitations = $('#question');
 var posX = $("#posX"), posY = $("#posY");
 var timer_view = document.getElementById("question_timer_value");
 
@@ -70,32 +71,45 @@ function chasse_para_play(){
 	togleAffichage = false;
     is_game_over = false;
 
+	canvas_container_width = $('#my_canvas_container').css('width');
+
+	//alert(canvas_container_width);
+
 	showHide();
 
 	canvas_quotient= 2;
 	imgWidth = (choixObjet.width/canvas_quotient)+2;
-	//alert(imgWidth);
+	//alert(canvas_container_width);
 	imgHeight = (choixObjet.height/canvas_quotient)+1;
 
-	canvas.width  = imgWidth;
+	//on enleve le "px" inclu dans la valeur recuperée
+	if(parseInt(canvas_container_width, 10)<imgWidth){
+		canvas.width = parseInt(canvas_container_width, 10)
+		$('.buttons_container').css('max-width',canvas_container_width+'px');
+	}
+	else{
+		canvas.width = imgWidth;
+		$('.buttons_container').css('max-width',imgWidth+'px');
+	}
+	
 	canvas.height = imgHeight;
 	canvas_context= canvas.getContext('2d');
 
-	$("#my_canvas_container").css({ "width":imgWidth+10+"px"});
+	//$("#my_canvas_container").css({ "width":imgWidth+10+"px"});
 
-	canvas_image = ScaleImage(imgWidth, imgHeight, imgWidth, imgHeight, true);
+	canvas_scaled_image_dim = ScaleImage(imgWidth, imgHeight, imgWidth, imgHeight, true);
 
 	image = new Image();
 
 	image.onload = function() {
-		canvas_context.drawImage(image, canvas_image.targetleft, canvas_image.targettop ,imgWidth,imgHeight);
+		//canvas_context.drawImage(image, canvas_image.targetleft, canvas_image.targettop ,imgWidth,imgHeight);
+		canvas_context.drawImage(image, canvas_scaled_image_dim.targetleft, canvas_scaled_image_dim.targettop ,imgWidth,imgHeight);
+		
 		countdown();
-		image_timer_stoped.src = 'img/ic_timer.png';
+		//image_timer_stoped.src = 'img/ic_timer.png';
 	};
 
 	image.src = 'img/'+choixObjet.picture;
-
-
 }
 
 function ScaleImage(srcwidth, srcheight, targetwidth, targetheight, fLetterBox) {
@@ -124,7 +138,7 @@ function ScaleImage(srcwidth, srcheight, targetwidth, targetheight, fLetterBox) 
 		fScaleOnWidth = !fLetterBox;
 	}
 
-	if (fScaleOnWidth) {
+	if (fScaleOnWidth) 	{
 		result.width = Math.floor(scaleX1);
 		result.height = Math.floor(scaleY1);
 		result.fScaleToTargetWidth = true;
@@ -185,6 +199,7 @@ function renit(){
 	togleAffichage = true;
 	$('.valides').remove();
 
+	text_felicitations.text('Cliquez ou appuyez sur les parasites le plus vite possible.'); 
 	updateScore();
 }
 
@@ -207,7 +222,7 @@ function showHide(isToggle){
 		}
 		else
 		{
-			// L'oposé de ce qui est la haut
+			// L'opposé de ce qui précedev-> (if)
 			$('.valides').show();
 			$("#afficher").text('Cacher');
 
@@ -246,8 +261,8 @@ function validClick(indexPara){
 			newSuccess.css({
 				'top'	:((myTab[indexPara].pos_y+1)/canvas_quotient)+'px',
 				'left'	:((myTab[indexPara].pos_x+1)/canvas_quotient)+'px',
-				'width'	:(myTab[indexPara].size_x+1)/canvas_quotient,
-				'height':(myTab[indexPara].size_y+1)/canvas_quotient
+				'width'	:(myTab[indexPara].size_x+1)/canvas_quotient+'px',
+				'height':(myTab[indexPara].size_y+1)/canvas_quotient+'px'
 			});
 
 			//Ajout
@@ -461,6 +476,7 @@ $("#my_canvas").click(function(e){
 	//Clique sur le button "recommencer"
 $("#recommencer").click(function(e){
 	renit();
+
 
 	clearTimeout(tempo)
 	setTimeout(function(){
