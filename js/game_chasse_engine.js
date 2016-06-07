@@ -53,6 +53,8 @@ var imgHeight;
 var canvas_belt = $('#canvas_belt');
 var canvas_container_width;
 var image;
+var image_error;
+var error_width, error_height, error_margin;
 var image_timer_stoped = new Image();
 var textReussites = $("#valPara"), textErreurs = $("#valErreur");
 var text_felicitations = $('#question');
@@ -156,14 +158,25 @@ function ScaleImage(srcwidth, srcheight, targetwidth, targetheight, fLetterBox) 
 
 function drawError(TabXY){
 
-	var radius = 5/canvas_quotient;
-	canvas_context.beginPath();
-	canvas_context.arc((TabXY[0]+1)/canvas_quotient, ((TabXY[1]+1)/canvas_quotient), radius, 0, 2 * Math.PI, false);
-	canvas_context.fillStyle = 'red';
-	canvas_context.fill();
-	canvas_context.lineWidth = 0;
-	canvas_context.strokeStyle = 'red';
-	canvas_context.stroke();
+	//on utilise le meme Context (canvas_context)
+	if (image_error == null) { 
+            
+            //1ère usage de l'image
+            image_error = new Image();
+            image_error.src = 'img/ic_echecs.png';
+
+            error_width  = 20/canvas_quotient;
+            error_height = 35/canvas_quotient;
+            error_margin = 5*canvas_quotient;
+
+	    image_error.onload = function(){
+			canvas_context.drawImage(image_error,(TabXY[0]-(canvas_quotient*4))/canvas_quotient, (TabXY[1]-error_margin)/canvas_quotient, error_width, error_height);
+		};
+    }
+    else{
+    	    //L'image ayant déjà été chargée en mémoire, on la reutilisa sans la charger à nouveau.
+    	    canvas_context.drawImage(image_error,(TabXY[0]-(canvas_quotient*4))/canvas_quotient, (TabXY[1]-error_margin)/canvas_quotient, error_width, error_height);
+    } 
 }
 
 /*
