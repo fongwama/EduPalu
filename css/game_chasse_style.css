@@ -11,16 +11,19 @@ section{
     margin-left: auto;
     margin-right: auto;
     width: 100%; 
+    border:1px solid red;
 }
 #my_canvas{
+    display: block;
     position: relative;
     overflow: hidden;
-    margin: auto;
+    margin:0 auto; 
+}
 }
 
 #canvas_belt{
     position: relative;
-    display: inline-block;
+    border: 1px thin #727272;
 }
 
 #question{
@@ -98,7 +101,12 @@ section{
 }
 
 .buttons_container{
-    margin-bottom: 60px; 
+    position: relative;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    margin-left: 0 auto;
+    margin-right: 0 auto; 
 }
 .my_btn{
     display: inline-block;
