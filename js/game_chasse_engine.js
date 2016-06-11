@@ -96,12 +96,17 @@ function chasse_para_play(){
 
 	}
 
+	//Alignement dynamique des buttons du bas
 	var tmpCanvas = $(canvas);
 	var childPos  = tmpCanvas.offset();
 	var parentPos = tmpCanvas.parent().offset();
- 
-	$('.buttons_container').css('left',parseInt(childPos.left - parentPos.left,10));
-	
+ 	var canvasOffsetLeft = parseInt(childPos.left - parentPos.left,10);
+	$('.buttons_container').css('left',canvasOffsetLeft);
+	$('#extra_infos').css('left',canvasOffsetLeft);
+
+	//Alignement dynamique du chronometre
+ 	var canvasOffsetRight = $(canvas_belt).width() - (canvasOffsetLeft + tmpCanvas.outerWidth());
+	$('#question_timer').css('right',canvasOffsetRight);
 
 
 	canvas.height = imgHeight;
