@@ -1,4 +1,4 @@
-var parasitesTab = [{ "date": "20160315",'entries':8,
+var parasitesTab = [{ "date": "20160315",'time':40,'entries':8,
   "picture": "game_chasse_Plasmodium_falciparum__Lukas__Wikipedia__PD.jpg","width":1159,"height":745,
   "parasites": [
     {
