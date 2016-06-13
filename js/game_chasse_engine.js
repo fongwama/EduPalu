@@ -84,6 +84,7 @@ function chasse_para_play(){
 	//alert(canvas_container_width);
 	imgHeight = (choixObjet.height/canvas_quotient)+1;
 
+
 	//on enleve le "px" inclu dans la valeur recuperée
 	if(parseInt(canvas_container_width, 10)<imgWidth){
 		canvas.width = parseInt(canvas_container_width, 10)
@@ -91,9 +92,23 @@ function chasse_para_play(){
 	}
 	else{
 		canvas.width = imgWidth;
-		$('.buttons_container').css('max-width',imgWidth+'px');
+		$('.buttons_container').css({'width':imgWidth+'px','left':15});
+
 	}
-	
+
+	//Alignement dynamique des buttons du bas
+	var tmpCanvas = $(canvas);
+	var childPos  = tmpCanvas.offset();
+	var parentPos = tmpCanvas.parent().offset();
+ 	var canvasOffsetLeft = parseInt(childPos.left - parentPos.left,10);
+	$('.buttons_container').css('left',canvasOffsetLeft);
+	$('#extra_infos').css('left',canvasOffsetLeft);
+
+	//Alignement dynamique du chronometre
+ 	var canvasOffsetRight = $(canvas_belt).width() - (canvasOffsetLeft + tmpCanvas.outerWidth());
+	$('#question_timer').css('right',canvasOffsetRight);
+
+
 	canvas.height = imgHeight;
 	canvas_context= canvas.getContext('2d');
 
@@ -110,6 +125,7 @@ function chasse_para_play(){
 		countdown();
 		//image_timer_stoped.src = 'img/ic_timer.png';
 	};
+
 
 	image.src = 'img/'+choixObjet.picture;
 }
@@ -271,16 +287,16 @@ function validClick(indexPara){
 			    newSuccess.attr( 'class','valides' );
 
 			//propriétés de positionnement du contour
-			newSuccess.css({
-				'top'	:((myTab[indexPara].pos_y+1)/canvas_quotient)+'px',
-				'left'	:((myTab[indexPara].pos_x+1)/canvas_quotient)+'px',
-				'width'	:(myTab[indexPara].size_x+1)/canvas_quotient+'px',
-				'height':(myTab[indexPara].size_y+1)/canvas_quotient+'px'
-			});
+			 
 
 			//Ajout
-			newSuccess.appendTo(canvas_belt);
-
+			//newSuccess.appendTo(canvas);
+			 
+			canvas_context.beginPath();
+			canvas_context.lineWidth=3/canvas_quotient;
+			canvas_context.strokeStyle="green";
+			canvas_context.rect((myTab[indexPara].pos_x)/canvas_quotient, (myTab[indexPara].pos_y+1)/canvas_quotient, (myTab[indexPara].size_x)/canvas_quotient, (myTab[indexPara].size_y+1)/canvas_quotient);
+			canvas_context.stroke();
 			//On actualise le Score (sur l'ecran)
 			updateScore();	
 }
