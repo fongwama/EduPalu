@@ -19,11 +19,12 @@
 
 */
 
-var BreakException= {};
 var reussites_count =0;
 var erreurs_count =0;
 var canvas_quotient;
+
 var paraValidees = [];
+
 var cordonneesErreurs = [];
 var cordonneesValides = [];
 
@@ -37,7 +38,7 @@ var choix = getRandomInt(0,0);
 
 	//on recupere l'objet JSON aléatoirement choisi choisi
 var choixObjet = parasitesTab[choix];    
-document.getElementById("val_total_para").innerHTML= choixObjet.entries;
+var totalCanvasPara  = $('#val_total_para');
 
 var myTab   = choixObjet.parasites;  //tableau JSON des positions des parasites
 var myImage = choixObjet.picture;
@@ -47,22 +48,31 @@ var myHeight= choixObjet.height;
 //creation des references utiles
 var canvas = document.getElementById('my_canvas');
 var canvas_context;
-var canvas_image;
+var canvas_scaled_image_dim;
 var imgWidth;
 var imgHeight;
 var canvas_belt = $('#canvas_belt');
+var canvas_container_width;
 var image;
+var image_error;
+var error_width, error_height, error_margin;
 var image_timer_stoped = new Image();
 var textReussites = $("#valPara"), textErreurs = $("#valErreur");
-var text_felicitations = $('#message_fin');
+var text_felicitations = $('#question');
 var posX = $("#posX"), posY = $("#posY");
 var timer_view = document.getElementById("question_timer_value");
 
 //Chrono
-var sec = choixObjet.time+1; //on recupere le temps de Jeu
+var sec = choixObjet.time+1; //on recupere le temps de Jeu par defaut
 var tempo; // le retardateur
 
 var is_game_over = false;
+
+$(document).ready(function() {
+    // run game when the DOM is fully loaded
+    chasse_para_play();
+});
+
 
 // Methodes
 function chasse_para_play(){
@@ -70,32 +80,64 @@ function chasse_para_play(){
 	togleAffichage = false;
     is_game_over = false;
 
+	canvas_container_width = $('#my_canvas_container').css('width');
+
+	//alert(canvas_container_width);
+
 	showHide();
 
 	canvas_quotient= 2;
 	imgWidth = (choixObjet.width/canvas_quotient)+2;
-	//alert(imgWidth);
+	//alert(canvas_container_width);
 	imgHeight = (choixObjet.height/canvas_quotient)+1;
 
-	canvas.width  = imgWidth;
 	canvas.height = imgHeight;
 	canvas_context= canvas.getContext('2d');
 
-	$("#my_canvas_container").css({ "width":imgWidth+10+"px"});
-
-	canvas_image = ScaleImage(imgWidth, imgHeight, imgWidth, imgHeight, true);
-
+	canvas_scaled_image_dim = ScaleImage(imgWidth, imgHeight, imgWidth, imgHeight, true);
 	image = new Image();
 
+	//on enleve le "px" inclu dans la valeur recuperée
+	if(parseInt(canvas_container_width, 10)<imgWidth){
+		canvas.width = parseInt(canvas_container_width, 10)
+		$('.buttons_container').css('max-width',canvas_container_width+'px');
+
+		//mise à jour du tableau de parasites (parasite presents dans le canvas)
+		myTab = getCanvasParasites();
+
+		//Changement du temps de jeu (5 secondes pour chaque parasite)
+		sec =  (5 * myTab.length) +1;
+	}
+	else{
+		canvas.width = imgWidth;
+		$('.buttons_container').css({'width':imgWidth+'px','left':15});
+	}
+
+	totalCanvasPara.text(myTab.length);
+
+	//Alignement dynamique des buttons du bas
+	var tmpCanvas = $(canvas);
+	var childPos  = tmpCanvas.offset();
+	var parentPos = tmpCanvas.parent().offset();
+ 	var canvasOffsetLeft = parseInt(childPos.left - parentPos.left,10);
+	$('.buttons_container').css('left',canvasOffsetLeft);
+	$('#extra_infos').css('left',canvasOffsetLeft);
+
+	//Alignement dynamique du chronometre
+ 	var canvasOffsetRight = $(canvas_belt).width() - (canvasOffsetLeft + tmpCanvas.outerWidth());
+	$('#question_timer').css('right',canvasOffsetRight);
+	
+
 	image.onload = function() {
-		canvas_context.drawImage(image, canvas_image.targetleft, canvas_image.targettop ,imgWidth,imgHeight);
+		//canvas_context.drawImage(image, canvas_image.targetleft, canvas_image.targettop ,imgWidth,imgHeight);
+		canvas_context.drawImage(image, canvas_scaled_image_dim.targetleft, canvas_scaled_image_dim.targettop ,imgWidth,imgHeight);
+		
 		countdown();
-		image_timer_stoped.src = 'img/ic_timer.png';
+		//image_timer_stoped.src = 'img/ic_timer.png';
 	};
 
+
 	image.src = 'img/'+choixObjet.picture;
-
-
 }
 
 function ScaleImage(srcwidth, srcheight, targetwidth, targetheight, fLetterBox) {
@@ -124,7 +166,7 @@ function ScaleImage(srcwidth, srcheight, targetwidth, targetheight, fLetterBox) 
 		fScaleOnWidth = !fLetterBox;
 	}
 
-	if (fScaleOnWidth) {
+	if (fScaleOnWidth) 	{
 		result.width = Math.floor(scaleX1);
 		result.height = Math.floor(scaleY1);
 		result.fScaleToTargetWidth = true;
@@ -142,30 +184,39 @@ function ScaleImage(srcwidth, srcheight, targetwidth, targetheight, fLetterBox) 
 
 function drawError(TabXY){
 
-	var radius = 5/canvas_quotient;
-	canvas_context.beginPath();
-	canvas_context.arc((TabXY[0]+1)/canvas_quotient, ((TabXY[1]+1)/canvas_quotient), radius, 0, 2 * Math.PI, false);
-	canvas_context.fillStyle = 'red';
-	canvas_context.fill();
-	canvas_context.lineWidth = 0;
-	canvas_context.strokeStyle = 'red';
-	canvas_context.stroke();
+	//on utilise le meme Context (canvas_context)
+	if (image_error == null) { 
+            
+            //1ère usage de l'image
+            image_error = new Image();
+            image_error.src = 'img/ic_echecs.png';
+
+            error_width  = 20/canvas_quotient;
+            error_height = 35/canvas_quotient;
+            error_margin = 5*canvas_quotient;
+
+	    image_error.onload = function(){
+			canvas_context.drawImage(image_error,(TabXY[0]-(canvas_quotient*4))/canvas_quotient, (TabXY[1]-error_margin)/canvas_quotient, error_width, error_height);
+		};
+    }
+    else{
+    	    //L'image ayant déjà été chargée en mémoire, on la reutilisa sans la charger à nouveau.
+    	    canvas_context.drawImage(image_error,(TabXY[0]-(canvas_quotient*4))/canvas_quotient, (TabXY[1]-error_margin)/canvas_quotient, error_width, error_height);
+    } 
 }
 
-/*
-function drawSuccess(posX, posY, sizeX, sizeY){
+function drawSuccess(parasite){
+
 	canvas_context.beginPath();
-	canvas_context.rect(posX, posY,sizeX,sizeY);
-	canvas_context.fillStyle = 'red';
-	canvas_context.fill();
-	canvas_context.lineWidth = 0;
-	canvas_context.strokeStyle = 'red';
-	canvas_context.stroke();
+			canvas_context.lineWidth=3/canvas_quotient;
+			canvas_context.strokeStyle="green";
+			canvas_context.rect((parasite.pos_x)/canvas_quotient, (parasite.pos_y+1)/canvas_quotient, (parasite.size_x)/canvas_quotient, (parasite.size_y+1)/canvas_quotient);
+			canvas_context.stroke();
 }
-*/
 
 function updateScore(){
-	textReussites.text(reussites_count);
+	//textReussites.text(reussites_count);
+	textReussites.text(paraValidees.length);
 	textErreurs.text(erreurs_count);
 }
 
@@ -177,29 +228,28 @@ function getRandomInt(min, max) {
 function renit(){
 	//On reinitialise les variables à 0(Zero) ensuite on rafraichi l'affichage
 
-	reussites_count =0;
-	erreurs_count   =0;
-	paraValidees    =[];
-	cordonneesErreurs = [];
-	sec = choixObjet.time+1;
+	
+	
+	cordonneesErreurs =[];
 	togleAffichage = true;
-	$('.valides').remove();
+	erreurs_count  = 0;
+	paraValidees   = [];
+	sec = choixObjet.time+1;
 
+	text_felicitations.text('Cliquez ou appuyez sur les parasites le plus vite possible.'); 
 	updateScore();
 }
 
 function showHide(isToggle){
 
 		if(togleAffichage){
-			 //si c'est true alors on cache tous les points de reussite
-			 $('.valides').hide();
-
+			
 			//On change la valeur du text dans le button Afficher/Cacher
 			 $("#afficher").text('Afficher');
 
 			//on redessine l'image de la lame qui est sauvegardée dans la variable "image"
 			if(isToggle){
-				canvas_context.drawImage(image, canvas_image.targetleft, canvas_image.targettop ,imgWidth,imgHeight);
+				canvas_context.drawImage(image, canvas_scaled_image_dim.targetleft, canvas_scaled_image_dim.targettop ,imgWidth,imgHeight);
 			}
 
 			//On signale à notre code que l'etat est maintenant "Cacher"
@@ -207,16 +257,22 @@ function showHide(isToggle){
 		}
 		else
 		{
-			// L'oposé de ce qui est la haut
-			$('.valides').show();
+			// L'opposé de ce qui précede -> (if)
 			$("#afficher").text('Cacher');
 
 			if(isToggle){
 				cordonneesErreurs.forEach(function(erreurObj, index, tab){
 
 					window.setTimeout(function(){
-						drawError(erreurObj)
-					}, 300);
+						drawError(erreurObj);
+					}, 15);
+				});
+
+				paraValidees.forEach(function(parasiteObj, index, tab){
+
+					window.setTimeout(function(){
+						drawSuccess(parasiteObj);
+					}, 10);
 				});
 			}
 			togleAffichage = true;
@@ -230,28 +286,13 @@ function affichePosition(x,y){
 
 	//Cette fonction sert à dessiner(afficher) le contour sur le parasite
 function validClick(indexPara){
-	       //On incremente le nombre de reussites
-			reussites_count++;
-			
-			//On ajoute l'index actuel dans la liste des parasites déjà trouvées
-			paraValidees.push(indexPara);
-			
-			//on crée un contour pour la parasite
-				  //C'est ici que l'on va creer le point de reussite à l'endroit du click
-		    var newSuccess = document.createElement('span');
-			    newSuccess = $(newSuccess);
-			    newSuccess.attr( 'class','valides' );
+	       			
+			//On recupere le parasite dans le tableau(myTab) et on l'ajoute dans la liste des parasites trouvées
+			var tmpPara = myTab[indexPara];
+			paraValidees.push(tmpPara);
 
-			//propriétés de positionnement du contour
-			newSuccess.css({
-				'top'	:((myTab[indexPara].pos_y+1)/canvas_quotient)+'px',
-				'left'	:((myTab[indexPara].pos_x+1)/canvas_quotient)+'px',
-				'width'	:(myTab[indexPara].size_x+1)/canvas_quotient,
-				'height':(myTab[indexPara].size_y+1)/canvas_quotient
-			});
-
-			//Ajout
-			newSuccess.appendTo(canvas_belt);
+			//On envoi le parasite à la fonction drawSuccess qui se charge de le dessiner sur le canvas.
+			drawSuccess(tmpPara);
 
 			//On actualise le Score (sur l'ecran)
 			updateScore();	
@@ -286,15 +327,12 @@ function verification(valX, valY)
 				else
 				{
 					//Si le parasite trouvé est nouveau
-					if(paraValidees.indexOf(index) == -1)
-					{
+					if(paraValidees.indexOf(index) == -1)					{
 					   validClick(index);
 					}
-					else
-					{
+					else{
 						// Parasite déja trouvé
 					   alert("Parasite déja trouvé ! ");   //  +myTab[index].id);
-
 					}
 
 					//On sort de la boucle
@@ -303,11 +341,10 @@ function verification(valX, valY)
 			}
 			else  //erreur **********************************
 			{
-
 			   // Lorsqu'on fini de parcourrir le tableau des parasites et que les
 			  //  coordonnées du "click" ne correspondent à rien
-			  if((index+1) == tab.length)
-			  {
+			  if((index+1) == tab.length){
+
 				  //On incremente le nombre d'erreurs
 				  erreurs_count++;
 
@@ -322,11 +359,8 @@ function verification(valX, valY)
 
 				  //On rafraichi le score(sur l'ecran) pour voir notre nombre d'erreurs
 				  updateScore();
-			  }
-			   
-			}
-			 
-
+			  }  
+			} 
 		/* sleep(1);  ici je veux faire reposer le thread
 		   (Permettre au jeu de ne point planter le navigateur quelque soit le nombre de parasites   valides à rechercher sur l'image.
 		   Meme si l'on a autour d'une 1000 parasites.
@@ -338,11 +372,41 @@ function verification(valX, valY)
 		if (e!==BreakException) throw e;
 	 }
 
-	if(reussites_count == choixObjet.entries){
+	if(paraValidees.length == myTab.length){
 		clearTimeout(tempo);
 		game_over();
 	}
+}
 
+function getCanvasParasites(){
+
+	var myTmpTab = [];
+	var canvasWidth = canvas.width;
+
+	myTab.some(
+		function(parasiteObj, index, tab){
+					 
+				if( intersect(parasiteObj, canvasWidth) ){
+					//alert('appartient '+index);
+					myTmpTab.push(parasiteObj);
+				}
+	});
+
+	return myTmpTab;
+}
+
+
+function intersect(parasite, canvasWidth) {
+
+	//On considere un parasite si au moins "1/4" (le quart) de sa taille est visible dans le canvas.
+	return ( ((parasite.pos_x/canvas_quotient) +  ((parasite.size_x/canvas_quotient)/4))  < canvasWidth);
+
+	/* Vu que nous redimensionnant l'image seulement sur l'axe horizontal (X), nous prenons en compte juste la coordonnée X du parasite*/
+}
+
+
+function BreakException(message){
+	alert(message);
 }
 
 
@@ -393,11 +457,6 @@ function game_over(){
 	text_felicitations.html(temp_ecoule+"Bravo ou Desolé, encore entrain de travailler sur ce message &#x263A");
 	text_felicitations.focus();
 }
-
-
-$('.valides').click(function(e){
-	alert('parasite déjà trouvée !');
-});
 
 	//recuperation du positionnement de la souri lors du survol
 $("#my_canvas").mousemove(function(e){
@@ -461,6 +520,7 @@ $("#my_canvas").click(function(e){
 	//Clique sur le button "recommencer"
 $("#recommencer").click(function(e){
 	renit();
+
 
 	clearTimeout(tempo)
 	setTimeout(function(){

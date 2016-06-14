@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz ~ FCRM &amp; Fongwama</title>
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <title>Chasse Aux Parasites ~ FCRM &amp; Fongwama</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/game_chasse_style.css" rel="stylesheet" />
 </head>
-<body onload="chasse_para_play();">
+<body>
 <header class="jumbotron">
     <a href="index.html">
         <img src="img/logo.png" alt="logo EduPalu" class="center-block" />
@@ -17,40 +17,42 @@
 <section class="container">
     <div id="question">
         Cliquez ou appuyez sur les parasites le plus vite possible.
-    </div>
-    <div id="message_fin"> </div>
+    </div> 
     <div id="question_header">
-
-
     </div>
 
     <div id="my_canvas_container" >
 
         <div id="extra_infos" >
-            Parasites trouvés : <span id="valPara">0</span>/<span id="val_total_para">1</span>
+            Parasites trouvés : <span id="valPara">0</span>/<span id="val_total_para">0</span>
             <span class="erreurs_space">Erreurs</span> : <span id="valErreur">0</span>
 
-            <div id="extra_cursor_pos">
+            <!--<div id="extra_cursor_pos">
                 <span>X:</span> <span id="posX">0</span>px <span id="my_slash">-</span>
                 <span>Y:</span> <span id="posY">0</span>px
-            </div>
+            </div>-->
         </div>
+         
         <div id="question_timer">
-            <img src="img/ic_timer.gif" id="ic_image_timer"/>
+            <!-- l'icone du chronometre <img src="img/ic_timer.gif" id="ic_image_timer"/> -->
             <span id="question_timer_value">0:00</span>
         </div>
 
-        <div id="canvas_belt">
-            <canvas id="my_canvas"></canvas>
+        <div id="canvas_belt"> 
+                <canvas id="my_canvas"></canvas>
+       
         </div>
 
-        <div class="buttons_container">
+        <div class="btn-grou buttons_container">
             <button id="afficher" class="btn btn-primary my_btn" type="submit">Cacher</button>
             <button id="recommencer" class="btn btn-primary my_btn my_btn_right" type="submit">Recommencer</button>
         </div>
     </div>
+    
+    
+    <div class="span6" style="max-width: 500px; width:100%">
 
-
+    </div>
 
 
 </section>
