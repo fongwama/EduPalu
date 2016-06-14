@@ -68,6 +68,12 @@ var tempo; // le retardateur
 
 var is_game_over = false;
 
+$(document).ready(function() {
+    // run game when the DOM is fully loaded
+    chasse_para_play();
+});
+
+
 // Methodes
 function chasse_para_play(){
 
@@ -398,9 +404,11 @@ function intersect(parasite, canvasWidth) {
 	/* Vu que nous redimensionnant l'image seulement sur l'axe horizontal (X), nous prenons en compte juste la coordonnée X du parasite*/
 }
 
-function BreakException(message = "Exception inconue"){
+
+function BreakException(message){
 	alert(message);
 }
+
 
 function countdown(){
 
