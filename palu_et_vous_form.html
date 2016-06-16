@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire de recueil de données ~ EduPalu ~ FCRM &amp; Fongwama</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/adresses.css" />
+</head>
+<body>
+<header class="jumbotron">
+    <a href="index.html">
+        <img src="img/logo.png" alt="logo EduPalu" class="center-block" />
+    </a>
+</header>
+
+<section class="container">
+
+
+    <div class="col-md-12">
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <legend><h1><span class="text-primary">Recueil de données</span></h1></legend>
+
+                <form id="form_palu_et_vous" action="#" method="post">
+
+                    <fieldset class="form-group">
+                        <label>Vous êtes : </label><br>
+                        <input id="hom" type="radio" name="identite" value="homme"/> un homme<br>
+                        <input id="fem" type="radio" name="identite" value="femme"/> une femme
+                        <span id="etatenceinte" style="display: none"><input type="checkbox" name="etat" value=""/>enceinte</span>
+                    </fieldset>
+                    <legend></legend>
+                    <fieldset class="form-group">
+                        <label>Quel âge avez-vous ? </label><br>
+                        <input id="age"  type="number" name="age" class="col-sm-2"/><span> ans</span>
+                    </fieldset>
+                    <legend></legend>
+                    <fieldset class="form-group">
+                        <label>Quand sont apparus les premiers symptômes ? </label>
+                        <input id="dateS"  type="date" name="date" />
+                    </fieldset>
+                    <legend></legend>
+                    <fieldset class="form-group">
+                        <label>Avez-vous consulté un médecin pour diagnostiquer ce paludisme ?</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question" id="oui" value="oui" checked> oui
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question" id="non" value="non"> non
+                        </label>
+                    </fieldset>
+                    <legend></legend>
+                    <fieldset class="form-group">
+                        <label>Comment le paludisme a-t-il été diagnostiqué ?</label>
+
+                                <input type="checkbox" name="op1" id="op1" class="ch"/> je ne sais pas <br>
+
+                                <input type="checkbox" name="op2" id="op2" class="ch"/> uniquement à partir des symptomes (fièvres, frisson...) <br>
+
+
+                                <input type="checkbox" name="op3" id="op3" class="ch"/> goutte épaisse <br>
+
+                                <input type="checkbox" name="op4" id="op4" class="ch"/> test de diagnostic rapide (TDR) <br>
+
+                                <input type="checkbox" name="op5" id="op5" class="ch"/> QBC <br>
+
+                                <input type="checkbox" name="op6" id="op6" class="ch"/> autre <br>
+                                <textarea rows="3" id="op6Text" name="op6Text" class="form-control" style="display: none"></textarea>
+                    </fieldset>
+                    <legend></legend>
+                    <fieldset class="form-group">
+                        <label>Quel traitement avez-vous pris contre le paludisme ?</label>
+
+                        <input type="checkbox" name="op12" id="op12" class="ch2" /> aucun <br>
+
+                        <input type="checkbox" name="op22" id="op22" class="ch2"/> antipalidéen : <br>
+                        <select class="form-control" id="select22" style="display: none">
+                            <option>--Choix du traitement--</option>
+                            <option>Malarone</option>
+                            <option>Riamet</option>
+                            <option>Coartem</option>
+                            <option>Nivaquine</option>
+                            <option>Lariam</option>
+                            <option>Doxypalu</option>
+                            <option>Paludrine</option>
+                            <option>Savadrine </option>
+                        </select>
+
+                        <input type="checkbox" name="op32" id="op32" class="ch2"/> médecine traditionnelle : <br>
+                        <input type="text" id="op32Text" name="op32Text" class="form-control" style="display: none"/>
+
+                        <input type="checkbox" name="op42" id="op42" class="ch2"/> autre <br>
+                        <input type="text" id="op42Text" name="op42Text" class="form-control" style="display: none"/>
+
+                    </fieldset>
+                    <legend></legend>
+
+                    <fieldset class="form-group">
+                        <label>Pendant combien de jours ?  </label><br>
+                        <input id="jour"  type="number" name="jour" class="col-sm-2"/><span> jour(s)</span>
+                    </fieldset>
+                    <legend></legend>
+
+                    <fieldset class="form-group">
+                        <label>Où avez-vous obtenu votre traitement ? </label><br>
+                        <input id="l1" type="radio" name="lieu" value="dans une pharmacie"/> dans une pharmacie<br>
+                        <input id="l2" type="radio" name="lieu" value="auprès d'un vendeur ambulant"/> auprès d'un vendeur ambulant, au marché ou dans la rue <br>
+                        <input id="l3" type="radio" name="lieu" value="auprès d'un guérisseur"/> auprès d'un guérisseur, tradi-praticien
+                    </fieldset>
+                    <legend></legend>
+
+                    <fieldset class="form-group">
+                        <label>Pouvez-vous préciser votre zone d'habitation ?</label>
+
+                        <label> Ville : </label><br>
+                        <select class="form-control" id="selectVille">
+                            <option>--Choix d'une ville--</option>
+                            <option>Brazzaville</option>
+                            <option>Pointe - Noire</option>
+                            <option>Dolisie</option>
+                            <option>OYO</option>
+                            <option>EWO</option>
+                        </select>
+
+                        <label>Quartier ou arrondissement : </label>
+                        <input type="text" id="quartier_arrondi" name="quartier_arrondi" class="form-control"/>
+
+                    </fieldset>
+                    <legend></legend>
+
+
+                    <input class="btnValider btn btn-primary center-block" type="submit" value="Envoyer">
+                </form>
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+</section>
+
+<footer>
+    <p>
+        <a href="http://www.fcrm-congo.com">FCRM</a> &amp; <a href="http://www.fongwama.com">Fongwama</a> - 2016
+    </p>
+</footer>
+
+
+<!-- inclusion  des fichiers javascript -->
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<!-- Bootstrap JavaScript File Include -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/palu_et_vous.js"></script>
+<script type="application/javascript" src="js/backend.js"></script>
+
+</body>
+</html>
