@@ -37,7 +37,7 @@
                     <legend></legend>
                     <fieldset class="form-group">
                         <label>Quel âge avez-vous ? </label><br>
-                        <input id="age"  type="number" name="age" class="col-sm-2"/><span> ans</span>
+                        <input id="age"  type="number" name="age" min="0" max="130" class="col-sm-2"/><span> ans</span>
                     </fieldset>
                     <legend></legend>
                     <fieldset class="form-group">
@@ -48,10 +48,10 @@
                     <fieldset class="form-group">
                         <label>Avez-vous consulté un médecin pour diagnostiquer ce paludisme ?</label>
                         <label class="radio-inline">
-                            <input type="radio" name="question" id="oui" value="oui" checked> oui
+                            <input type="radio" name="question" id="oui" value="oui" /> oui
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="question" id="non" value="non"> non
+                            <input type="radio" name="question" id="non" value="non" /> non
                         </label>
                     </fieldset>
                     <legend></legend>
@@ -70,7 +70,7 @@
                                 <input type="checkbox" name="op5" id="op5" class="ch"/> QBC <br>
 
                                 <input type="checkbox" name="op6" id="op6" class="ch"/> autre <br>
-                                <textarea rows="3" id="op6Text" name="op6Text" class="form-control" style="display: none"></textarea>
+                                <textarea rows="3" id="op6Text" name="op6Text" placeholder="Indiquez ici comment le pludisme a été diagnostiqué" class="form-control" style="display: none"></textarea>
                     </fieldset>
                     <legend></legend>
                     <fieldset class="form-group">
@@ -92,17 +92,17 @@
                         </select>
 
                         <input type="checkbox" name="op32" id="op32" class="ch2"/> médecine traditionnelle : <br>
-                        <input type="text" id="op32Text" name="op32Text" class="form-control" style="display: none"/>
+                        <input type="text" id="op32Text" name="op32Text" placeholder="Indiquez ici quelle médecine traditionnelle vous avez pris." class="form-control" style="display: none"/>
 
                         <input type="checkbox" name="op42" id="op42" class="ch2"/> autre <br>
-                        <input type="text" id="op42Text" name="op42Text" class="form-control" style="display: none"/>
+                        <input type="text" id="op42Text" name="op42Text" placeholder="Indiquez ici quel autre traitement vous avez pris." class="form-control" style="display: none"/>
 
                     </fieldset>
                     <legend></legend>
 
                     <fieldset class="form-group">
-                        <label>Pendant combien de jours ?  </label><br>
-                        <input id="jour"  type="number" name="jour" class="col-sm-2"/><span> jour(s)</span>
+                        <label>Pendant combien de jours avez-vous pris ce traitement ?  </label><br>
+                        <input id="jour"  type="number" name="jour" min="1" class="col-sm-2"/><span> jour(s)</span>
                     </fieldset>
                     <legend></legend>
 
@@ -121,14 +121,24 @@
                         <select class="form-control" id="selectVille">
                             <option>--Choix d'une ville--</option>
                             <option>Brazzaville</option>
-                            <option>Pointe - Noire</option>
                             <option>Dolisie</option>
-                            <option>OYO</option>
-                            <option>EWO</option>
+                            <option>Ewo</option>
+                            <option>Gamboma</option>
+                            <option>Impfondo</option>
+                            <option>Kinkala</option>
+                            <option>Madingou</option>
+                            <option>Makoua</option>
+                            <option>Mossendjo</option>
+                            <option>Nkayi</option>
+                            <option>Ouesso</option>
+                            <option>Owando</option>
+                            <option>Oyo</option>
+                            <option>Pointe-Noire</option>
+                            <option>Sibiti</option>
                         </select>
 
                         <label>Quartier ou arrondissement : </label>
-                        <input type="text" id="quartier_arrondi" name="quartier_arrondi" class="form-control"/>
+                        <input type="text" id="quartier_arrondi" name="quartier_arrondi" placeholder="Indiquez ici votre quartier ou votre arrondissement" class="form-control"/>
 
                     </fieldset>
                     <legend></legend>
