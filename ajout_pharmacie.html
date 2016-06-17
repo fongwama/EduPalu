@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajouter pharmacies ~ EduPalu ~ FCRM &amp; Fongwama</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/adresses.css" />
+</head>
+<body>
+<header class="jumbotron">
+    <a href="index.html">
+        <img src="img/logo.png" alt="logo EduPalu" class="center-block" />
+    </a>
+</header>
+<section class="container">
+
+
+    <div class="col-md-12">
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <legend><h1><span class="text-primary">Ajoutez des pharmacies</span></h1></legend>
+
+                <form id="form_pharmacie" class="ajax-pharma-json" action="api/AddPharma.php" method="post">
+
+                    <div class="form-group">
+                        <label for="input_name">
+                            <span class="text-uppercase">Nom pharmacie</span>
+                        </label>
+                        <input id="input_name" name="nom" class="form-control" type="text" value=""/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input_address">
+                            <span class="text-uppercase">Adresse pharmacie</span>
+                        </label>
+                        <input id="input_address" name="adresse" class="form-control search" type="text" value=""/>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input_ville">
+                            <span class="text-uppercase">Ville</span>
+                        </label>
+                        <input id="input_ville" name="ville" class="form-control search" type="text" value=""/>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input_contact">
+                            <span class="text-uppercase">Contact pharmacie</span>
+                        </label>
+                        <input id="input_contact" name="contact" class="form-control search" type="text" value=""/>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input_quartier">
+                            <span class="text-uppercase">Quartier ou Arrondissement</span>
+                        </label>
+                        <input id="input_quartier" name="quartier" class="form-control search" type="text" value=""/>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input_numero">
+                            <span class="text-uppercase">Numéro ou mail de l'envoyeur</span>
+                        </label>
+                        <input id="input_numero" name="numero" class="form-control search" type="text" value=""/>
+
+                    </div>
+
+
+                    <input class="btnAjouter btn-block btn btn-primary" type="submit" value="Ajouter">
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<footer>
+    <p>
+        <a href="http://www.fcrm-congo.com">FCRM</a> &amp; <a href="http://www.fongwama.com">Fongwama</a> - 2016
+    </p>
+</footer>
+
+
+<!-- inclusion  des fichiers javascript -->
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<!-- Bootstrap JavaScript File Include -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="application/javascript" src="js/backend.js"></script>
+
+</body>
+</html>
