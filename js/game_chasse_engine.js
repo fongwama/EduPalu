@@ -1,32 +1,13 @@
-/* var parasites = {
-	
-	"parasites":[ 
-	{
-		id: "para1",
-    	pos_x: 79,
-    	pos_y: 69,
-    	size_x: 46,
-    	size_y: 46
-	} 
-	],
-	 "image":"../images/image1.jpj"
-
-	};
-
- 
-	
-	 
-
-*/
+/*www.fongwama.com @2015*/
 
 var reussites_count =0;
 var erreurs_count =0;
 var canvas_quotient;
 
-var paraValidees = [];
+var paraIndexValides = [];
 
-var cordonneesErreurs = [];
-var cordonneesValides = [];
+var coordonneesErreurs = [];
+var coordonneesValides = [];
 
 var butAC = "";
 var togleAffichage = true;
@@ -200,7 +181,7 @@ function drawError(TabXY){
 		};
     }
     else{
-    	    //L'image ayant déjà été chargée en mémoire, on la reutilisa sans la charger à nouveau.
+    	    //L'image ayant déjà été chargée en mémoire, on la reutilisa sans la charger à nouveau. (HTML5)
     	    canvas_context.drawImage(image_error,(TabXY[0]-(canvas_quotient*4))/canvas_quotient, (TabXY[1]-error_margin)/canvas_quotient, error_width, error_height);
     } 
 }
@@ -215,8 +196,8 @@ function drawSuccess(parasite){
 }
 
 function updateScore(){
-	//textReussites.text(reussites_count);
-	textReussites.text(paraValidees.length);
+	
+	textReussites.text(coordonneesValides.length);
 	textErreurs.text(erreurs_count);
 }
 
@@ -228,12 +209,12 @@ function getRandomInt(min, max) {
 function renit(){
 	//On reinitialise les variables à 0(Zero) ensuite on rafraichi l'affichage
 
-	
-	
-	cordonneesErreurs =[];
+	coordonneesErreurs =[];
+	coordonneesValides =[];
+
 	togleAffichage = true;
 	erreurs_count  = 0;
-	paraValidees   = [];
+    paraIndexValides   = [];
 	sec = choixObjet.time+1;
 
 	text_felicitations.text('Cliquez ou appuyez sur les parasites le plus vite possible.'); 
@@ -261,14 +242,14 @@ function showHide(isToggle){
 			$("#afficher").text('Cacher');
 
 			if(isToggle){
-				cordonneesErreurs.forEach(function(erreurObj, index, tab){
+				coordonneesErreurs.forEach(function(erreurObj, index, tab){
 
 					window.setTimeout(function(){
 						drawError(erreurObj);
 					}, 15);
 				});
 
-				paraValidees.forEach(function(parasiteObj, index, tab){
+				coordonneesValides.forEach(function(parasiteObj, index, tab){
 
 					window.setTimeout(function(){
 						drawSuccess(parasiteObj);
@@ -289,7 +270,11 @@ function validClick(indexPara){
 	       			
 			//On recupere le parasite dans le tableau(myTab) et on l'ajoute dans la liste des parasites trouvées
 			var tmpPara = myTab[indexPara];
-			paraValidees.push(tmpPara);
+			coordonneesValides.push(tmpPara);
+
+			 // - Pour verifier facilement le "Parasite deja trouvé" il faut un tableau d'index 
+			//  - sans ce tableau, on va boucler coordoneesValides en comparant par example les "id"
+			paraIndexValides.push(indexPara);
 
 			//On envoi le parasite à la fonction drawSuccess qui se charge de le dessiner sur le canvas.
 			drawSuccess(tmpPara);
@@ -317,7 +302,7 @@ function verification(valX, valY)
 				&& (valY >= parasite.pos_y && (valY <= (parasite.pos_y + parasite.size_y))))
 			{
 				//Si le tableau des parasites trouvés est vide
-				if(paraValidees.length == 0)
+				if(coordonneesValides.length == 0)
 				{
 					validClick(index);
 					
@@ -327,7 +312,7 @@ function verification(valX, valY)
 				else
 				{
 					//Si le parasite trouvé est nouveau
-					if(paraValidees.indexOf(index) == -1)					{
+					if(paraIndexValides.indexOf(index) == -1)					{
 					   validClick(index);
 					}
 					else{
@@ -345,26 +330,28 @@ function verification(valX, valY)
 			  //  coordonnées du "click" ne correspondent à rien
 			  if((index+1) == tab.length){
 
-				  //On incremente le nombre d'erreurs
-				  erreurs_count++;
+				    //On incremente le nombre d'erreurs
+				    erreurs_count++;
 
 				  	var tmpTab = [];
 				    tmpTab.push(valX);  // LEFT
 				  	tmpTab.push(valY);  // TOP
 
-				  	cordonneesErreurs.push(tmpTab);
+				  	coordonneesErreurs.push(tmpTab);
 
 				  	//on dessine l'erreur sur le canvas
 				  	drawError(tmpTab);
 
-				  //On rafraichi le score(sur l'ecran) pour voir notre nombre d'erreurs
-				  updateScore();
+				    //On rafraichi le score(sur l'ecran) pour voir notre nombre d'erreurs
+				    updateScore();
 			  }  
 			} 
+
 		/* sleep(1);  ici je veux faire reposer le thread
 		   (Permettre au jeu de ne point planter le navigateur quelque soit le nombre de parasites   valides à rechercher sur l'image.
 		   Meme si l'on a autour d'une 1000 parasites.
-		*/		
+		*/	
+
 	 	});  //End forEach
 	 }
 	 catch(e)
@@ -372,7 +359,8 @@ function verification(valX, valY)
 		if (e!==BreakException) throw e;
 	 }
 
-	if(paraValidees.length == myTab.length){
+	 //On a trouvé tous les parasites, fin du jeu
+	if(coordonneesValides.length == myTab.length){
 		clearTimeout(tempo);
 		game_over();
 	}
@@ -406,7 +394,7 @@ function intersect(parasite, canvasWidth) {
 
 
 function BreakException(message){
-	alert(message);
+	//alert(message);
 }
 
 
@@ -439,7 +427,7 @@ function game_over(){
 
 	//$("#comment_1").html("<p>Le jeu est terminé !</p>");
 
-	//var score = paraValidees.length / choixObjet.entries * 100;
+	//var score = coordonneesValides.length / choixObjet.entries * 100;
 	/*
 	if (score>=0 && score<50){
 		msg = "Essayez de rejouer. Vous allez certainement vous améliorez";
@@ -476,7 +464,7 @@ $("#my_canvas").mousemove(function(e){
 	affichePosition(valX, valY);
 });
 
-	//on renitialise les cordonnées à zéro, x=0, y=0
+	//on renitialise les coordonnées à zéro, x=0, y=0
 $("#my_canvas").mouseout(function(e){
 	
 	//On appelle la fonction d'affichage
