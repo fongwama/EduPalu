@@ -104,7 +104,7 @@ section{
     position: relative;
     display: block;
     margin-top: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 .my_btn{
     display: inline-block;
@@ -131,6 +131,13 @@ section{
 
 #question_footer {
     margin-top: 5px;
+}
+
+
+/*Buttons */
+#afficher, #recommencer{
+    display: none;
+    height: 0px;
 }
 
 @media (max-width: 500px  ) {
