@@ -217,6 +217,9 @@ function renit(){
     paraIndexValides   = [];
 	sec = choixObjet.time+1;
 
+	$('#afficher').hide();
+	$('#recommencer').hide();
+
 	text_felicitations.text('Cliquez ou appuyez sur les parasites le plus vite possible.'); 
 	updateScore();
 }
@@ -426,7 +429,7 @@ function game_over(){
 	//$('#ic_image_timer').attr({'src':"img/ic_timer.png"});
 	$('#afficher').show();
 	$('#recommencer').show();
-	$('#quitter').css('margin-top','5px');
+	$('#quitter').css('margin-top','3px');
 	//$("#comment_1").html("<p>Le jeu est terminé !</p>");
 
 	//var score = coordonneesValides.length / choixObjet.entries * 100;
