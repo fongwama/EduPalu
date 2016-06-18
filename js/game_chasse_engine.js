@@ -20,8 +20,7 @@ var choix = getRandomInt(0,0);
 	//on recupere l'objet JSON aléatoirement choisi choisi
 var choixObjet = parasitesTab[choix];    
 var totalCanvasPara  = $('#val_total_para');
-
-var myTab   = choixObjet.parasites;  //tableau JSON des positions des parasites
+var myTab = choixObjet.parasites;  //tableau JSON des positions des parasites etc...
 var myImage = choixObjet.picture;
 var myWidth = choixObjet.width;
 var myHeight= choixObjet.height;
@@ -76,7 +75,7 @@ function chasse_para_play(){
 	canvas_context= canvas.getContext('2d');
 
 	canvas_scaled_image_dim = ScaleImage(imgWidth, imgHeight, imgWidth, imgHeight, true);
-	image = new Image();
+	image = new Image();	
 
 	//on enleve le "px" inclu dans la valeur recuperée
 	if(parseInt(canvas_container_width, 10)<imgWidth){
@@ -101,6 +100,7 @@ function chasse_para_play(){
 	var childPos  = tmpCanvas.offset();
 	var parentPos = tmpCanvas.parent().offset();
  	var canvasOffsetLeft = parseInt(childPos.left - parentPos.left,10);
+
 	$('.buttons_container').css('left',canvasOffsetLeft);
 	$('#extra_infos').css('left',canvasOffsetLeft);
 
@@ -217,6 +217,9 @@ function renit(){
     paraIndexValides   = [];
 	sec = choixObjet.time+1;
 
+	// On initialise à  myTab ici pour prendre en compte le click sur le button "recommencer".
+	myTab = choixObjet.parasites;
+	
 	$('#afficher').hide();
 	$('#recommencer').hide();
 
