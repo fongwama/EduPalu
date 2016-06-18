@@ -423,8 +423,10 @@ function countdown(){
 //Game finish
 function game_over(){
 	is_game_over = true;
-	$('#ic_image_timer').attr({'src':"img/ic_timer.png"});
-
+	//$('#ic_image_timer').attr({'src':"img/ic_timer.png"});
+	$('#afficher').show();
+	$('#recommencer').show();
+	$('#quitter').css('margin-top','5px');
 	//$("#comment_1").html("<p>Le jeu est terminé !</p>");
 
 	//var score = coordonneesValides.length / choixObjet.entries * 100;

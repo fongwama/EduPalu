@@ -137,13 +137,22 @@ section{
 /*Buttons */
 #afficher, #recommencer{
     display: none;
-    height: 0px;
+    position: relative;
 }
+
+#quitter{
+    position: relative;
+    margin-top:10px;
+    width: 99.8%;
+}
+
+
 
 @media (max-width: 500px  ) {
 
     .buttons_container{
-        margin-bottom: 0px;
+        margin-bottom: 3px;
+        position: relative;
     }
 
     /*
