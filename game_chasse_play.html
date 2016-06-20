@@ -15,8 +15,8 @@
     </a>
 </header>
 <section class="container">
-    <div id="question">
-        Cliquez ou appuyez sur les parasites le plus vite possible.
+    <div id="message">
+    Cliquez ou appuyez sur les parasites le plus vite possible.
     </div> 
     <div id="question_header">
     </div>
@@ -34,35 +34,33 @@
         </div>
          
         <div id="question_timer">
-            <!-- l'icone du chronometre <img src="img/ic_timer.gif" id="ic_image_timer"/> -->
             <span id="question_timer_value">0:00</span>
         </div>
 
         <div id="canvas_belt"> 
                 <canvas id="my_canvas"></canvas>
-       
+        </div>
+        <div id="score_next">
+            <div id="score">
+                Score : <span id="score_value">0</span>
+            </div>
+            <button id="next" class="btn btn-primary">Suivant</button>
         </div>
 
-        <div class="btn-grou buttons_container">
-            <button id="afficher" class="btn btn-primary my_btn" type="submit">Cacher</button>
-            <button id="recommencer" class="btn btn-primary my_btn my_btn_right" type="submit">Recommencer</button>
+        <div>
+            <a href="index.html"><button id="quitter" class="btn btn-primary">Quitter</button></a>
         </div>
-    </div>
-    
-    
-    <div class="span6" style="max-width: 500px; width:100%">
 
     </div>
-
-
 </section>
+
 <footer>
     <p>
         <a href="http://www.fcrm-congo.com">FCRM</a> &amp; <a href="http://www.fongwama.com">Fongwama</a> - 2016
     </p>
 </footer>
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="js/game_chasse_Plasmodium_falciparum__Lukas__Wikipedia__PD.js"></script>
+<script type="text/javascript" src="data/parasites.json"></script>
 <script type="text/javascript" src="js/game_chasse_engine.js"></script>
 
 </body>
