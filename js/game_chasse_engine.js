@@ -409,9 +409,16 @@ function game_over(success){
         showMissedParasites();
     } else {
         $('#message').html("Bravo, vous avez trouvé tous les parasites.");
+        // update score
+        // score_new = score_old + time_left - 2 x errors
+        var score = parseInt($('#score_value').text()) + parseInt(sec) - 2 * erreurs_count;
+        // no negativ score ;-)
+        if (score < 0) {
+            score = 0;
+        }
+        $('#score_value').html( score );
     }
-    // update score
-    $('#score_value').html( parseInt($('#score_value').text()) + parseInt(sec) );
+    
     // display next button
     if (pictures_order.length != 0) {
         $('#next').css({'display': 'inline-block'});
