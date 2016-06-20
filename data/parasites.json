@@ -1,0 +1,151 @@
+var time_per_para = 5
+var pictures = [
+    { 
+        "date": "20160315",
+        "filename": "para1.jpg",
+        "width": 1159,
+        "height": 745,
+        "source": "Plasmodium falciparum, Lukas, Wikipedia",
+        "objects": [
+            {
+                id: "para1",
+                type: "schizont",
+                pos_x: 638,
+                pos_y: 488,
+                size_x: 77,
+                size_y: 75
+            },
+            {
+                id: "para2",
+                type: "mature trophozoite",
+                pos_x: 171,
+                pos_y: 345,
+                size_x: 44,
+                size_y: 51
+            },
+            {
+                id: "para3",
+                type: "ring-form trophozoites",
+                pos_x: 165,
+                pos_y: 0,
+                size_x: 52,
+                size_y: 43
+            },    
+            {
+                id: "para4",
+                type: "ring-form trophozoites",
+                pos_x: 799,
+                pos_y: 271,
+                size_x: 48,
+                size_y: 46
+            },    
+            {
+                id: "para5",
+                type: "ring-form trophozoites",
+                pos_x: 898,
+                pos_y: 92,
+                size_x: 51,
+                size_y: 49
+            },
+            {
+                id: "para6",
+                type: "ring-form trophozoites",
+                pos_x: 946,
+                pos_y: 445,
+                size_x: 35,
+                size_y: 38
+            },
+            {
+                id: "para7",
+                type: "ring-form trophozoites",
+                pos_x: 917,
+                pos_y: 541,
+                size_x: 35,
+                size_y: 36
+            },
+            {
+                id: "para8",
+                type: "ring-form trophozoites",
+                pos_x: 950,
+                pos_y: 531,
+                size_x: 42,
+                size_y: 43
+            }
+        ]
+    },
+    { 
+        "date": "20160613",
+        "filename": "para2.jpg",
+        "width": 1200,
+        "height": 900,
+        "source": "FCRM",
+        "objects": [
+            {
+                id: "para1",
+                type: "ring-form trophozoites",
+                pos_x: 288,
+                pos_y: 342,
+                size_x: 90,
+                size_y: 84
+            },
+            {
+                id: "para2",
+                type: "ring-form trophozoites",
+                pos_x: 326,
+                pos_y: 418,
+                size_x: 68,
+                size_y: 54
+            },
+            {
+                id: "para3",
+                type: "ring-form trophozoites",
+                pos_x: 178,
+                pos_y: 796,
+                size_x: 66,
+                size_y: 68
+            },    
+        ]
+    },
+    { 
+        "date": "20160613",
+        "filename": "para3.jpg",
+        "width": 1200,
+        "height": 900,
+        "source": "FCRM",
+        "objects": [
+            {
+                id: "para1",
+                type: "ring-form trophozoites",
+                pos_x: 51,
+                pos_y: 320,
+                size_x: 72,
+                size_y: 72
+            },
+            {
+                id: "para2",
+                type: "ring-form trophozoites",
+                pos_x: 350,
+                pos_y: 193,
+                size_x: 67,
+                size_y: 79
+            },
+            {
+                id: "para3",
+                type: "ring-form trophozoites",
+                pos_x: 906,
+                pos_y: 461,
+                size_x: 62,
+                size_y: 69
+            },
+            {
+                id: "para4",
+                type: "ring-form trophozoites",
+                pos_x: 1118,
+                pos_y: 69,
+                size_x: 57,
+                size_y: 77
+            },  
+        ]
+    },
+];
+    
