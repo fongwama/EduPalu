@@ -43,7 +43,7 @@ var posX = $("#posX"), posY = $("#posY");
 var timer_view = document.getElementById("question_timer_value");
 
 //Chrono
-var sec = choixObjet.time+1; //on recupere le temps de Jeu par defaut
+var sec = 5//choixObjet.time+1; //on recupere le temps de Jeu par defaut
 var tempo; // le retardateur
 
 var is_game_over = false;
@@ -86,7 +86,7 @@ function chasse_para_play(){
 		myTab = getCanvasParasites();
 
 		//Changement du temps de jeu (5 secondes pour chaque parasite)
-		sec =  (5 * myTab.length) +1;
+		sec =5//  (5 * myTab.length) +1;
 	}
 	else{
 		canvas.width = imgWidth;
@@ -195,6 +195,31 @@ function drawSuccess(parasite){
 			canvas_context.stroke();
 }
 
+function drawUnfound(){
+
+	var timeAnim = 500;
+	myTab.forEach(function(parasiteObj, index, tab){
+
+		if(paraIndexValides.indexOf(index) == -1){
+				
+			window.setTimeout(function()
+			{
+				canvas_context.beginPath();
+				canvas_context.lineWidth=2.5/canvas_quotient;
+				canvas_context.strokeStyle="blue";
+				canvas_context.setLineDash([5,5,3,3]);
+				canvas_context.rect((myTab[index].pos_x)/canvas_quotient, (myTab[index].pos_y+1)/canvas_quotient, (myTab[index].size_x)/canvas_quotient, (myTab[index].size_y+1)/canvas_quotient);
+				canvas_context.stroke();
+
+			}, timeAnim);
+
+		 timeAnim +=1500/(myTab.length - paraIndexValides.length);
+		}
+		
+	});
+	
+}
+
 function updateScore(){
 	
 	textReussites.text(coordonneesValides.length);
@@ -215,7 +240,7 @@ function renit(){
 	togleAffichage = true;
 	erreurs_count  = 0;
     paraIndexValides   = [];
-	sec = choixObjet.time+1;
+	sec = 5//choixObjet.time+1;
 
 	// On initialise à  myTab ici pour prendre en compte le click sur le button "recommencer".
 	myTab = choixObjet.parasites;
@@ -452,6 +477,8 @@ function game_over(){
 
 	text_felicitations.html(temp_ecoule+"Bravo ou Desolé, encore entrain de travailler sur ce message &#x263A");
 	text_felicitations.focus();
+
+	drawUnfound();
 }
 
 	//recuperation du positionnement de la souri lors du survol
