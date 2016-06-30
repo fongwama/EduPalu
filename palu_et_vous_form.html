@@ -17,10 +17,7 @@
 </header>
 
 <section class="container">
-
-
     <div class="col-md-12">
-
         <div class="row">
             <div class="col-md-6">
 
@@ -37,12 +34,7 @@
                     <legend></legend>
                     <fieldset class="form-group">
                         <label>Quel âge avez-vous ? </label><br>
-                        <input id="age"  type="number" name="age" min="0" max="130" class="col-sm-2"/><span> ans</span>
-                    </fieldset>
-                    <legend></legend>
-                    <fieldset class="form-group">
-                        <label>Quand sont apparus les premiers symptômes ? </label>
-                        <input id="dateS"  type="date" name="date" />
+                        <input id="age"  type="number" name="age" min="0" max="130" class="col-sm-2"/><span>&nbsp; ans</span>
                     </fieldset>
                     <legend></legend>
                     <fieldset class="form-group">
@@ -56,21 +48,13 @@
                     </fieldset>
                     <legend></legend>
                     <fieldset class="form-group">
-                        <label>Comment le paludisme a-t-il été diagnostiqué ?</label>
-
-                                <input type="checkbox" name="op1" id="op1" class="ch"/> je ne sais pas <br>
-
-                                <input type="checkbox" name="op2" id="op2" class="ch"/> uniquement à partir des symptomes (fièvres, frisson...) <br>
-
-
-                                <input type="checkbox" name="op3" id="op3" class="ch"/> goutte épaisse <br>
-
-                                <input type="checkbox" name="op4" id="op4" class="ch"/> test de diagnostic rapide (TDR) <br>
-
-                                <input type="checkbox" name="op5" id="op5" class="ch"/> QBC <br>
-
-                                <input type="checkbox" name="op6" id="op6" class="ch"/> autre <br>
-                                <textarea rows="3" id="op6Text" name="op6Text" placeholder="Indiquez ici comment le pludisme a été diagnostiqué" class="form-control" style="display: none"></textarea>
+                        <label>Avez-vous réalisé un examen en laboratoire pour diagnostiquer ce paludisme ?</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question" id="labo_oui" value="oui" /> oui
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question" id="labo_non" value="non" /> non
+                        </label>
                     </fieldset>
                     <legend></legend>
                     <fieldset class="form-group">
@@ -80,7 +64,7 @@
 
                         <input type="checkbox" name="op22" id="op22" class="ch2"/> antipalidéen : <br>
                         <select class="form-control" id="select22" style="display: none">
-                            <option>--Choix du traitement--</option>
+                            <option>Indiquez le médicament si vous vous en souvenez</option>
                             <option>Malarone</option>
                             <option>Riamet</option>
                             <option>Coartem</option>
@@ -101,12 +85,6 @@
                     <legend></legend>
 
                     <fieldset class="form-group">
-                        <label>Pendant combien de jours avez-vous pris ce traitement ?  </label><br>
-                        <input id="jour"  type="number" name="jour" min="1" class="col-sm-2"/><span> jour(s)</span>
-                    </fieldset>
-                    <legend></legend>
-
-                    <fieldset class="form-group">
                         <label>Où avez-vous obtenu votre traitement ? </label><br>
                         <input id="l1" type="radio" name="lieu" value="dans une pharmacie"/> dans une pharmacie<br>
                         <input id="l2" type="radio" name="lieu" value="auprès d'un vendeur ambulant"/> auprès d'un vendeur ambulant, au marché ou dans la rue <br>
@@ -115,7 +93,7 @@
                     <legend></legend>
 
                     <fieldset class="form-group">
-                        <label>Pouvez-vous préciser votre zone d'habitation ?</label>
+                        <label>Précisez votre zone d'habitation ?</label>
 
                         <label> Ville : </label><br>
                         <select class="form-control" id="selectVille">
