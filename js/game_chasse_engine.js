@@ -249,7 +249,26 @@ function renit(){
 // display parasites not found by user
 // dotted blue lines
 function showMissedParasites(){
-	
+	var timeAnim = 500;
+	picture_objects.forEach(function(parasiteObj, index, tab){
+
+		if(paraIndexValides.indexOf(index) == -1){
+				
+			window.setTimeout(function()
+			{
+				canvas_context.beginPath();
+				canvas_context.lineWidth=2/canvas_quotient;
+				canvas_context.strokeStyle="blue";
+				canvas_context.setLineDash([3,2.5,3,2.5]);
+				canvas_context.rect((picture_objects[index].pos_x)/canvas_quotient, (picture_objects[index].pos_y+1)/canvas_quotient, (picture_objects[index].size_x)/canvas_quotient, (picture_objects[index].size_y+1)/canvas_quotient);
+				canvas_context.stroke();
+
+			}, timeAnim);
+
+		 timeAnim +=1200/(picture_objects.length - paraIndexValides.length);
+		}
+		
+	});
 }
 
 function affichePosition(x,y){
