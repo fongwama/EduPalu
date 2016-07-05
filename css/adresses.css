@@ -1,4 +1,4 @@
- #resultat {
+ #results {
   margin: 0;
   padding: 0;
   border: 0;
@@ -16,13 +16,13 @@ text-decoration : none;
 
 
 
-#resultat place {
+#results place {
     margin: 10px;
     display: inline-block;
     width: 50%;
 }
 
-#resultat ul a { display: block; position: relative; width: 100%; }
+#results ul a { display: block; position: relative; width: 100%; }
 
 .place h2 { 
     font-size: 1.5em; 
