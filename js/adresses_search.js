@@ -1,11 +1,10 @@
 $(document).ready(function(){
 
-    // add field with all addresse data
+    // create field with all address data
     for (var i=0; i < places.length; i++) 
     {
         places[i].address_full = places[i].address1 + places[i].address2 + places[i].city;
     }
-    
     
     // loading of pharmacy json database
 	var db = JsonQuery(places);
@@ -19,7 +18,7 @@ $(document).ready(function(){
         var query = "db.where({'name.$li': " + re + "}).or({'address_full.$li': " + re + "}).exec()";
 
         // build results content (construction du résultat de la recherche)
-        var content = "<ul>";
+        var content = "";
 
         // evaluation of builded query
         results = eval(query);
@@ -27,19 +26,17 @@ $(document).ready(function(){
         // Construction des item de la recherche (résultat)
         for (var i=0; i < results.length; i++) {
            // row ${i}
-           content += "<a href='#' class='feed'><li class='clearfix'>";
-           //content +=  "<img src='img/"+results[i].photo +"' alt='thumb' class='thumbnail'>";
-           content +=  "<h2>"+results[i].name +"</h2><br/>";
-           content +=  "<span class='desc'>"+ results[i].address1 + "</span><br />";
-           content +=  "<span class='desc'>"+ results[i].address2 + "</span>";
-           content +=  "<p class='desc'>"+ results[i].city +"</p>";
-           content +=  "<span class='contact'>"+ results[i].tel1 +" | "+results[i].tel2 +"</span>"; 
-           content += "</li></a>";
+           content += "<div class='place'>";
+           content +=  "<h2>"+results[i].name +"</h2>";
+           content +=  "<div class='address'>"+ results[i].address1 + "</div>";
+           content +=  "<div class='address'>"+ results[i].address2 + "</div>";
+           content +=  "<div class='city'>"+ results[i].city +"</div>";
+           content +=  "<a class='tel' href='tel:"+ results[i].tel1 +"'>"+ results[i].tel1 +"</a>";
+           content +=  "&nbsp; <a class='tel' href='tel:"+ results[i].tel2 +"'>"+ results[i].tel2 +"</a>";
+           content += "</div>";
         }
-        content += "</ul>";
 
         $("#resultat").html(content);
-        //$("#results").html(content);
     });
 
     $("#btn_search_near").click(function() {
