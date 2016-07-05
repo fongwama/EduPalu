@@ -39,12 +39,12 @@ $(document).ready(function(){
            content += "</div>";
         };
 
-        $("#result").html(content);
+        $("#results").html(content);
     });
 
     $("#btn_search_near").click(function() {
         
-        $("#result").html("Veuillez autoriser la géolocalisation et patientez quelques instants...");
+        $("#results").html("Veuillez autoriser la géolocalisation et patientez quelques instants...");
         
         navigator.geolocation.getCurrentPosition(
             getNearestPlaces, 
@@ -58,7 +58,7 @@ $(document).ready(function(){
         content = "L'application ne peut trouver la pharmacie la plus proche. :-( <br />";
         content += "Avez-vous bien autorisé la géolocalisation ? <br /><br />";
         content += "code erreur : " + error.code;
-        $("#result").html(content);
+        $("#results").html(content);
         // error.code can be:
         //   0: unknown error
         //   1: permission denied
@@ -70,7 +70,7 @@ $(document).ready(function(){
     {
         lat1 = position.coords.latitude;
         lon1 = position.coords.longitude;
-        $("#result").html("Position trouvée !");
+        $("#results").html("Position trouvée !");
         Number.prototype.toRad = function() {
            return this * Math.PI / 180;
         };
@@ -145,7 +145,6 @@ $(document).ready(function(){
 
             };
 
-            
             content += "<div class='place'>";
             content += "<h2>"+results[i].name +"</h2>";           
             content += "<div class='distance'>distance :</span><span class='black distance'> "+ distance +"</div>";
@@ -157,7 +156,7 @@ $(document).ready(function(){
             content += "</div>";
         };
         
-        $("#result").html(content);
+        $("#results").html(content);
 
     }
 
