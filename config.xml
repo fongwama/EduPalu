@@ -25,10 +25,11 @@
     <icon src="logo_EduPalu_square.png" />
 
 
-    <!-- no permission required -->
-    <preference name="permissions" value="none" />
+    <!-- no permission required 
+    <preference name="permissions" value="none" />-->
 
     <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
 
     <preference name="fullscreen" value="false" />
 
