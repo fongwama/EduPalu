@@ -1,25 +1,27 @@
 $(document).ready(function(){
 
-    // add field with all addresse data
+    // create field with all address data
     for (var i=0; i < places.length; i++) 
     {
         places[i].address_full = places[i].address1 + places[i].address2 + places[i].city;
-    }
-    
+        places[i].address_full = places[i].address_full.toLowerCase();
+    };
     
     // loading of pharmacy json database
-	var db = JsonQuery(places);
+  var db = JsonQuery(places);
     var db_geo;
     
     // When search by pharmacy name
     $("#btn_search").click(function() {
 
+        // clean input field
+        var query_field = $("#input_name").val().trim().toLowerCase(); 
         // build query, condition, name like (name.$li)
-        re = new RegExp($("#input_name").val(), "i");
+        re = new RegExp(query_field, "i");
         var query = "db.where({'name.$li': " + re + "}).or({'address_full.$li': " + re + "}).exec()";
 
         // build results content (construction du résultat de la recherche)
-        var content = "<ul>";
+        var content = "";
 
         // evaluation of builded query
         results = eval(query);
@@ -27,103 +29,51 @@ $(document).ready(function(){
         // Construction des item de la recherche (résultat)
         for (var i=0; i < results.length; i++) {
            // row ${i}
-           content += "<a href='#' class='feed'><li class='clearfix'>";
-           //content +=  "<img src='img/"+results[i].photo +"' alt='thumb' class='thumbnail'>";
-           content +=  "<h2>"+results[i].name +"</h2><br/>";
-           content +=  "<span class='desc'>"+ results[i].address1 + "</span><br />";
-           content +=  "<span class='desc'>"+ results[i].address2 + "</span>";
-           content +=  "<p class='desc'>"+ results[i].city +"</p>";
+           content += "<div class='place'>";
+           content += "<h2>"+results[i].name +"</h2>";
+           content += "<div class='address'>"+ results[i].address1 + "</div>";
+           content += "<div class='address'>"+ results[i].address2 + "</div>";
+           content += "<div class='city'>"+ results[i].city +"</div>";
+           content += "<a class='tel' href='tel:"+ results[i].tel1 +"'>"+ results[i].tel1 +"</a>";
+           content +=  "&nbsp; <a class='tel' href='tel:"+ results[i].tel2 +"'>"+ results[i].tel2 +"</a>";
+           content += "</div>";
+        };
 
-          var tel = "<span class='contact'>"+ results[i].tel1+ "</span>";
-           
-           //le spérateur doit s'afficher si le deuxième numero existe
-           if(results[i].tel2 != "")
-           {
-              tel = "<span class='contact'>"+ results[i].tel1 +" | "+results[i].tel2 +"</span>";
-           }
-
-          content += tel;
-            
-          content += "</li></a>";
-        }
-        content += "</ul>";
-
-        $("#resultat").html(content);
-        //$("#results").html(content);
+        $("#results").html(content);
     });
 
-     //Position par defaut pour les Tests
-      var lat1=-4.788426;
-      var lon1=11.864629;
-
-    $("#btn_search_near").click(function() 
-    {  
-       var position_actuelle;
-
-      //cette option permet l'utilisation du gps 
-      var options = { enableHighAccuracy: true };
-
-      navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
-
-    });
-
-    //cette méthode s'exécute si la position est trouvée
-    function onSuccess(position)
-    {
-       //alert("success");
-      position_actuelle = position;
-
-      lat1 = position_actuelle.coords.latitude;
-      lon1 = position_actuelle.coords.longitude;
-
-      getPharmacies(lat1, lon1);
-
-     }
-
-    //cette méthode s'exécute si la position n'est pas trouvée
-    function onError(error) 
-    {
-       //alert("error");
-      // error.code can be:
-      //   0: unknown error
-      //   1: permission denied
-      //   2: position unavailable (error response from locaton provider)
-      //   3: timed out
-
-      var message = "";
-
-      switch(error.code)
-      {
-         case 0 : 
-              message = "Erreur inconnue";
-         break;
-
-         case 1 : 
-            message = "Le GPS n'est pas activer";
-         break;
-
-         case 2 : 
-            message = "Position incorrecte";
-         break;
-
-         case 3 : 
-            message = "Le délai d'attente à expirer";
-         break;
-      }
-
-      alert(message+" "+error.message);
-
-      getPharmacies(lat1, lon1);
-
-    }
-
-    function getPharmacies(lat1, lon1)
-    {
+    $("#btn_search_near").click(function() {
         
-         Number.prototype.toRad = function() {
-           return this * Math.PI / 180;
-          }
+        $("#results").html("Veuillez autoriser la géolocalisation et patientez quelques instants...");
+        
+        navigator.geolocation.getCurrentPosition(
+            getNearestPlaces, 
+            failGeolocation, {enableHighAccuracy:true, timeout:8000});
+        // {enableHighAccuracy:true, timeout:5000}
+          
+    });
 
+    function failGeolocation(error)
+    {
+        content = "L'application ne peut trouver la pharmacie la plus proche. :-( <br />";
+        content += "Avez-vous bien autorisé la géolocalisation ? <br /><br />";
+        content += "code erreur : " + error.code;
+        $("#results").html(content);
+        // error.code can be:
+        //   0: unknown error
+        //   1: permission denied
+        //   2: position unavailable (error response from locaton provider)
+        //   3: timed out
+    };
+
+    function getNearestPlaces(position)
+    {
+        lat1 = position.coords.latitude;
+        lon1 = position.coords.longitude;
+        $("#results").html("Position trouvée !");
+        Number.prototype.toRad = function() {
+           return this * Math.PI / 180;
+        };
         
         var tab_pharma_geo = [];
 
@@ -143,7 +93,7 @@ $(document).ready(function(){
               var d = R * c;
               if(d<0){
                  d = (-1*d);
-              }
+              };
 
               var pharma = 
               {
@@ -158,15 +108,15 @@ $(document).ready(function(){
               };
 
               tab_pharma_geo.push(pharma);
-        }
+        };
         
 
         db_geo = JsonQuery(tab_pharma_geo);
 
-        var query = "db_geo.limit(650).order({'distance':'asc'}).exec()";
+        var query = "db_geo.limit(10).order({'distance':'asc'}).exec()";
 
         // build results content (construction du résultat de la recherche)
-        var content = "<ul>";
+        var content = "";
 
         // evaluation of builded query
         results = eval(query);
@@ -174,54 +124,39 @@ $(document).ready(function(){
         // Construction des item de la recherche (résultat)
         for (var i=0; i < results.length; i++) {
 
-              var distance;
-              var distance_km = results[i].distance;
+            var distance;
+            var distance_km = results[i].distance;
 
-              if(distance_km<1){
-                // - de 1000 Mettres
-
-                var distance_mettre = distance_km * 1000;
-                distance = distance_mettre.toFixed(2) +" mèttres";
-              }
-              else
-              {
-                // + de 1000 Mettre
+            if(distance_km < 1){
+                // - de 1000 mètres
+                distance = (distance_km * 1000).toFixed(0) +" mètres";
+            }
+            else
+            {
+                // + de 1000 mètres
                 var partie_decimale = distance_km % parseInt(distance_km, 10);
                 if( partie_decimale > 0 ){
 
-                    distance = parseInt(distance_km, 10)+" Km <strong>et</strong> "+(partie_decimale * 1000).toFixed(2)+" mèttre(s)";
+                    distance = parseInt(distance_km, 10)+" km et "+(partie_decimale * 1000).toFixed(0)+" mètres";
                 }
                 else{
                   distance = dist_km +" Km";
-                }
+                };
 
-              }
+            };
 
-           // row ${i}
-           content += "<a href='#' class='feed'><li class='clearfix'>";
-           //content +=  "<img src='img/"+results[i].photo +"' alt='thumb' class='thumbnail'>";
-           content +=  "<h2>"+results[i].name +"</h2>";           
-           content +=  "<span class='contact'>Distance :</span><span class='black distance'> "+ distance +"</span><br/>";
-           content +=  "<span class='desc'>"+ results[i].address1 + "</span>";
-            content +=  "<span class='desc'>"+ results[i].address2 + "</span>";
-           content +=  "<p class='desc'>"+ results[i].city +"</p>";
-
-            var tel = "<span class='contact'>"+ results[i].tel1+ "</span>";
-           
-           //le spérateur doit s'afficher si le deuxième numero existe
-           if(results[i].tel2 != "")
-           {
-              tel = "<span class='contact'>"+ results[i].tel1 +" | "+results[i].tel2 +"</span>";
-           }
-
-          content += tel;
-           content += "</li></a>";
-        }
+            content += "<div class='place'>";
+            content += "<h2>"+results[i].name +"</h2>";           
+            content += "<div class='distance'>distance :</span><span class='black distance'> "+ distance +"</div>";
+            content += "<div class='address'>"+ results[i].address1 + "</div>";
+            content += "<div class='address'>"+ results[i].address2 + "</div>";
+            content += "<div class='city'>"+ results[i].city +"</div>";
+            content += "<a class='tel' href='tel:"+ results[i].tel1 +"'>"+ results[i].tel1 +"</a>";
+            content += "&nbsp; <a class='tel' href='tel:"+ results[i].tel2 +"'>"+ results[i].tel2 +"</a>";
+            content += "</div>";
+        };
         
-        content += "</ul>";
-       // alert(content);
-
-        $("#resultat").html(content);
+        $("#results").html(content);
 
     }
 

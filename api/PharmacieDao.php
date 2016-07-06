@@ -3,7 +3,7 @@
 include_once ('db.php');
 include_once ('IPharmacie.php');
 
-class PharmaciesDao implements IPharmacie
+class PharmaciesDao
 {
 
 
@@ -47,15 +47,5 @@ class PharmaciesDao implements IPharmacie
         }catch (PDOException $e){
             return $e -> getMessage();
         }
-    }
-
-    public function deletePharmacie(Pharmacie $pharmacie)
-    {
-        // TODO: Implement deletePharmacie() method.
-    }
-
-    public function updatePharmacie(Pharmacie $pharmacie)
-    {
-        // TODO: Implement updatePharmacie() method.
     }
 }
