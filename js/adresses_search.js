@@ -90,7 +90,28 @@ $(document).ready(function(){
       //   2: position unavailable (error response from locaton provider)
       //   3: timed out
 
-      alert('Connexion internet non établis '+error.message);
+      var message = "";
+
+      switch(error.code)
+      {
+         case 0 : 
+              message = "Erreur inconnue";
+         break;
+
+         case 1 : 
+            message = "Le GPS n'est pas activer";
+         break;
+
+         case 2 : 
+            message = "Position incorrecte";
+         break;
+
+         case 3 : 
+            message = "Le délai d'attente à expirer";
+         break;
+      }
+
+      alert(message+" "+error.message);
 
       getPharmacies(lat1, lon1);
 
