@@ -1150,5 +1150,21 @@ places = [
         "tel2": "",
         "version": 1,
         "website": ""
+    },
+    {
+        "address1": " 1 rue Mokiladzoli, en face du Lycée Thomas Sankara",
+        "address2": "",
+        "author": "Fongwma",
+        "city": "Djiri",
+        "date": "20160706",
+        "id": "2050516",
+        "lat": -4.20647,
+        "lon": 15.26369,
+        "name": "Pharmacie LECKA",
+        "source": "Fongwma",
+        "tel1": "242066681238",
+        "tel2": "",
+        "version": 1,
+        "website": ""
     }
 ]

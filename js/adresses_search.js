@@ -33,8 +33,18 @@ $(document).ready(function(){
            content +=  "<span class='desc'>"+ results[i].address1 + "</span><br />";
            content +=  "<span class='desc'>"+ results[i].address2 + "</span>";
            content +=  "<p class='desc'>"+ results[i].city +"</p>";
-           content +=  "<span class='contact'>"+ results[i].tel1 +" | "+results[i].tel2 +"</span>"; 
-           content += "</li></a>";
+
+          var tel = "<span class='contact'>"+ results[i].tel1+ "</span>";
+           
+           //le spérateur doit s'afficher si le deuxième numero existe
+           if(results[i].tel2 != "")
+           {
+              tel = "<span class='contact'>"+ results[i].tel1 +" | "+results[i].tel2 +"</span>";
+           }
+
+          content += tel;
+            
+          content += "</li></a>";
         }
         content += "</ul>";
 
@@ -42,35 +52,49 @@ $(document).ready(function(){
         //$("#results").html(content);
     });
 
-    $("#btn_search_near").click(function() {
-
-      //Position par defaut pour les Tests
+     //Position par defaut pour les Tests
       var lat1=-4.788426;
       var lon1=11.864629;
 
-          var position_actuelle;
+    $("#btn_search_near").click(function() 
+    {  
+       var position_actuelle;
 
-          navigator.geolocation.getCurrentPosition(function(position) 
-          {
-             //alert("success");
-            position_actuelle = position;
-            lat1 = position_actuelle.coords.latitude;
-            lon1 = position_actuelle.coords.longitude;
+      //cette option permet l'utilisation du gps 
+      var options = { enableHighAccuracy: true };
 
-            getPharmacies(lat1, lon1);
-          }, 
-          function(error) 
-          {
-             //alert("error");
-            // error.code can be:
-            //   0: unknown error
-            //   1: permission denied
-            //   2: position unavailable (error response from locaton provider)
-            //   3: timed out
-            getPharmacies(lat1, lon1);
-          });
+      navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
 
     });
+
+    //cette méthode s'exécute si la position est trouvée
+    function onSuccess(position)
+    {
+       //alert("success");
+      position_actuelle = position;
+
+      lat1 = position_actuelle.coords.latitude;
+      lon1 = position_actuelle.coords.longitude;
+
+      getPharmacies(lat1, lon1);
+
+     }
+
+    //cette méthode s'exécute si la position n'est pas trouvée
+    function onError(error) 
+    {
+       //alert("error");
+      // error.code can be:
+      //   0: unknown error
+      //   1: permission denied
+      //   2: position unavailable (error response from locaton provider)
+      //   3: timed out
+
+      alert('Connexion internet non établis '+error.message);
+
+      getPharmacies(lat1, lon1);
+
+    }
 
     function getPharmacies(lat1, lon1)
     {
@@ -160,7 +184,16 @@ $(document).ready(function(){
            content +=  "<span class='desc'>"+ results[i].address1 + "</span>";
             content +=  "<span class='desc'>"+ results[i].address2 + "</span>";
            content +=  "<p class='desc'>"+ results[i].city +"</p>";
-           content +=  "<span class='contact'>"+ results[i].tel1 +" | "+results[i].tel2 +"</span>";
+
+            var tel = "<span class='contact'>"+ results[i].tel1+ "</span>";
+           
+           //le spérateur doit s'afficher si le deuxième numero existe
+           if(results[i].tel2 != "")
+           {
+              tel = "<span class='contact'>"+ results[i].tel1 +" | "+results[i].tel2 +"</span>";
+           }
+
+          content += tel;
            content += "</li></a>";
         }
         
