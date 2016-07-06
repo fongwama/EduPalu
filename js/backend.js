@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     //Add pharmacies
     $(".btnAjouter").on('click', function(e){
-        e.preventDefault();
+        e.defaultPrevented;
 
         //Je récupère les champs obligatoire
 
