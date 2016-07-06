@@ -25,8 +25,15 @@
     <icon src="logo_EduPalu_square.png" />
 
 
-    <!-- no permission required -->
-    <preference name="permissions" value="none" />
+    <!-- 
+    <preference name="permissions" value="none" /> -->
+
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+    </feature>
+ 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <preference name="fullscreen" value="false" />
 
