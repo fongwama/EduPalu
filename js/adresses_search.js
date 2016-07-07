@@ -48,7 +48,7 @@ $(document).ready(function(){
         
         navigator.geolocation.getCurrentPosition(
             getNearestPlaces, 
-            failGeolocation, {enableHighAccuracy:true, timeout:8000});
+            failGeolocation, {enableHighAccuracy:true});
         // {enableHighAccuracy:true, timeout:5000}
           
     });
