@@ -27,8 +27,8 @@
 
     <!-- no permission required -->
     <preference name="permissions" value="none" />
-
-    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+  
+    <plugin name="cordova-plugin-geolocation"         source="npm" spec="~2.1.0" />
 
     <preference name="fullscreen" value="false" />
 
