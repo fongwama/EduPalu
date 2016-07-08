@@ -42,18 +42,18 @@ places = [
         "version": 1
     },
     {
-        "address1": "94 Avenue du General Charles de Gaulle",
-        "address2": "",
+        "address1": "347 avenue du Général de Gaulle",
+        "address2": "en face de Burotec, centre ville",
         "city": "Pointe Noire",
-        "verified": "",
+        "verified": "20160708",
         "id": "2029972",
-        "lat": -4.8009122,
-        "lon": 11.840890599999966,
+        "lat": -4.795085,
+        "lon": 11.854775,
         "name": "Pharmacie Croix du Sud",
-        "source": "Congo Telecom",
-        "tel1": "22 294 04 46",
+        "source": "Congo Telecom / FCRM",
+        "tel1": "05 541 74 29",
         "tel2": "",
-        "version": 1
+        "version": 2
     },
     {
         "address1": "296 avenue Kaat Matou",
@@ -140,18 +140,18 @@ places = [
         "version": 1
     },
     {
-        "address1": "79 Avenue du General Charles de Gaulle",
-        "address2": "",
+        "address1": "281 avenue du Général de Gaulle",
+        "address2": "près de la station Total",
         "city": "Pointe Noire",
-        "verified": "",
+        "verified": "20160708",
         "id": "2029979",
-        "lat": -4.8009122,
-        "lon": 11.840890599999966,
-        "name": "Pharmacie Mavre",
-        "source": "Congo Telecom",
+        "lat": -4.796295,
+        "lon": 11.852371,
+        "name": "Pharmacie Mavré",
+        "source": "Congo Telecom / FCRM",
         "tel1": "22 294 24 26",
         "tel2": "",
-        "version": 1
+        "version": 2
     },
     {
         "address1": "142 bis avenue Bitelika Ndombi Mpita",
@@ -1011,13 +1011,41 @@ places = [
         "address1": "Rez de chaussée immeuble La Roche",
         "address2": "derrière le garage CFAO, centre ville",
         "city": "Pointe-Noire",
-        "verified": "20160705",
+        "verified": "20160708",
         "id": "2050516",
-        "lat": -4.797121,
-        "lon": 11.840234,
+        "lat": -4.797335,
+        "lon": 11.840086,
         "name": "Pharmacie Maria",
         "source": "FCRM",
         "tel1": "04 439 65 50",
+        "tel2": "",
+        "version": 2
+    },
+    {
+        "address1": "avenue Stéphane Tchichellé",
+        "address2": "près du rond point Kassai et du laboratoire Biomédical, centre ville",
+        "city": "Pointe-Noire",
+        "verified": "20160708",
+        "id": "2050517",
+        "lat": -4.793834,
+        "lon": 11.859107,
+        "name": "Pharmacie de l'Hôpital",
+        "source": "FCRM",
+        "tel1": "04 446 32 35",
+        "tel2": "",
+        "version": 1
+    },
+    {
+        "address1": "298 avenue Marien Ngouabi",
+        "address2": "près du rond point ex-Bata, bord-bord",
+        "city": "Pointe-Noire",
+        "verified": "20160708",
+        "id": "2050518",
+        "lat": -4.800796,
+        "lon": 11.854183,
+        "name": "Pharmacie Ray",
+        "source": "FCRM",
+        "tel1": "06 881 81 68",
         "tel2": "",
         "version": 1
     }
