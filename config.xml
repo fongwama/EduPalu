@@ -22,7 +22,7 @@
     <platform name="android" />
 
     <!-- icon -->
-    <icon src="logo_EduPalu_square.png" />
+    <icon src="logo_EduPalu_icon.png" />
 
 
     <!-- no permission required -->
