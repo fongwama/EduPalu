@@ -8,7 +8,7 @@ $(document).ready(function(){
     };
     
     // loading of pharmacy json database
-	var db = JsonQuery(places);
+  var db = JsonQuery(places);
     var db_geo;
     
     // When search by pharmacy name
@@ -48,7 +48,7 @@ $(document).ready(function(){
         
         navigator.geolocation.getCurrentPosition(
             getNearestPlaces, 
-            failGeolocation, {enableHighAccuracy:true, timeout:8000});
+            failGeolocation, {enableHighAccuracy:true});
         // {enableHighAccuracy:true, timeout:5000}
           
     });

@@ -22,11 +22,14 @@
     <platform name="android" />
 
     <!-- icon -->
-    <icon src="logo_EduPalu_square.png" />
+    <icon src="logo_EduPalu_icon.png" />
 
 
     <!-- no permission required -->
     <preference name="permissions" value="none" />
+  
+    <plugin name="cordova-plugin-geolocation"         source="npm" spec="~2.1.0" />
+    <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
 
     <preference name="fullscreen" value="false" />
 
