@@ -32,9 +32,6 @@
     <!-- https://build.phonegap.com/plugins/5538 -->
     <plugin name="cordova-plugin-geolocation"         source="pgb" />
 
-    <plugin name="cordova-plugin-network-information" source="pgb" />
-
-
     <!-- plugin for whitelist url / protocols -->
     <plugin name="cordova-whitelist-plugin" source="pgb" />
     <!-- Allow links to web pages to open in a browser -->
