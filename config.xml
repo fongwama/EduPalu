@@ -46,9 +46,11 @@
     <gap:splash platform="android" gap:qualifier="port-xxxhdpi" src="res/screen/android/screen-xxxhdpi-portrait.png" />
     <gap:splash src="splash.png" />
 
-    <!-- access to external links -->
     <preference name="stay-in-webview" value="false"/>
+    <!-- access to external links -->
     <access origin="*" browserOnly="true"/>
+    <!-- allow phone number dialing from app -->
+    <access origin="tel:*" launch-external="yes" />
 
 </widget>
 
