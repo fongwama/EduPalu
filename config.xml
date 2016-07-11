@@ -33,7 +33,7 @@
     <plugin name="cordova-plugin-geolocation"         source="pgb" />
 
     <!-- plugin for whitelist url / protocols -->
-    <plugin name="cordova-whitelist-plugin" />
+    <plugin name="cordova-plugin-whitelist" />
     <!-- Allow links to web pages to open in a browser -->
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
