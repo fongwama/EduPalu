@@ -18,7 +18,7 @@ places = [
         "address2": "Mfilou",
         "city": "Brazzaville",
         "id": "2",
-        "date": "20160707"
+        "date": "20160707",
         "lat": -4.25002755,
         "lon": 15.23323033,
         "name": "Pharmacie Teven",
@@ -32,7 +32,7 @@ places = [
         "address2": "Mfilou",
         "city": "Brazzaville",
         "id": "3",
-        "date": "20160707"
+        "date": "20160707",
         "lat": -4.26069165,
         "lon": 15.22725349,
         "name": "Pharmacie Galien",
@@ -46,7 +46,7 @@ places = [
         "address2": "Moungali",
         "city": "Brazzaville",
         "id": "4",
-        "date": "20160707"
+        "date": "20160707",
         "lat": -4.26459322,
         "lon": 15.24075813,
         "name": "Pharmacie Metta",
