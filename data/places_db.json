@@ -43,7 +43,7 @@ places = [
     },
     {
         "address1": "347 avenue du Général de Gaulle",
-        "address2": "en face de Burotec, centre ville",
+        "address2": "centre ville, en face de Burotec",
         "city": "Pointe Noire",
         "verified": "20160708",
         "id": 2029972,
@@ -126,32 +126,32 @@ places = [
         "version": 1
     },
     {
-        "address1": " avenue Moe Vangoula",
-        "address2": "",
+        "address1": "avenue Emmanuel Dadet (croisement avec l'avenue Moé Vangoula)",
+        "address2": "centre ville, près de l'école primaire française",
         "city": "Pointe Noire",
-        "verified": "",
+        "verified": "20160712",
         "id": 2029978,
-        "lat": -4.7959836,
-        "lon": 11.856179200000042,
-        "name": "Pharmacie Les 3 M",
-        "source": "Congo Telecom",
+        "lat": -4.791760,
+        "lon": 11.855063,
+        "name": "Pharmacie Les Trois M",
+        "source": "Congo Telecom / FCRM",
         "tel1": "",
         "tel2": "",
-        "version": 1
+        "version": 2
     },
     {
         "address1": "281 avenue du Général de Gaulle",
-        "address2": "près de la station Total",
+        "address2": "centre ville, près de la station Total",
         "city": "Pointe Noire",
-        "verified": "20160708",
+        "verified": "20160712",
         "id": 2029979,
         "lat": -4.796295,
         "lon": 11.852371,
         "name": "Pharmacie Mavré",
         "source": "Congo Telecom / FCRM",
-        "tel1": "22 294 24 26",
+        "tel1": "06 652 73 73",
         "tel2": "",
-        "version": 2
+        "version": 3
     },
     {
         "address1": "142 bis avenue Bitelika Ndombi Mpita",
@@ -561,7 +561,7 @@ places = [
     },
     {
         "address1": "croisement avenue Alphonse Fondère et avenue du Camp",
-        "address2": "Immeuble CNSS, centre ville",
+        "address2": "centre ville, immeuble CNSS",
         "city": "Brazzaville",
         "verified": "20160707",
         "id": 2035033,
@@ -1145,6 +1145,21 @@ places = [
         "name": "Pharmacie Lecka",
         "source": "Fongwama",
         "tel1": "06 668 12 38",
+        "tel2": "",
+        "version": 1
+    },
+    {
+        "address1": "avenue Stéphane Tchichellé",
+        "address2": "centre ville, en face de la morgue municipale",
+        "author": "Fongwama",
+        "city": "Pointe-Noire",
+        "verified": "20160712",
+        "id": 2050526,
+        "lat": -4.789340,
+        "lon": 11.858143,
+        "name": "Pharmacie CDB",
+        "source": "FCRM",
+        "tel1": "04 438 88 29",
         "tel2": "",
         "version": 1
     },

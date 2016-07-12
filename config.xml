@@ -2,8 +2,8 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.fcrm.edupalu"
-        versionCode = "1" 
-        version     = "1.0" >
+        versionCode = "12" 
+        version     = "1.2" >
         
     <!-- versionCode is optional and Android only. It must be an integer -->
     
@@ -28,8 +28,23 @@
     <!-- no permission required -->
     <preference name="permissions" value="none" />
   
-    <plugin name="cordova-plugin-geolocation"         source="npm" spec="~2.1.0" />
-    <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
+    <!-- plugin for geolocation -->
+    <!-- https://build.phonegap.com/plugins/5538 -->
+    <plugin name="cordova-plugin-geolocation"         source="pgb" />
+
+    <!-- plugin for whitelist url / protocols -->
+    <plugin name="cordova-plugin-whitelist" />
+    <!-- Allow links to web pages to open in a browser -->
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <!-- Allow tel: links to open the dialer -->
+    <allow-intent href="tel:*" />
+
+
+    <!-- access to external links -->
+    <access origin="*" browserOnly="true"/>
+    <!-- allow phone number dialing from app -->
+    <access origin="tel:*" launch-external="yes" />
 
     <preference name="fullscreen" value="false" />
 
@@ -46,9 +61,7 @@
     <gap:splash platform="android" gap:qualifier="port-xxxhdpi" src="res/screen/android/screen-xxxhdpi-portrait.png" />
     <gap:splash src="splash.png" />
 
-    <!-- access to external links -->
     <preference name="stay-in-webview" value="false"/>
-    <access origin="*" browserOnly="true"/>
 
 </widget>
 
