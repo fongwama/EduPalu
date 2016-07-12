@@ -561,7 +561,7 @@ places = [
     },
     {
         "address1": "croisement avenue Alphonse Fondère et avenue du Camp",
-        "address2": "Immeuble CNSS, centre ville",
+        "address2": "centre ville, immeuble CNSS",
         "city": "Brazzaville",
         "verified": "20160707",
         "id": 2035033,
