@@ -43,7 +43,7 @@ places = [
     },
     {
         "address1": "347 avenue du Général de Gaulle",
-        "address2": "en face de Burotec, centre ville",
+        "address2": "centre ville, en face de Burotec",
         "city": "Pointe Noire",
         "verified": "20160708",
         "id": 2029972,
