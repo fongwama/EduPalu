@@ -141,17 +141,17 @@ places = [
     },
     {
         "address1": "281 avenue du Général de Gaulle",
-        "address2": "près de la station Total",
+        "address2": "centre ville, près de la station Total",
         "city": "Pointe Noire",
-        "verified": "20160708",
+        "verified": "20160712",
         "id": 2029979,
         "lat": -4.796295,
         "lon": 11.852371,
         "name": "Pharmacie Mavré",
         "source": "Congo Telecom / FCRM",
-        "tel1": "22 294 24 26",
+        "tel1": "06 652 73 73",
         "tel2": "",
-        "version": 2
+        "version": 3
     },
     {
         "address1": "142 bis avenue Bitelika Ndombi Mpita",
