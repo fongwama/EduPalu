@@ -1148,4 +1148,19 @@ places = [
         "tel2": "",
         "version": 1
     },
+    {
+        "address1": "avenue Stéphane Tchichellé",
+        "address2": "centre ville, en face de la morgue municipale",
+        "author": "Fongwama",
+        "city": "Pointe-Noire",
+        "verified": "20160712",
+        "id": 2050526,
+        "lat": -4.789340,
+        "lon": 11.858143,
+        "name": "Pharmacie CDB",
+        "source": "FCRM",
+        "tel1": "04 438 88 29",
+        "tel2": "",
+        "version": 1
+    },
 ]
