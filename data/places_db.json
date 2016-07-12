@@ -126,18 +126,18 @@ places = [
         "version": 1
     },
     {
-        "address1": " avenue Moe Vangoula",
-        "address2": "",
+        "address1": "avenue Emmanuel Dadet (croisement avec l'avenue Moé Vangoula)",
+        "address2": "centre ville, près de l'école primaire française",
         "city": "Pointe Noire",
-        "verified": "",
+        "verified": "20160712",
         "id": 2029978,
-        "lat": -4.7959836,
-        "lon": 11.856179200000042,
-        "name": "Pharmacie Les 3 M",
-        "source": "Congo Telecom",
+        "lat": -4.791760,
+        "lon": 11.855063,
+        "name": "Pharmacie Les Trois M",
+        "source": "Congo Telecom / FCRM",
         "tel1": "",
         "tel2": "",
-        "version": 1
+        "version": 2
     },
     {
         "address1": "281 avenue du Général de Gaulle",
