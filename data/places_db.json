@@ -322,18 +322,18 @@ places = [
         "version": 1
     },
     {
-        "address1": "27 rue Ndolo",
+        "address1": "27 rue Ndolo, Croisement Avenue M.Ngouabi et Rue Ndolo",
         "address2": "Talangaï",
         "city": "Brazzaville",
-        "verified": "",
+        "verified": "20160715",
         "id": 2033110,
-        "lat": -4.22522,
-        "lon": 15.28722,
+        "lat": -4.225227,
+        "lon": 15.2873823,
         "name": "Pharmacie le Vert d'O Talangaï",
         "source": "Congo Telecom",
-        "tel1": "05 549 55 26",
+        "tel1": "055495526",
         "tel2": "",
-        "version": 1
+        "version": 2
     },
     {
         "address1": "24 rue Ngoko Mikaalou",
@@ -1190,21 +1190,6 @@ places = [
         "name": "Pharmacie Rosa",
         "source": "Fongwama",
         "tel1": "",
-        "tel2": "",
-        "version": 1
-    },
-    {
-        "address1": "croisement Rue Ndolo Avenue & Marien Ngouabi, Talangaï",
-        "address2": "Arret de bus Vert D'Ô",
-        "author": "Fongwama",
-        "city": "Brazzaville",
-        "verified": "20160713",
-        "id": 2050526,
-        "lat": -4.2252279,
-        "lon": 15.28738236,
-        "name": "Pharmacie Vert D'Ô",
-        "source": "Fongwama",
-        "tel1": "055495526",
         "tel2": "",
         "version": 1
     }
