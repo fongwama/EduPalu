@@ -1192,5 +1192,33 @@ places = [
         "tel1": "",
         "tel2": "",
         "version": 1
+    },
+    {
+        "address": "67  rue mboko, Poto-poto",
+        "address2": "Bataclan, arret marché moungali",
+        "source": "Fongwama",
+        "city": "Brazzaville",
+        "verified": "20160715",
+        "id": 2050524,
+        "lat": -4.257517,
+        "lon": 15.276505,
+        "name": "Pharmacie Divina",
+        "tel1": " ",
+        "tel2": " ",
+        "version": 1
+    },
+    {
+        "address": "croisement rue massa Avenue marien nguabi, Talangaï",
+        "address2": "Arret eglise kimbanguiste, pres du marché Talangaï",
+        "source": "Fongwama",
+        "city": "Brazzaville",
+        "verified": "20160715",
+        "id": 2050524,
+        "lat": -4.227026,
+        "lon": 15.290729,
+        "name": "Pharmacie Yves",
+        "tel1": " ",
+        "tel2": " ",
+        "version": 1
     }
 ]
