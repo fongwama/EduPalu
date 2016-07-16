@@ -1163,4 +1163,49 @@ places = [
         "tel2": "",
         "version": 1
     },
+    {
+        "address1": "20 Rue Oyomi, Avenue Okemba, Talangaï",
+        "address2": "Arret de bus Privé GNETO",
+        "author": "Fongwama",
+        "city": "Brazzaville",
+        "verified": "20160713",
+        "id": 2050526,
+        "lat": -4.2207293,
+        "lon": 15.28636381,
+        "name": "Pharmacie de nuit Louanges",
+        "source": "Fongwama",
+        "tel1": "",
+        "tel2": "",
+        "version": 1
+    },
+    {
+        "address1": "95 Rue Ndolo, Avenue Marien Ngouabi, Talangaï",
+        "address2": "Arret de bus Mangier",
+        "author": "Fongwama",
+        "city": "Brazzaville",
+        "verified": "20160713",
+        "id": 2050526,
+        "lat": -4.21917242,
+        "lon": 15.29058912,
+        "name": "Pharmacie Rosa",
+        "source": "Fongwama",
+        "tel1": "",
+        "tel2": "",
+        "version": 1
+    },
+    {
+        "address1": "croisement Rue Ndolo Avenue & Marien Ngouabi, Talangaï",
+        "address2": "Arret de bus Vert D'Ô",
+        "author": "Fongwama",
+        "city": "Brazzaville",
+        "verified": "20160713",
+        "id": 2050526,
+        "lat": -4.2252279,
+        "lon": 15.28738236,
+        "name": "Pharmacie Vert D'Ô",
+        "source": "Fongwama",
+        "tel1": "055495526",
+        "tel2": "",
+        "version": 1
+    }
 ]
