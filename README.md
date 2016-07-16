@@ -1,4 +1,4 @@
-![logo EduPalu](local/logo_Edupalu_text.png)
+![logo EduPalu](local/logo_EduPalu_text.png)
 
 ---
 
