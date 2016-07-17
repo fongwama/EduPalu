@@ -1,66 +1,202 @@
 places = [
     {
-        "address1": "1274 Avenue loutassi, Plateaux des quinze-ans, Moungali",
-        "address2": "",
-        "author": "Fongwama",
+        "address1": "1274 Avenue loutassi, Plateaux des quinze-ans",
+        "address2": "Moungali",
         "city": "Brazzaville",
         "id": "1",
-        "date": "20160706"
-        "lat": -4.26161163,
+        "date": "20160706",
+        "lat":-4.26161163,
         "lon": 15.26034857,
         "name": "Pharmacie Jagger",
         "source": "Fongwama",
         "tel1": "",
         "tel2": "",
-        "version": 1,
-        "website": "www.fongwama.com"
+        "version": 1
     },
 	{
-        "address1": "Rond point marché ngambio, Ngamaba, Mfilou",
+        "address1": "Av. de la mairie de Mfilou, Ngambio",
+        "address2": "Mfilou",
+        "city": "Brazzaville",
+        "id": "2",
+        "date": "20160707"
+        "lat": -4.250027,
+        "lon": 15.233230,
+        "name": "Pharmacie Teven",
+        "source": "Fongwama",
+        "tel1": "066628903",
+        "tel2": "",
+        "version": 1
+    },
+	{
+        "address1": "N°1 Rue Matkiona samuel, Ngangwélé (sur l'avenue)",
+        "address2": "Mfilou",
+        "city": "Brazzaville",
+        "id": "3",
+        "date": "20160707"
+        "lat": -4.260691,
+        "lon": 15.227253,
+        "name": "Pharmacie Galien",
+        "source": "Fongwama",
+        "tel1": "066718719",
+        "tel2": "",
+        "version": 1
+    },
+	{
+        "address1": "Av. de la base, La frontière",
+        "address2": "Moungali",
+        "city": "Brazzaville",
+        "id": "4",
+        "date": "20160707"
+        "lat": -4.264593,
+        "lon": 15.240758,
+        "name": "Pharmacie Metta",
+        "source": "Fongwama",
+        "tel1": "066559953",
+        "tel2": "",
+        "version": 1
+    },
+
+    {
+        "address1": "avenue camp comus la base, arret camps comus",
+        "address2": "",
+        "city": "Brazzaville",
+        "id": "2",
+        "lat": -4.231818,
+        "lon": 15.237319,
+        "name": "Pharmacie JFO",
+        "source": "Fongwama",
+        "tel1": " ",
+        "tel2": " ",
+        "version": 1
+    },
+    {
+        "address": "boulevard denis sassou nguesso",
+        "address2": "",
+        "source": "Fongwama",
+        "city": "Brazzaville",
+        "id": 1155,
+        "lat": -4.268928,
+        "lon": 15.290940,
+        "name": "Pharmacie Brant Jynes",
+        "tel1": " ",
+        "tel2": " ",
+        "version": 1
+    },
+    {
+        "address": "boulevard denis sassou nguesso",
+        "address2": "",
+        "source": "Fongwama",
+        "city": "Brazzaville",
+        "id": 1156,
+        "lat": -4.271164,
+        "lon": 15.287116,
+        "name": "Pharmacie de la gare",
+        "tel1": " ",
+        "tel2": " ",
+        "version": 1
+    },
+    {
+        "address": "city center",
+        "address2": "",
+        "source": "Fongwama",
+        "city": "Brazzaville",
+        "id": 1157,
+        "lat": -4.274120,
+        "lon": 15.284780,
+        "name": "Mavré",
+        "tel1": " ",
+        "tel2": " ",
+        "version": 1
+    },
+    {
+        "address": "avenue camp comus la base, arret soudure",
+        "address2": "",
+        "source": "Fongwama",
+        "city": "Brazzaville",
+        "id": 1158,
+        "lat": -4.234550,
+        "lon": 15.253784,
+        "name": "Pharmacie relys",
+        "tel1": " ",
+        "tel2": " ",
+        "version": 1
+    },
+    {
+        "address": "avenue de la paix, marché moungalie",
+        "address2": "",
+        "source": "Fongwama",
+        "city": "Brazzaville",
+        "id": 1159,
+        "lat": -4.259797,
+        "lon": 15.278655,
+        "name": "Pharmacie Pharmapolis santé",
+        "tel1": " ",
+        "tel2": " ",
+        "version": 1,
+        "website": ""
+    },
+    {
+        "address1": "2 rue Angola libre, Mikalou, Talangaï",
         "address2": "",
         "author": "Fongwama",
         "city": "Brazzaville",
         "id": "2",
-        "date": "20160707"
-        "lat": -4.25002755,
-        "lon": 15.23323033,
-        "name": "Pharmacie Teven",
+        "date": "20160706",
+        "lat": -4.22347016,
+        "lon":  15.27558669,
+        "name": "Pharmacie de Mikalou",
         "source": "Fongwama",
         "tel1": "",
         "tel2": "",
         "version": 1,
-        "website": "www.fongwama.com"
+        "website": ""
     },
-	{
-        "address1": "N°1 Rue Matsioka samuelle, Ngangwélé (sur l'avenue), Mfilou",
+    {
+        "address1": "73 rue Balloys, Ouenzé",
         "address2": "",
         "author": "Fongwama",
         "city": "Brazzaville",
         "id": "3",
-        "date": "20160707"
-        "lat": -4.26069165,
-        "lon": 15.22725349,
-        "name": "Pharmacie Galien",
+        "date": "20160706",
+        "lat": -4.24068444,
+        "lon":  15.28427584,
+        "name": "Pharmacie GOMA DE BAZ",
         "source": "Fongwama",
-        "tel1": "",
+        "tel1": "242055600655",
         "tel2": "",
         "version": 1,
-        "website": "www.fongwama.com"
+        "website": ""
     },
-	{
-        "address1": "La frontière, Moungali",
+    {
+        "address1": "1 rue Mokiladzoli, Lycée Thomas Sankara, Djiri",
         "address2": "",
         "author": "Fongwama",
         "city": "Brazzaville",
         "id": "4",
-        "date": "20160707"
-        "lat": -4.26459322,
-        "lon": 15.24075813,
-        "name": "Pharmacie Metta",
+        "date": "20160706",
+        "lat": -4.20647751,
+        "lon":  15.26369415,
+        "name": "Pharmacie LECKA ",
+        "source": "Fongwama",
+        "tel1": "242066681238",
+        "tel2": "",
+        "version": 1,
+        "website": ""
+    },
+    {
+        "address1": "1 rue des ancêtres, Texaco, Talangaï",
+        "address2": "",
+        "author": "Fongwama",
+        "city": "Brazzaville",
+        "id": "5",
+        "date": "20160706",
+        "lat": -4.23249743,
+        "lon":  15.28028403,
+        "name": "Pharmacie de la Tsieme ",
         "source": "Fongwama",
         "tel1": "",
         "tel2": "",
         "version": 1,
-        "website": "www.fongwama.com"
+        "website": ""
     }
 ]
