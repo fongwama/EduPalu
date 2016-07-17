@@ -1185,8 +1185,8 @@ places = [
         "city": "Brazzaville",
         "verified": "20160713",
         "id": 2050526,
-        "lat": -4.21917242,
-        "lon": 15.29058912,
+        "lat": -4.219172,
+        "lon": 15.290589,
         "name": "Pharmacie Rosa",
         "source": "Fongwama",
         "tel1": "",
@@ -1195,7 +1195,7 @@ places = [
     },
     {
         "address": "67  rue mboko, Poto-poto",
-        "address2": "Bataclan, arret marché moungali",
+        "address2": "Bataclan, arrêt marché moungali",
         "source": "Fongwama",
         "city": "Brazzaville",
         "verified": "20160715",
@@ -1208,8 +1208,8 @@ places = [
         "version": 1
     },
     {
-        "address": "croisement rue massa Avenue marien nguabi, Talangaï",
-        "address2": "Arret eglise kimbanguiste, pres du marché Talangaï",
+        "address": "croisement rue massa Avenue Marien Ngouabi, Talangaï",
+        "address2": "Arrêt église kimbanguiste, près du marché Talangaï",
         "source": "Fongwama",
         "city": "Brazzaville",
         "verified": "20160715",
