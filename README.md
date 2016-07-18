@@ -13,7 +13,7 @@ EduPalu apporte à l’ensemble de la population :
 
 ## Version web
 
-Utilisez EduPalu en ligne en cliquant sur le lient suivant : [fongwama.github.io/EduPalu](http://fongwama.github.io/Edupalu/)
+Utilisez EduPalu en ligne en cliquant sur le lient suivant : [fongwama.github.io/EduPalu](http://fongwama.github.io/EduPalu/)
 
 ## Version PC (et Mac aussi)
 
