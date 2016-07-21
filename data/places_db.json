@@ -202,7 +202,7 @@ places = [
         "verified": "",
         "id": 2029983,
         "lat": -4.7851689,
-        "lon": 11.877756299999987,
+        "lon": 11.877756,
         "name": "Pharmacie Sympathique",
         "source": "Congo Telecom",
         "tel1": "22 294 43 23",
@@ -216,7 +216,7 @@ places = [
         "verified": "",
         "id": 2029994,
         "lat": -4.77867,
-        "lon": 11.863640000000032,
+        "lon": 11.863640,
         "name": "SAI-Pharma",
         "source": "Congo Telecom",
         "tel1": "22 294 12 20",
@@ -336,8 +336,8 @@ places = [
         "version": 2
     },
     {
-        "address1": "24 rue Ngoko Mikaalou",
-        "address2": "",
+        "address1": "24 rue Ngoko Mikalou",
+        "address2": "Talangaï",
         "city": "Brazzaville",
         "verified": "",
         "id": 2033111,
@@ -351,7 +351,7 @@ places = [
     },
     {
         "address1": "Avenue Denis Sassous Nguesso",
-        "address2": "",
+        "address2": "Centre Ville",
         "city": "Brazzaville",
         "verified": "20160707",
         "id": 2033120,
@@ -365,7 +365,7 @@ places = [
     },
     {
         "address1": "57 rue Oboli Moungali",
-        "address2": "",
+        "address2": "Moungali",
         "city": "Brazzaville",
         "verified": "",
         "id": 2033121,
@@ -379,7 +379,7 @@ places = [
     },
     {
         "address1": "11 rue Andzounou Mikalou",
-        "address2": "",
+        "address2": "Terminus mikalou",
         "city": "Brazzaville",
         "verified": "",
         "id": 2033122,
@@ -393,7 +393,7 @@ places = [
     },
     {
         "address1": "1535 avenue de la cite des 17 rond point Mazala Moukondo",
-        "address2": "",
+        "address2": "Moukondo",
         "city": "Brazzaville",
         "verified": "",
         "id": 2033123,
@@ -421,7 +421,7 @@ places = [
     },
     {
         "address1": "40 rue Massa Talangai",
-        "address2": "Avenue Marien Ngouabi vers le Marche Talangai",
+        "address2": "Avenue Marien Ngouabi vers le Marche Talangaï",
         "city": "Brazzaville",
         "verified": "",
         "id": 2033126,
@@ -575,7 +575,7 @@ places = [
     },
     {
         "address1": "28 rue Komono, Talangaï",
-        "address2": "Avenue Marien Ngouabi",
+        "address2": "Avenue Marien Ngouabi, à coté du Bar Show-Na-Show",
         "city": "Brazzaville",
         "verified": "",
         "id": 2035034,
@@ -841,7 +841,7 @@ places = [
     },
     {
         "address1": "20 Oyomi Talangai",
-        "address2": "non loin de la Liberté",
+        "address2": "non loin de l'école publique Liberté",
         "city": "Brazzaville",
         "verified": "",
         "id": 2035515,
@@ -1136,7 +1136,6 @@ places = [
     {
         "address1": "1 rue Mokiladzoli, Lycée Thomas Sankara",
         "address2": "Djiri",
-        "author": "Fongwama",
         "city": "Brazzaville",
         "verified": "20160706",
         "id": 2050525,
@@ -1151,7 +1150,6 @@ places = [
     {
         "address1": "avenue Stéphane Tchichellé",
         "address2": "centre ville, en face de la morgue municipale",
-        "author": "Fongwama",
         "city": "Pointe-Noire",
         "verified": "20160712",
         "id": 2050526,
@@ -1165,8 +1163,7 @@ places = [
     },
     {
         "address1": "20 Rue Oyomi, Avenue Okemba, Talangaï",
-        "address2": "Arret de bus Privé GNETO",
-        "author": "Fongwama",
+        "address2": "Arrêt de bus école publique Liberté, arrêt de bus école privée Gneto",
         "city": "Brazzaville",
         "verified": "20160713",
         "id": 2050526,
@@ -1180,8 +1177,7 @@ places = [
     },
     {
         "address1": "95 Rue Ndolo, Avenue Marien Ngouabi, Talangaï",
-        "address2": "Arret de bus Mangier",
-        "author": "Fongwama",
+        "address2": "Arrêt de Bus Manguier",
         "city": "Brazzaville",
         "verified": "20160713",
         "id": 2050526,
