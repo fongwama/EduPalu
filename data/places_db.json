@@ -840,20 +840,6 @@ places = [
         "version": 1
     },
     {
-        "address1": "20 Oyomi Talangai",
-        "address2": "non loin de l'école publique Liberté",
-        "city": "Brazzaville",
-        "verified": "",
-        "id": 2035515,
-        "lat": -4.22083,
-        "lon": 15.28639,
-        "name": "Pharmacie de Nuit Louange",
-        "source": "Congo Telecom",
-        "tel1": "22 604 69 67",
-        "tel2": "",
-        "version": 1
-    },
-    {
         "address1": "1 rue des ancêtres",
         "address2": "Talangaï, arrêt de bus texaco Tsieme",
         "city": "Brazzaville",
