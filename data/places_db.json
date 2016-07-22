@@ -1165,7 +1165,7 @@ places = [
     },
     
 {
-        "address1": "juste au rond point chateau d'eau",
+        "address1": "Rond-point château d'eau",
         "address2": "Makélékélé",
         "city": "Brazzaville",
         "id": 10,
@@ -1180,7 +1180,7 @@ places = [
     },
 
 {
-        "address1": "Chateau d'eau juste au rond point",
+        "address1": "Après l'arret de bus du château d'eau",
         "address2": "Makélékélé",
         "city": "Brazzaville",
         "id": 11,
