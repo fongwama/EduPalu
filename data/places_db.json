@@ -1170,8 +1170,8 @@ places = [
         "city": "Brazzaville",
         "id": 10,
         "date": "20160708",
-        "lat":-4.28030688,
-        "lon": 15.23810874,
+        "lat":-4.280306,
+        "lon": 15.238108,
         "name": "Pharmacie chateau d'eau",
         "source": "Fongwama",
         "tel1": "",
@@ -1185,28 +1185,14 @@ places = [
         "city": "Brazzaville",
         "id": 11,
         "date": "20160708",
-        "lat":-4.28144299,
-        "lon": 15.23671371,
+        "lat":-4.281442,
+        "lon": 15.236713,
         "name": "Pharmacie Jire_Rapha",
         "source": "Fongwama",
         "tel1": "",
         "tel2": "",
         "version": 1
-    },
-
-
-{
-        "address1": "Mpila  juste en face des depeche de brazzaville",
-        "address2": "Poto-poto",
-        "city": "Brazzaville",
-        "id": 12,
-        "date": "20160708",
-        "lat":-4.26909991,
-        "lon": 15.29100151,
-        "name": "Pharmacie Brant Jynes",
-        "source": "Fongwama",
-        "tel1": "",
-        "tel2": "",
-        "version": 1
     }
+
+
 ]
