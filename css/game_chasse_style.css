@@ -6,19 +6,20 @@ section{
     padding-bottom: 10px;
     /*overflow: scroll;*/
 }
+
 #my_canvas_container{
     position: relative;
     margin-left: auto;
     margin-right: auto;
     width: 100%; 
 }
+
 #my_canvas{
     display: block;
     position: relative;
     overflow: hidden;
     margin:0 auto; 
 }
-
 
 #canvas_belt{
     position: relative;
@@ -39,10 +40,6 @@ section{
     display: inline-block;
 }
 
-#next {
-    float: right;
-}
-
 #extra_cursor_pos{
 
     margin-left: auto;
@@ -59,18 +56,17 @@ section{
     color: #6495ED;
     vertical-align: middle;
 }
+
 .erreurs_space{
     margin-left: 10px;
 }
+
 #valErreur{
     color: red;
 }
+
 #valPara, #val_total_para{
     color: #32cd32;
-}
-
-#ic_image_timer{
-    margin-right: 2px;
 }
 
 #question_timer{
@@ -87,7 +83,7 @@ section{
     vertical-align: middle;
 }
 
-#message, #score, #next {
+#message, #score {
     display: inline-block;
     font: bold 12pt arial;
     color: #6495ED;
@@ -97,6 +93,7 @@ section{
 #next{
     width: 49%;
     height: 35px;
+    float: right;
 }
 
 #quitter{
@@ -104,7 +101,6 @@ section{
     margin-top: 10px;
     width: 99.8%;
 }
-
 
 
 @media (max-width: 500px  ) {

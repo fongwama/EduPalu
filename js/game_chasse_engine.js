@@ -1,5 +1,3 @@
-/*www.fongwama.com @2015*/
-
 var reussites_count =0;
 var erreurs_count =0;
 var canvas_quotient;
