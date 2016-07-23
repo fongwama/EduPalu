@@ -1050,7 +1050,7 @@ places = [
         "version": 1
     },
     {
-        "address1": "Rond point marché Ngambio, Ngamaba",
+        "address1": "Av. de la Mairie de Mfilou, Ngamaba",
         "address2": "Mfilou",
         "city": "Brazzaville",
         "verified": "20160707",
@@ -1059,12 +1059,12 @@ places = [
         "lon": 15.233230,
         "name": "Pharmacie Teven",
         "source": "Fongwama",
-        "tel1": "",
+        "tel1": "06 662 89 03",
         "tel2": "",
         "version": 1
     },
     {
-        "address1": "n°1 Rue Matsioka Samuelle, Ngangwélé (sur l'avenue)",
+        "address1": "N°1 Rue Matkiona Samuel, Ngangwélé (sur l'avenue)",
         "address2": "Mfilou",
         "city": "Brazzaville",
         "verified": "20160707",
@@ -1073,12 +1073,12 @@ places = [
         "lon": 15.227253,
         "name": "Pharmacie Galien",
         "source": "Fongwama",
-        "tel1": "",
+        "tel1": "06 671 87 19",
         "tel2": "",
         "version": 1
     },
     {
-        "address1": "La frontière",
+        "address1": "Av. de la Base, La frontière",
         "address2": "Moungali",
         "city": "Brazzaville",
         "verified": "20160707",
@@ -1087,7 +1087,7 @@ places = [
         "lon": 15.240758,
         "name": "Pharmacie Metta",
         "source": "Fongwama",
-        "tel1": "",
+        "tel1": "06 655 99 53",
         "tel2": "",
         "version": 1
     },
