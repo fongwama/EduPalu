@@ -12,22 +12,22 @@ var questions = [
     "answers": [ 
             {
                 "text" : "Un médicament",
-                "comment": "Le paludisme est une maladie, responsable en 2015 de 438 000 décès.",
+                "comment": "Le paludisme est une maladie, responsable en 2015 de 438 000 décès dans le monde.",
                 "correct": false,
             },
             {
                 "text" : "Une maladie",
-                "comment": "En 2015, le paludisme a été responsable de 438 000 décès.",
+                "comment": "En 2015, le paludisme a été responsable de 438 000 décès dans le monde.",
                 "correct": true,
             },
             {
                 "text" : "Une mouche",
-                "comment": "Le paludisme est une maladie, responsable en 2015 de 438 000 décès.",
+                "comment": "Le paludisme est une maladie, responsable en 2015 de 438 000 décès dans le monde.",
                 "correct": false,
             },
             {
                 "text" : "Un moustique",
-                "comment": "Le paludisme est une maladie, responsable en 2015 de 438 000 décès. Cette maladie est transmise par un moustique.",
+                "comment": "Le paludisme est une maladie, responsable en 2015 de 438 000 décès dans le monde. Cette maladie est transmise par un moustique.",
                 "correct": false,
             },
         ]
@@ -511,22 +511,22 @@ var questions = [
         ]
     },
     {
-    "text" : "En 2014, combien de personnes ont été infectées par le paludisme dans le monde ?",
+    "text" : "En 2015, combien de personnes ont été infectées par le paludisme dans le monde ?",
     "time": 15,
     "answers": [ 
             {
                 "text" : "Plus de 200 millions",
-                "comment": "Pour être plus exact, l'organisation mondiale de la santé estime que 246 millions de personnes ont été infectées par le paludisme en 2014.",
+                "comment": "Pour être plus exact, l'organisation mondiale de la santé estime que 214 millions de personnes ont été infectées par le paludisme en 2015.",
                 "correct": true,
             },
             {
                 "text" : "200 000",
-                "comment": "L'organisation mondiale de la santé estime que 246 millions de personnes ont été infectées par le paludisme en 2014.",
+                "comment": "L'organisation mondiale de la santé estime que 214 millions de personnes ont été infectées par le paludisme en 2015.",
                 "correct": false,
             },
             {
                 "text" : "1 million",
-                "comment": "L'organisation mondiale de la santé estime que 246 millions de personnes ont été infectées par le paludisme en 2014.",
+                "comment": "L'organisation mondiale de la santé estime que 214 millions de personnes ont été infectées par le paludisme en 2015.",
                 "correct": false,
             },
         ]
