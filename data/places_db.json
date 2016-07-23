@@ -1059,7 +1059,7 @@ places = [
         "lon": 15.233230,
         "name": "Pharmacie Teven",
         "source": "Fongwama",
-        "tel1": "066628903",
+        "tel1": "06 662 89 03",
         "tel2": "",
         "version": 1
     },
@@ -1073,7 +1073,7 @@ places = [
         "lon": 15.227253,
         "name": "Pharmacie Galien",
         "source": "Fongwama",
-        "tel1": "066718719",
+        "tel1": "06 671 87 19",
         "tel2": "",
         "version": 1
     },
@@ -1087,7 +1087,7 @@ places = [
         "lon": 15.240758,
         "name": "Pharmacie Metta",
         "source": "Fongwama",
-        "tel1": "066559953",
+        "tel1": "06 655 99 53",
         "tel2": "",
         "version": 1
     },
