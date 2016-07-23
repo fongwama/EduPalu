@@ -421,17 +421,17 @@ places = [
     },
     {
         "address1": "40 rue Massa Talangai",
-        "address2": "Avenue Marien Ngouabi vers le Marche Talangai",
+        "address2": "Arrêt église kimbanguiste, près du marché Talangaï",
         "city": "Brazzaville",
-        "verified": "",
+        "verified": "20160723",
         "id": 2033126,
-        "lat": -4.22667,
-        "lon": 15.29056,
+        "lat": -4.227026,
+        "lon": 15.290729,
         "name": "Pharmacie Yves",
         "source": "Congo Telecom",
         "tel1": "06 556 30 34",
         "tel2": "",
-        "version": 1
+        "version": 2
     },
     {
         "address1": "16 avenue de la Paix",
@@ -1226,20 +1226,6 @@ places = [
         "lat": -4.257517,
         "lon": 15.276505,
         "name": "Pharmacie Divina",
-        "source": "Fongwama",
-        "tel1": " ",
-        "tel2": " ",
-        "version": 1
-    },
-    {
-        "address1": "croisement rue Massa et avenue Marien Ngouabi",
-        "address2": "Talangaï, arrêt église kimbanguiste, près du marché Talangaï",
-        "city": "Brazzaville",
-        "verified": "20160715",
-        "id": 2050532,
-        "lat": -4.227026,
-        "lon": 15.290729,
-        "name": "Pharmacie Yves",
         "source": "Fongwama",
         "tel1": " ",
         "tel2": " ",
