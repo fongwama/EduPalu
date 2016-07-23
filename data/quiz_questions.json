@@ -490,7 +490,7 @@ var questions = [
             {
                 "text" : "Non",
                 "comment": "On ne peut pas attraper le paludisme en étant en contact ou à proximité d'une personne souffrant du paludisme.",
-                "correct": false,
+                "correct": true,
             },
         ]
     }, 
