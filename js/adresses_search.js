@@ -45,7 +45,9 @@ $(document).ready(function(){
            content += "</div>";
         };
 
-        $("#results").html(content);
+        //Avoid empty result on the view, keep the latest result
+        if(content !="")
+        	$("#results").html(content);
 
     }
 
