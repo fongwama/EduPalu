@@ -18,12 +18,11 @@ $(document).ready(function(){
   var db = JsonQuery(places);
     var db_geo;
     
-    // When search by pharmacy name
-    $("#btn_search").click(function() {
 
-        // clean input field
-        var query_field = $("#input_name").val().trim().toLowerCase().latinise(); 
-        // build query, condition, name like (name.$li)
+        //search the pharmacy - function
+    function searchPharma(query_field){
+
+    		// build query, condition, name like (name.$li)
         re = new RegExp(query_field, "i");
         var query = "db.where({'name.$li': " + re + "}).or({'address_full.$li': " + re + "}).exec()";
 
@@ -46,7 +45,32 @@ $(document).ready(function(){
            content += "</div>";
         };
 
-        $("#results").html(content);
+        //Avoid empty result on the view, keep the latest result
+        if(content !="")
+        	$("#results").html(content);
+
+    }
+
+
+    // When search by pharmacy name
+    $("#btn_search").click(function() {
+
+            // clean input field
+        var query_field = $("#input_name").val().trim().toLowerCase().latinise(); 
+        searchPharma(query_field);
+
+    });
+
+    // Search at every key press
+    $("#input_name").keyup( function() {
+
+    		 // clean input field
+        var query_field = $("#input_name").val().trim().toLowerCase().latinise(); 
+        
+        	//Start searching from the second key press
+        if(query_field.length>1)
+        	searchPharma(query_field);
+         
     });
 
     $("#btn_search_near").click(function() {
