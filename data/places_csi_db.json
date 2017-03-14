@@ -27,6 +27,7 @@
         "tel2": "",
         "version": 1
     },
+    /*
     {
         "address1": "",
         "address2": "",
@@ -41,6 +42,7 @@
         "tel2": "",
         "version": 1
     },
+
     {
         "address1": "",
         "address2": "",
@@ -55,20 +57,7 @@
         "tel2": "",
         "version": 1
     },
-    {
-        "address1": "avenue Ngouabi",
-        "address2": "",
-        "city": "Pointe Noire",
-        "verified": "10082016",
-        "id": 5,
-        "lat":-4.796806,
-        "lon": 11.869343,
-        "name": "Polyclinique Kitoko",
-        "source": "Congo Telecom",
-        "tel1": "",
-        "tel2": "",
-        "version": 1
-    },
+    
     {
         "address1": "avenue Marien N'Gouabi",
         "address2": "",
@@ -273,7 +262,9 @@
         "tel1": "",
         "tel2": "",
         "version": 1
-    },{
+    },
+    */
+    {
         "address1": "Boulevard Denis SASSOU NGUESSO, à côté de l'embassade des Etats Units",
         "address2": "",
         "city": "Brazzaville",
@@ -286,7 +277,9 @@
         "tel1": "",
         "tel2": "",
         "version": 1
-    },{
+    },
+    /*
+    {
         "address1": "",
         "address2": "",
         "city": "Brazzaville",
@@ -299,7 +292,9 @@
         "tel1": "",
         "tel2": "",
         "version": 1
-    },{
+    },
+    */
+    {
         "address1": "avenue de la 2 eme division blindée, camp 15 Aôut, centre ville",
         "address2": "",
         "city": "Brazzaville",
@@ -341,6 +336,7 @@
         "tel2": "",
         "version": 1
     },
+    /*
     {
         "address1": "avenue Tchitembo",
         "address2": "",
@@ -411,6 +407,7 @@
         "tel2": "",
         "version": 1
     },
+    */
     {
         "address1": "22 avenue Jacques Opagault, Moungali",
         "address2": "",
@@ -439,6 +436,7 @@
         "tel2": "",
         "version": 1
     },
+    /*
     {
         "address1": "avenue Simon Kibangou, Bacongo",
         "address2": "",
@@ -453,6 +451,7 @@
         "tel2": "",
         "version": 1
     },
+    */
     {
         "address1": "57 rue Tshitondi, arrêt kimbangiste, Talangaï",
         "address2": "",
@@ -467,7 +466,7 @@
         "tel2": "",
         "version": 1
     },
-     {
+    {
         "address1": "8 rue Albert Bassoundza, Centre ville",
         "address2": "",
         "city": "Brazzaville",
@@ -495,6 +494,9 @@
         "tel2": "",
         "version": 1
     },
+
+    //quel quartier
+    /*
     {
         "address1": "57 rue Tshitondi",
         "address2": "",
@@ -509,6 +511,9 @@
         "tel2": "",
         "version": 1
     },
+    */
+    //trop vague, numéro de la parcelle 
+    /*
     {
         "address1": "avenue du Général de Gaulle, Bacongo",
         "address2": "",
@@ -523,6 +528,7 @@
         "tel2": "",
         "version": 1
     },
+    */
     {
         "address1": "56 rue Lagué, Moungali",
         "address2": "",
@@ -579,6 +585,8 @@
         "tel2": "",
         "version": 1
     },
+
+    /*
     {
         "address1": "rue Ossio Louami, Talangaï",
         "address2": "",
@@ -593,6 +601,7 @@
         "tel2": "",
         "version": 1
     },
+    */
     {
         "address1": "123 avenue Auberge Gascogne, Chateau d'eau, Makélékélé",
         "address2": "",
@@ -621,7 +630,8 @@
         "tel2": "",
         "version": 1
     },
-     {
+    /*
+    {
         "address1": "215 rue de la Musique, Centre ville",
         "address2": "",
         "city": "Brazzaville",
@@ -887,6 +897,7 @@
         "tel2": "",
         "version": 1
     },
+    */
     {
         "address1": "13 avenue Fulbert Youlou, Centre ville",
         "address2": "",
@@ -902,7 +913,7 @@
         "version": 1
     },
     {
-        "address1": "81 rue Louolo, plateau de 15 ans, Centre ville",
+        "address1": "81 rue Louolo, plateau de 15 ans, Moungali",
         "address2": "",
         "city": "Brazzaville",
         "verified": "10082016",
@@ -916,7 +927,7 @@
         "version": 1
     },
     {
-        "address1": "1769 avenue Loutassi plateau des 15 ans, Centre ville",
+        "address1": "1769 avenue Loutassi plateau des 15 ans, Moungali",
         "address2": "",
         "city": "Brazzaville",
         "verified": "10082016",
@@ -944,7 +955,7 @@
         "version": 1
     },
     {
-        "address1": "En face du PSP , Plateau de 15 ans Moungali, Moungali",
+        "address1": "En face du PSP, Plateau de 15 ans, Moungali",
         "address2": "",
         "city": "Brazzaville",
         "verified": "10082016",
@@ -1049,14 +1060,14 @@
         "id": 78,
         "lat":-4.261670,
         "lon":15.280000,
-        "name": "Laboratoire d' Analyses Médicales BIOQUICK",
+        "name": "Laboratoire d'Analyses Médicales BIOQUICK",
         "source": "Congo Telecom",
         "tel1": "",
         "tel2": "",
         "version": 1
     },
     {
-        "address1": "29 bis avenue Bouéta mbongo, Moungali",
+        "address1": "29 bis avenue Bouéta Mbongo, Moungali",
         "address2": "",
         "city": "Brazzaville",
         "verified": "10082016",
@@ -1125,6 +1136,7 @@
         "tel2": "",
         "version": 1
     },
+    /*
      {
         "address1": "Favre, Centre-ville",
         "address2": "",
@@ -1181,4 +1193,5 @@
         "tel2": "",
         "version": 1
     }
+    */
 ]
